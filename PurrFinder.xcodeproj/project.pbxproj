@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
+		E4DF01D6299183D8004E1CC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D5299183D8004E1CC6 /* ContentView.swift */; };
+		E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01D7299183D9004E1CC6 /* Assets.xcassets */; };
+		E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */; };
+		E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */; };
+		E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */; };
+		E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4DF01E1299183DA004E1CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4DF01C8299183D8004E1CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DF01CF299183D8004E1CC6;
+			remoteInfo = PurrFinder;
+		};
+		E4DF01EB299183DA004E1CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4DF01C8299183D8004E1CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DF01CF299183D8004E1CC6;
+			remoteInfo = PurrFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4DF01D0299183D8004E1CC6 /* PurrFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurrFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderApp.swift; sourceTree = "<group>"; };
+		E4DF01D5299183D8004E1CC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4DF01D7299183D9004E1CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderTests.swift; sourceTree = "<group>"; };
+		E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITests.swift; sourceTree = "<group>"; };
+		E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4DF01CD299183D8004E1CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01DD299183DA004E1CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01E7299183DA004E1CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4DF01C7299183D8004E1CC6 = {
+			isa = PBXGroup;
+			children = (
+				E4DF01D2299183D8004E1CC6 /* PurrFinder */,
+				E4DF01E3299183DA004E1CC6 /* PurrFinderTests */,
+				E4DF01ED299183DA004E1CC6 /* PurrFinderUITests */,
+				E4DF01D1299183D8004E1CC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4DF01D1299183D8004E1CC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01D0299183D8004E1CC6 /* PurrFinder.app */,
+				E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */,
+				E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4DF01D2299183D8004E1CC6 /* PurrFinder */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */,
+				E4DF01D5299183D8004E1CC6 /* ContentView.swift */,
+				E4DF01D7299183D9004E1CC6 /* Assets.xcassets */,
+				E4DF01D9299183D9004E1CC6 /* Preview Content */,
+			);
+			path = PurrFinder;
+			sourceTree = "<group>";
+		};
+		E4DF01D9299183D9004E1CC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4DF01E3299183DA004E1CC6 /* PurrFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */,
+			);
+			path = PurrFinderTests;
+			sourceTree = "<group>";
+		};
+		E4DF01ED299183DA004E1CC6 /* PurrFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */,
+				E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */,
+			);
+			path = PurrFinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4DF01CF299183D8004E1CC6 /* PurrFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4DF01F4299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinder" */;
+			buildPhases = (
+				E4DF01CC299183D8004E1CC6 /* Sources */,
+				E4DF01CD299183D8004E1CC6 /* Frameworks */,
+				E4DF01CE299183D8004E1CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PurrFinder;
+			productName = PurrFinder;
+			productReference = E4DF01D0299183D8004E1CC6 /* PurrFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4DF01DF299183DA004E1CC6 /* PurrFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4DF01F7299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderTests" */;
+			buildPhases = (
+				E4DF01DC299183DA004E1CC6 /* Sources */,
+				E4DF01DD299183DA004E1CC6 /* Frameworks */,
+				E4DF01DE299183DA004E1CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4DF01E2299183DA004E1CC6 /* PBXTargetDependency */,
+			);
+			name = PurrFinderTests;
+			productName = PurrFinderTests;
+			productReference = E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E4DF01E9299183DA004E1CC6 /* PurrFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4DF01FA299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderUITests" */;
+			buildPhases = (
+				E4DF01E6299183DA004E1CC6 /* Sources */,
+				E4DF01E7299183DA004E1CC6 /* Frameworks */,
+				E4DF01E8299183DA004E1CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4DF01EC299183DA004E1CC6 /* PBXTargetDependency */,
+			);
+			name = PurrFinderUITests;
+			productName = PurrFinderUITests;
+			productReference = E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4DF01C8299183D8004E1CC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					E4DF01CF299183D8004E1CC6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					E4DF01DF299183DA004E1CC6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E4DF01CF299183D8004E1CC6;
+					};
+					E4DF01E9299183DA004E1CC6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E4DF01CF299183D8004E1CC6;
+					};
+				};
+			};
+			buildConfigurationList = E4DF01CB299183D8004E1CC6 /* Build configuration list for PBXProject "PurrFinder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4DF01C7299183D8004E1CC6;
+			productRefGroup = E4DF01D1299183D8004E1CC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4DF01CF299183D8004E1CC6 /* PurrFinder */,
+				E4DF01DF299183DA004E1CC6 /* PurrFinderTests */,
+				E4DF01E9299183DA004E1CC6 /* PurrFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4DF01CE299183D8004E1CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */,
+				E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01DE299183DA004E1CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01E8299183DA004E1CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4DF01CC299183D8004E1CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4DF01D6299183D8004E1CC6 /* ContentView.swift in Sources */,
+				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01DC299183DA004E1CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4DF01E6299183DA004E1CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */,
+				E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4DF01E2299183DA004E1CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4DF01CF299183D8004E1CC6 /* PurrFinder */;
+			targetProxy = E4DF01E1299183DA004E1CC6 /* PBXContainerItemProxy */;
+		};
+		E4DF01EC299183DA004E1CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4DF01CF299183D8004E1CC6 /* PurrFinder */;
+			targetProxy = E4DF01EB299183DA004E1CC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4DF01F2299183DA004E1CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E4DF01F3299183DA004E1CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4DF01F5299183DA004E1CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PurrFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4DF01F6299183DA004E1CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PurrFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E4DF01F8299183DA004E1CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurrFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PurrFinder";
+			};
+			name = Debug;
+		};
+		E4DF01F9299183DA004E1CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurrFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PurrFinder";
+			};
+			name = Release;
+		};
+		E4DF01FB299183DA004E1CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PurrFinder;
+			};
+			name = Debug;
+		};
+		E4DF01FC299183DA004E1CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BPYC96MR8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannrzd.PurrFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PurrFinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4DF01CB299183D8004E1CC6 /* Build configuration list for PBXProject "PurrFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4DF01F2299183DA004E1CC6 /* Debug */,
+				E4DF01F3299183DA004E1CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4DF01F4299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4DF01F5299183DA004E1CC6 /* Debug */,
+				E4DF01F6299183DA004E1CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4DF01F7299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4DF01F8299183DA004E1CC6 /* Debug */,
+				E4DF01F9299183DA004E1CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4DF01FA299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4DF01FB299183DA004E1CC6 /* Debug */,
+				E4DF01FC299183DA004E1CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4DF01C8299183D8004E1CC6 /* Project object */;
+}
