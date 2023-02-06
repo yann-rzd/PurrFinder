@@ -23,14 +23,21 @@ struct LoginView: View {
             }) {
                 Text("Register")
                     .fontWeight(.bold)
-                    .foregroundColor(Color("Color"))
+                    .foregroundColor(Color("BluePurr"))
             })
         }
         
         ZStack {
             
             VStack {
-                Image("Dailympact_logo")
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                
+                Text("PurrFinder")
+                    .font(Font.custom("AmaticSC-Bold", size: 32))
+                    .foregroundColor(Color("BluePurr"))
+                    
                 
                 Text("Log in to your account")
                     .font(.title)
@@ -41,7 +48,7 @@ struct LoginView: View {
                 TextField("Email", text: $loginViewModel.email)
                     .textInputAutocapitalization(.never)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.email != "" ? Color("Color") : loginViewModel.color, lineWidth: 2))
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.email != "" ? Color("BluePurr") : loginViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
                 
                 HStack(spacing: 15) {
@@ -63,7 +70,7 @@ struct LoginView: View {
                     }
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.pass != "" ? Color("Color") : loginViewModel.color, lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.pass != "" ? Color("BluePurr") : loginViewModel.color, lineWidth: 2))
                 .padding(.top, 25)
                 
                 HStack {
@@ -74,7 +81,7 @@ struct LoginView: View {
                     }) {
                         Text("Forget password")
                             .fontWeight(.bold)
-                            .foregroundColor(Color("Color"))
+                            .foregroundColor(Color("BluePurr"))
                     }
                 }
                 .padding(.top, 20)
@@ -87,7 +94,7 @@ struct LoginView: View {
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 50)
                 }
-                .background(Color("Color"))
+                .background(Color("BluePurr"))
                 .cornerRadius(10)
                 .padding(.top, 25)
             }

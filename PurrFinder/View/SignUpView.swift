@@ -23,15 +23,21 @@ struct SignUpView: View {
                 }) {
                     Image(systemName: "chevron.left")
                         .font(.title)
-                        .foregroundColor(Color("Color"))
+                        .foregroundColor(Color("BluePurr"))
                 })
             }
             .navigationBarBackButtonHidden(true)
             
             VStack {
-                Image("Dailympact_logo")
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 150, height: 150)
                 
-                Text("Log in to your account")
+                Text("PurrFinder")
+                    .font(Font.custom("AmaticSC-Bold", size: 32))
+                    .foregroundColor(Color("BluePurr"))
+                
+                Text("Sign up")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(signUpViewModel.color)
@@ -40,7 +46,7 @@ struct SignUpView: View {
                 TextField("Email", text: $signUpViewModel.email)
                     .textInputAutocapitalization(.never)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("Color") : signUpViewModel.color, lineWidth: 2))
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
                 
                 HStack(spacing: 15) {
@@ -63,7 +69,7 @@ struct SignUpView: View {
                 }
                 
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.pass != "" ? Color("Color") : signUpViewModel.color, lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.pass != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                 .padding(.top, 25)
                 
                 HStack(spacing: 15) {
@@ -86,7 +92,7 @@ struct SignUpView: View {
                 }
                 
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.repass != "" ? Color("Color") : signUpViewModel.color, lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.repass != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                 .padding(.top, 25)
                 
                 Button(action: {
@@ -98,7 +104,7 @@ struct SignUpView: View {
                         .frame(width: UIScreen.main.bounds.width - 50)
                 }
                 
-                .background(Color("Color"))
+                .background(Color("BluePurr"))
                 .cornerRadius(10)
                 .padding(.top, 25)
             }

@@ -30,6 +30,15 @@
 		E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021929918954004E1CC6 /* LoginView.swift */; };
 		E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021B2991895F004E1CC6 /* SignUpView.swift */; };
 		E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021D29918969004E1CC6 /* ErrorView.swift */; };
+		E4DF023029919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
+		E4DF023129919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
+		E4DF023229919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
+		E4DF023329919601004E1CC6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022E29919601004E1CC6 /* OFL.txt */; };
+		E4DF023429919601004E1CC6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022E29919601004E1CC6 /* OFL.txt */; };
+		E4DF023529919601004E1CC6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022E29919601004E1CC6 /* OFL.txt */; };
+		E4DF023629919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
+		E4DF023729919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
+		E4DF023829919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,10 @@
 		E4DF021929918954004E1CC6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4DF021B2991895F004E1CC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E4DF021D29918969004E1CC6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Bold.ttf"; sourceTree = "<group>"; };
+		E4DF022E29919601004E1CC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		E4DF02392991979C004E1CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +173,7 @@
 		E4DF01D2299183D8004E1CC6 /* PurrFinder */ = {
 			isa = PBXGroup;
 			children = (
+				E4DF02392991979C004E1CC6 /* Info.plist */,
 				E4DF01FF299186D6004E1CC6 /* View */,
 				E4DF0200299186E3004E1CC6 /* ViewModel */,
 				E4DF0201299186F0004E1CC6 /* Model */,
@@ -228,6 +242,7 @@
 		E4DF0202299186F8004E1CC6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E4DF022C299195C3004E1CC6 /* Fonts */,
 				E4DF01D7299183D9004E1CC6 /* Assets.xcassets */,
 				E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */,
 				E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */,
@@ -252,6 +267,16 @@
 				E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */,
 			);
 			path = AuthenticationViewModel;
+			sourceTree = "<group>";
+		};
+		E4DF022C299195C3004E1CC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */,
+				E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */,
+				E4DF022E29919601004E1CC6 /* OFL.txt */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +388,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DF023329919601004E1CC6 /* OFL.txt in Resources */,
+				E4DF023029919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */,
+				E4DF023629919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */,
 				E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */,
 				E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */,
 				E4DF01FE299186AE004E1CC6 /* GoogleService-Info.plist in Resources */,
@@ -373,6 +401,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DF023429919601004E1CC6 /* OFL.txt in Resources */,
+				E4DF023129919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */,
+				E4DF023729919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +411,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DF023529919601004E1CC6 /* OFL.txt in Resources */,
+				E4DF023229919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */,
+				E4DF023829919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +703,7 @@
 				DEVELOPMENT_TEAM = BPYC96MR8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PurrFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -699,6 +734,7 @@
 				DEVELOPMENT_TEAM = BPYC96MR8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PurrFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

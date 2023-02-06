@@ -27,7 +27,7 @@ struct HomePageView: View {
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 50)
             }
-            .background(Color("Color"))
+            .background(Color("BluePurr"))
             .cornerRadius(10)
             .padding(.top, 25)
         }
