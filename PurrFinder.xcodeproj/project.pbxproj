@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B8BEDE9D15CCA97923EEB7 /* Pods_PurrFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */; };
+		5460B51BFFC5BD4B0073CC1D /* Pods_PurrFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */; };
+		906E48FB95523ED004AD8EE0 /* Pods_PurrFinder_PurrFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5218D5C6DE1213B37BCB19 /* Pods_PurrFinder_PurrFinderUITests.framework */; };
 		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
-		E4DF01D6299183D8004E1CC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D5299183D8004E1CC6 /* ContentView.swift */; };
 		E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01D7299183D9004E1CC6 /* Assets.xcassets */; };
 		E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */; };
 		E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */; };
 		E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */; };
 		E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */; };
+		E4DF01FE299186AE004E1CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */; };
+		E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */; };
+		E4DF0206299187BC004E1CC6 /* AuthenticationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */; };
+		E4DF02092991882A004E1CC6 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02082991882A004E1CC6 /* HomePageViewModel.swift */; };
+		E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */; };
+		E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */; };
+		E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */; };
+		E4DF0212299188E2004E1CC6 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */; };
+		E4DF021429918931004E1CC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021329918931004E1CC6 /* ContentView.swift */; };
+		E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02152991893C004E1CC6 /* HomeView.swift */; };
+		E4DF02182991894B004E1CC6 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02172991894B004E1CC6 /* HomePageView.swift */; };
+		E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021929918954004E1CC6 /* LoginView.swift */; };
+		E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021B2991895F004E1CC6 /* SignUpView.swift */; };
+		E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021D29918969004E1CC6 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197FC3FB31593D2BD08716CB /* Pods-PurrFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder/Pods-PurrFinder.release.xcconfig"; sourceTree = "<group>"; };
+		3793E269FD2CFD9901168436 /* Pods-PurrFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder/Pods-PurrFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4DF01D0299183D8004E1CC6 /* PurrFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurrFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderApp.swift; sourceTree = "<group>"; };
-		E4DF01D5299183D8004E1CC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4DF01D7299183D9004E1CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +64,24 @@
 		E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITests.swift; sourceTree = "<group>"; };
 		E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceError.swift; sourceTree = "<group>"; };
+		E4DF02082991882A004E1CC6 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		E4DF021329918931004E1CC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4DF02152991893C004E1CC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E4DF02172991894B004E1CC6 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		E4DF021929918954004E1CC6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E4DF021B2991895F004E1CC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E4DF021D29918969004E1CC6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF5218D5C6DE1213B37BCB19 /* Pods_PurrFinder_PurrFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinder_PurrFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5460B51BFFC5BD4B0073CC1D /* Pods_PurrFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B8BEDE9D15CCA97923EEB7 /* Pods_PurrFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +105,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906E48FB95523ED004AD8EE0 /* Pods_PurrFinder_PurrFinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		417C8C53C16AE44CBEF5EFFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */,
+				FF5218D5C6DE1213B37BCB19 /* Pods_PurrFinder_PurrFinderUITests.framework */,
+				F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76F958FD70B17F17AB039892 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3793E269FD2CFD9901168436 /* Pods-PurrFinder.debug.xcconfig */,
+				197FC3FB31593D2BD08716CB /* Pods-PurrFinder.release.xcconfig */,
+				ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */,
+				B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */,
+				70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */,
+				FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E4DF01C7299183D8004E1CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +142,8 @@
 				E4DF01E3299183DA004E1CC6 /* PurrFinderTests */,
 				E4DF01ED299183DA004E1CC6 /* PurrFinderUITests */,
 				E4DF01D1299183D8004E1CC6 /* Products */,
+				76F958FD70B17F17AB039892 /* Pods */,
+				417C8C53C16AE44CBEF5EFFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,9 +160,10 @@
 		E4DF01D2299183D8004E1CC6 /* PurrFinder */ = {
 			isa = PBXGroup;
 			children = (
-				E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */,
-				E4DF01D5299183D8004E1CC6 /* ContentView.swift */,
-				E4DF01D7299183D9004E1CC6 /* Assets.xcassets */,
+				E4DF01FF299186D6004E1CC6 /* View */,
+				E4DF0200299186E3004E1CC6 /* ViewModel */,
+				E4DF0201299186F0004E1CC6 /* Model */,
+				E4DF0202299186F8004E1CC6 /* SupportingFiles */,
 				E4DF01D9299183D9004E1CC6 /* Preview Content */,
 			);
 			path = PurrFinder;
@@ -127,6 +194,66 @@
 			path = PurrFinderUITests;
 			sourceTree = "<group>";
 		};
+		E4DF01FF299186D6004E1CC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF021329918931004E1CC6 /* ContentView.swift */,
+				E4DF02152991893C004E1CC6 /* HomeView.swift */,
+				E4DF02172991894B004E1CC6 /* HomePageView.swift */,
+				E4DF021929918954004E1CC6 /* LoginView.swift */,
+				E4DF021B2991895F004E1CC6 /* SignUpView.swift */,
+				E4DF021D29918969004E1CC6 /* ErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4DF0200299186E3004E1CC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF020A29918889004E1CC6 /* AuthenticationViewModel */,
+				E4DF020729918808004E1CC6 /* HomePageViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E4DF0201299186F0004E1CC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */,
+				E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4DF0202299186F8004E1CC6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF01D7299183D9004E1CC6 /* Assets.xcassets */,
+				E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */,
+				E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E4DF020729918808004E1CC6 /* HomePageViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF02082991882A004E1CC6 /* HomePageViewModel.swift */,
+			);
+			path = HomePageViewModel;
+			sourceTree = "<group>";
+		};
+		E4DF020A29918889004E1CC6 /* AuthenticationViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */,
+				E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */,
+				E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */,
+				E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */,
+			);
+			path = AuthenticationViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4DF01F4299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinder" */;
 			buildPhases = (
+				0C213B4DE7CC3C878E7B72B8 /* [CP] Check Pods Manifest.lock */,
 				E4DF01CC299183D8004E1CC6 /* Sources */,
 				E4DF01CD299183D8004E1CC6 /* Frameworks */,
 				E4DF01CE299183D8004E1CC6 /* Resources */,
+				BE6E7D7915D4FC60DA32B772 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4DF01F7299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderTests" */;
 			buildPhases = (
+				1BB1E592C18A0B695A5E3073 /* [CP] Check Pods Manifest.lock */,
 				E4DF01DC299183DA004E1CC6 /* Sources */,
 				E4DF01DD299183DA004E1CC6 /* Frameworks */,
 				E4DF01DE299183DA004E1CC6 /* Resources */,
@@ -169,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4DF01FA299183DA004E1CC6 /* Build configuration list for PBXNativeTarget "PurrFinderUITests" */;
 			buildPhases = (
+				9F8D9847D02CD4108E2E5E99 /* [CP] Check Pods Manifest.lock */,
 				E4DF01E6299183DA004E1CC6 /* Sources */,
 				E4DF01E7299183DA004E1CC6 /* Frameworks */,
 				E4DF01E8299183DA004E1CC6 /* Resources */,
+				FDBABDAAEDDD24B21591B10C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +365,7 @@
 			files = (
 				E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */,
 				E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */,
+				E4DF01FE299186AE004E1CC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +385,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C213B4DE7CC3C878E7B72B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurrFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB1E592C18A0B695A5E3073 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurrFinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F8D9847D02CD4108E2E5E99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurrFinder-PurrFinderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE6E7D7915D4FC60DA32B772 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurrFinder/Pods-PurrFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurrFinder/Pods-PurrFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PurrFinder/Pods-PurrFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBABDAAEDDD24B21591B10C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4DF01CC299183D8004E1CC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DF01D6299183D8004E1CC6 /* ContentView.swift in Sources */,
+				E4DF0212299188E2004E1CC6 /* ErrorViewModel.swift in Sources */,
+				E4DF0206299187BC004E1CC6 /* AuthenticationServiceError.swift in Sources */,
+				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
+				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,
+				E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */,
+				E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */,
+				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
+				E4DF02092991882A004E1CC6 /* HomePageViewModel.swift in Sources */,
+				E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */,
+				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
+				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,
+				E4DF02182991894B004E1CC6 /* HomePageView.swift in Sources */,
+				E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +659,7 @@
 		};
 		E4DF01F5299183DA004E1CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3793E269FD2CFD9901168436 /* Pods-PurrFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +689,7 @@
 		};
 		E4DF01F6299183DA004E1CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197FC3FB31593D2BD08716CB /* Pods-PurrFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +719,7 @@
 		};
 		E4DF01F8299183DA004E1CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +740,7 @@
 		};
 		E4DF01F9299183DA004E1CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +761,7 @@
 		};
 		E4DF01FB299183DA004E1CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +780,7 @@
 		};
 		E4DF01FC299183DA004E1CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

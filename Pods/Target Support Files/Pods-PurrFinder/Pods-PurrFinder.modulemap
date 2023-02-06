@@ -1,0 +1,6 @@
+framework module Pods_PurrFinder {
+  umbrella header "Pods-PurrFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
