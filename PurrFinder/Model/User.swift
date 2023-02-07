@@ -8,8 +8,8 @@
 import Foundation
 import CoreLocation
 
-struct UserData {
-    let id: String
+struct User {
+    let uid: String
     let name: String
     let email: String
     let phone: String
