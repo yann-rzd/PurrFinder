@@ -14,7 +14,7 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 if homeViewModel.status {
-                    HomePageView()
+                    NavigationTabView()
                 } else {
                     ZStack {
                         NavigationLink(destination: SignUpView(show: $homeViewModel.show), isActive: $homeViewModel.show) {

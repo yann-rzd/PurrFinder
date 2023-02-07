@@ -1,14 +1,14 @@
 //
-//  HomePageView.swift
+//  UserProfileView.swift
 //  PurrFinder
 //
-//  Created by Yann Rouzaud on 06/02/2023.
+//  Created by Yann Rouzaud on 07/02/2023.
 //
 
 import SwiftUI
 
-struct HomePageView: View {
-    @StateObject private var homePageViewModel = HomePageViewModel()
+struct UserProfileView: View {
+    @StateObject private var userProfileViewModel = UserProfileViewModel()
     
     var body: some View {
         VStack {
@@ -18,7 +18,7 @@ struct HomePageView: View {
                 .foregroundColor(Color.black.opacity(0.7))
             
             Button(action: {
-                homePageViewModel.signOut()
+                userProfileViewModel.signOut()
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
             }) {
@@ -31,5 +31,11 @@ struct HomePageView: View {
             .cornerRadius(10)
             .padding(.top, 25)
         }
+    }
+}
+
+struct UserProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserProfileView()
     }
 }
