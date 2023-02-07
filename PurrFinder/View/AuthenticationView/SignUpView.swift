@@ -11,7 +11,6 @@ struct SignUpView: View {
     @StateObject private var signUpViewModel = SignUpViewModel()
     @Binding var show: Bool
     
-    
     var body: some View {
         ZStack {
             NavigationView {
@@ -37,7 +36,7 @@ struct SignUpView: View {
                     .font(Font.custom("AmaticSC-Bold", size: 32))
                     .foregroundColor(Color("BluePurr"))
                 
-                Text("Sign up")
+                Text("S'incrire")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(signUpViewModel.color)
@@ -52,10 +51,10 @@ struct SignUpView: View {
                 HStack(spacing: 15) {
                     VStack {
                         if signUpViewModel.visible {
-                            TextField("Password", text: $signUpViewModel.pass)
+                            TextField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
                         } else {
-                            SecureField("Password", text: $signUpViewModel.pass)
+                            SecureField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
                         }
                     }
@@ -75,10 +74,10 @@ struct SignUpView: View {
                 HStack(spacing: 15) {
                     VStack {
                         if signUpViewModel.revisible {
-                            TextField("Re-enter", text: $signUpViewModel.repass)
+                            TextField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
                         } else {
-                            SecureField("Re-enter", text: $signUpViewModel.repass)
+                            SecureField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
                         }
                     }
@@ -98,7 +97,7 @@ struct SignUpView: View {
                 Button(action: {
                     signUpViewModel.register()
                 }) {
-                    Text("Register")
+                    Text("Je m'inscris")
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 50)

@@ -21,7 +21,7 @@ struct LoginView: View {
             .navigationBarItems(trailing: Button(action: {
                 self.show.toggle()
             }) {
-                Text("Register")
+                Text("Pas encore inscrit ?")
                     .fontWeight(.bold)
                     .foregroundColor(Color("BluePurr"))
             })
@@ -39,7 +39,7 @@ struct LoginView: View {
                     .foregroundColor(Color("BluePurr"))
                     
                 
-                Text("Log in to your account")
+                Text("Se connecter")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(loginViewModel.color)
@@ -54,10 +54,10 @@ struct LoginView: View {
                 HStack(spacing: 15) {
                     VStack {
                         if loginViewModel.visible {
-                            TextField("Password", text: $loginViewModel.pass)
+                            TextField("Mot de passe", text: $loginViewModel.pass)
                                 .textInputAutocapitalization(.never)
                         } else {
-                            SecureField("Password", text: $loginViewModel.pass)
+                            SecureField("Mot de passe", text: $loginViewModel.pass)
                                 .textInputAutocapitalization(.never)
                         }
                     }
@@ -79,7 +79,7 @@ struct LoginView: View {
                     Button(action: {
                         loginViewModel.reset()
                     }) {
-                        Text("Forget password")
+                        Text("Mot de passe oublié")
                             .fontWeight(.bold)
                             .foregroundColor(Color("BluePurr"))
                     }
@@ -89,7 +89,7 @@ struct LoginView: View {
                 Button(action: {
                     loginViewModel.verify()
                 }) {
-                    Text("Log in")
+                    Text("Je me connecte")
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 50)

@@ -12,7 +12,7 @@ struct NavigationTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            UserProfileView()
+            UserView()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 50))
