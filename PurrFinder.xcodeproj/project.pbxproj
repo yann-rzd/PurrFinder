@@ -39,6 +39,18 @@
 		E4DF023629919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
 		E4DF023729919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
 		E4DF023829919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
+		E4DF023C29919BF4004E1CC6 /* LostPetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* LostPetData.swift */; };
+		E4DF023D29919BF4004E1CC6 /* LostPetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* LostPetData.swift */; };
+		E4DF023E29919BF4004E1CC6 /* LostPetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* LostPetData.swift */; };
+		E4DF024029919C1E004E1CC6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* UserData.swift */; };
+		E4DF024129919C1E004E1CC6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* UserData.swift */; };
+		E4DF024229919C1E004E1CC6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* UserData.swift */; };
+		E4DF024429919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
+		E4DF024529919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
+		E4DF024629919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
+		E4DF024829925F49004E1CC6 /* PostAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024729925F49004E1CC6 /* PostAlert.swift */; };
+		E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024B29926247004E1CC6 /* LocationService.swift */; };
+		E4DF024E2992691A004E1CC6 /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024D2992691A004E1CC6 /* FireStoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +103,12 @@
 		E4DF022E29919601004E1CC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
 		E4DF02392991979C004E1CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E4DF023B29919BF4004E1CC6 /* LostPetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPetData.swift; sourceTree = "<group>"; };
+		E4DF023F29919C1E004E1CC6 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		E4DF024329919C31004E1CC6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E4DF024729925F49004E1CC6 /* PostAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlert.swift; sourceTree = "<group>"; };
+		E4DF024B29926247004E1CC6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E4DF024D2992691A004E1CC6 /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,8 +251,13 @@
 		E4DF0201299186F0004E1CC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */,
-				E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */,
+				E4DF023A29919BC4004E1CC6 /* Authentication */,
+				E4DF023B29919BF4004E1CC6 /* LostPetData.swift */,
+				E4DF023F29919C1E004E1CC6 /* UserData.swift */,
+				E4DF024329919C31004E1CC6 /* Notification.swift */,
+				E4DF024729925F49004E1CC6 /* PostAlert.swift */,
+				E4DF024B29926247004E1CC6 /* LocationService.swift */,
+				E4DF024D2992691A004E1CC6 /* FireStoreService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +300,15 @@
 				E4DF022E29919601004E1CC6 /* OFL.txt */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E4DF023A29919BC4004E1CC6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */,
+				E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,16 +561,22 @@
 			files = (
 				E4DF0212299188E2004E1CC6 /* ErrorViewModel.swift in Sources */,
 				E4DF0206299187BC004E1CC6 /* AuthenticationServiceError.swift in Sources */,
+				E4DF024029919C1E004E1CC6 /* UserData.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
 				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,
 				E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */,
+				E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */,
 				E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
+				E4DF023C29919BF4004E1CC6 /* LostPetData.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
+				E4DF024829925F49004E1CC6 /* PostAlert.swift in Sources */,
 				E4DF02092991882A004E1CC6 /* HomePageViewModel.swift in Sources */,
+				E4DF024E2992691A004E1CC6 /* FireStoreService.swift in Sources */,
 				E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
 				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,
+				E4DF024429919C31004E1CC6 /* Notification.swift in Sources */,
 				E4DF02182991894B004E1CC6 /* HomePageView.swift in Sources */,
 				E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */,
 			);
@@ -548,7 +586,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DF024129919C1E004E1CC6 /* UserData.swift in Sources */,
 				E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */,
+				E4DF024529919C31004E1CC6 /* Notification.swift in Sources */,
+				E4DF023D29919BF4004E1CC6 /* LostPetData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +598,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */,
+				E4DF023E29919BF4004E1CC6 /* LostPetData.swift in Sources */,
+				E4DF024229919C1E004E1CC6 /* UserData.swift in Sources */,
+				E4DF024629919C31004E1CC6 /* Notification.swift in Sources */,
 				E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
