@@ -10,28 +10,19 @@ import SwiftUI
 struct NavigationTabView: View {
     @State private var selectedTab = 1
     
-    init() {
-        
-        UITabBar.appearance().backgroundColor = UIColor(Color("BluePurr"))
-        //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50)], for: .normal)
-        //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50)], for: .selected)
-    }
-    
     var body: some View {
         TabView(selection: $selectedTab) {
             UserProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
-                        .foregroundColor(.red)
-                        .font(.largeTitle)
-                        .imageScale(.large)
+                        .font(.system(size: 50))
                 }
                 .tag(0)
             
             AlertPageView()
                 .tabItem {
                     Image(systemName: "bell.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 50))
                     
                 }
                 .tag(1)
@@ -39,7 +30,7 @@ struct NavigationTabView: View {
             ChatHelpView()
                 .tabItem {
                     Image(systemName: "text.bubble.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 50))
                     
                 }
                 .tag(2)
