@@ -11,8 +11,6 @@ struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
 
-    
-
     var body: some View {
         VStack {
             ZStack(alignment: .bottomTrailing) {
@@ -43,8 +41,7 @@ struct UserProfileView: View {
                 
             }
             .sheet(isPresented: $imagePickerViewModel.showPicker) {
-                ImagePicker(sourceType: imagePickerViewModel.source == .library ? .photoLibrary : .camera, selectedImage: $imagePickerViewModel.image)
-                    .ignoresSafeArea()
+                ImagePicker(sourceType: .photoLibrary, selectedImage: $imagePickerViewModel.image)
             }
             
             Text("Bienvenue sur PurrFinder !")
