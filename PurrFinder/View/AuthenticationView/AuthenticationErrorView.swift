@@ -1,5 +1,5 @@
 //
-//  ErrorView.swift
+//  AuthenticationErrorView.swift
 //  PurrFinder
 //
 //  Created by Yann Rouzaud on 06/02/2023.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ErrorView: View {
-    @StateObject private var errorViewModel = ErrorViewModel()
+struct AuthenticationErrorView: View {
+    @StateObject private var errorViewModel = AuthenticationErrorViewModel()
     @Binding var alert: Bool
     @Binding var error: String
     

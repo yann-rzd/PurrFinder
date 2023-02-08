@@ -14,6 +14,9 @@
 		E4C3F83B2992BA2D0016B665 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83A2992BA2D0016B665 /* UserView.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4C3F83F2992BA770016B665 /* UserAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83E2992BA770016B665 /* UserAlertView.swift */; };
+		E4CA4855299401EF00CEEA3E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePicker.swift */; };
+		E4CA485B299403F900CEEA3E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485A299403F900CEEA3E /* Picker.swift */; };
+		E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */; };
 		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
 		E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01D7299183D9004E1CC6 /* Assets.xcassets */; };
 		E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */; };
@@ -27,13 +30,13 @@
 		E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */; };
 		E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */; };
 		E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */; };
-		E4DF0212299188E2004E1CC6 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */; };
+		E4DF0212299188E2004E1CC6 /* AuthenticationErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0211299188E2004E1CC6 /* AuthenticationErrorViewModel.swift */; };
 		E4DF021429918931004E1CC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021329918931004E1CC6 /* ContentView.swift */; };
 		E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02152991893C004E1CC6 /* HomeView.swift */; };
 		E4DF02182991894B004E1CC6 /* AlertPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02172991894B004E1CC6 /* AlertPageView.swift */; };
 		E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021929918954004E1CC6 /* LoginView.swift */; };
 		E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021B2991895F004E1CC6 /* SignUpView.swift */; };
-		E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021D29918969004E1CC6 /* ErrorView.swift */; };
+		E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021D29918969004E1CC6 /* AuthenticationErrorView.swift */; };
 		E4DF023029919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
 		E4DF023129919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
 		E4DF023229919601004E1CC6 /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */; };
@@ -86,6 +89,9 @@
 		E4C3F83A2992BA2D0016B665 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4C3F83E2992BA770016B665 /* UserAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlertView.swift; sourceTree = "<group>"; };
+		E4CA4854299401EF00CEEA3E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E4CA485A299403F900CEEA3E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		E4DF01D0299183D8004E1CC6 /* PurrFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurrFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderApp.swift; sourceTree = "<group>"; };
 		E4DF01D7299183D9004E1CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,13 +108,13 @@
 		E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		E4DF0211299188E2004E1CC6 /* AuthenticationErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorViewModel.swift; sourceTree = "<group>"; };
 		E4DF021329918931004E1CC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4DF02152991893C004E1CC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E4DF02172991894B004E1CC6 /* AlertPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPageView.swift; sourceTree = "<group>"; };
 		E4DF021929918954004E1CC6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4DF021B2991895F004E1CC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		E4DF021D29918969004E1CC6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E4DF021D29918969004E1CC6 /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
 		E4DF022D29919601004E1CC6 /* AmaticSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Bold.ttf"; sourceTree = "<group>"; };
 		E4DF022E29919601004E1CC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
@@ -188,6 +194,14 @@
 			path = UserView;
 			sourceTree = "<group>";
 		};
+		E4CA48592994032800CEEA3E /* UIViewRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA4854299401EF00CEEA3E /* ImagePicker.swift */,
+			);
+			path = UIViewRepresentable;
+			sourceTree = "<group>";
+		};
 		E4DF01C7299183D8004E1CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +231,7 @@
 				E4DF01FF299186D6004E1CC6 /* View */,
 				E4DF0200299186E3004E1CC6 /* ViewModel */,
 				E4DF0201299186F0004E1CC6 /* Model */,
+				E4CA48592994032800CEEA3E /* UIViewRepresentable */,
 				E4DF0202299186F8004E1CC6 /* SupportingFiles */,
 				E4DF01D9299183D9004E1CC6 /* Preview Content */,
 			);
@@ -281,6 +296,7 @@
 				E4DF024B29926247004E1CC6 /* LocationService.swift */,
 				E4DF024D2992691A004E1CC6 /* FireStoreService.swift */,
 				E4C3F8352992B7A40016B665 /* UserProfileTabEnum.swift */,
+				E4CA485A299403F900CEEA3E /* Picker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +315,7 @@
 		E4DF020729918808004E1CC6 /* UserProfileViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */,
 				E4DF02082991882A004E1CC6 /* UserProfileViewModel.swift */,
 			);
 			path = UserProfileViewModel;
@@ -310,7 +327,7 @@
 				E4DF020B299188A4004E1CC6 /* HomeViewModel.swift */,
 				E4DF020D299188B4004E1CC6 /* LoginViewModel.swift */,
 				E4DF020F299188C4004E1CC6 /* SignUpViewModel.swift */,
-				E4DF0211299188E2004E1CC6 /* ErrorViewModel.swift */,
+				E4DF0211299188E2004E1CC6 /* AuthenticationErrorViewModel.swift */,
 			);
 			path = AuthenticationViewModel;
 			sourceTree = "<group>";
@@ -337,7 +354,7 @@
 		E4DF02512992946A004E1CC6 /* AuthenticationView */ = {
 			isa = PBXGroup;
 			children = (
-				E4DF021D29918969004E1CC6 /* ErrorView.swift */,
+				E4DF021D29918969004E1CC6 /* AuthenticationErrorView.swift */,
 				E4DF021B2991895F004E1CC6 /* SignUpView.swift */,
 				E4DF021929918954004E1CC6 /* LoginView.swift */,
 				E4DF02152991893C004E1CC6 /* HomeView.swift */,
@@ -593,17 +610,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DF0212299188E2004E1CC6 /* ErrorViewModel.swift in Sources */,
+				E4DF0212299188E2004E1CC6 /* AuthenticationErrorViewModel.swift in Sources */,
 				E4DF0253299294F1004E1CC6 /* ChatHelpView.swift in Sources */,
 				E4DF0206299187BC004E1CC6 /* AuthenticationServiceError.swift in Sources */,
+				E4CA4855299401EF00CEEA3E /* ImagePicker.swift in Sources */,
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
+				E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */,
 				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,
 				E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */,
 				E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */,
 				E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
 				E4DF023C29919BF4004E1CC6 /* Animal.swift in Sources */,
+				E4CA485B299403F900CEEA3E /* Picker.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
 				E4DF024829925F49004E1CC6 /* PostAlert.swift in Sources */,
 				E4DF02092991882A004E1CC6 /* UserProfileViewModel.swift in Sources */,
@@ -611,7 +631,7 @@
 				E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */,
 				E4C3F83F2992BA770016B665 /* UserAlertView.swift in Sources */,
 				E4C3F8362992B7A40016B665 /* UserProfileTabEnum.swift in Sources */,
-				E4DF021E29918969004E1CC6 /* ErrorView.swift in Sources */,
+				E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
 				E4DF02552992985A004E1CC6 /* NavigationTabView.swift in Sources */,
 				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,

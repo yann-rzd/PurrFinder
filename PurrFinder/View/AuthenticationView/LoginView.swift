@@ -102,7 +102,7 @@ struct LoginView: View {
         }
         
         if loginViewModel.alert {
-            ErrorView(alert: $loginViewModel.alert, error: $loginViewModel.error)
+            AuthenticationErrorView(alert: $loginViewModel.alert, error: $loginViewModel.error)
         }
         
     }

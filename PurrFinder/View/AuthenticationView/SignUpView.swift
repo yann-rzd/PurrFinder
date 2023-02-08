@@ -110,7 +110,7 @@ struct SignUpView: View {
             .padding(.horizontal, 25)
             
             if signUpViewModel.alert {
-                ErrorView(alert: $signUpViewModel.alert, error: $signUpViewModel.error)
+                AuthenticationErrorView(alert: $signUpViewModel.alert, error: $signUpViewModel.error)
             }
         }
     }

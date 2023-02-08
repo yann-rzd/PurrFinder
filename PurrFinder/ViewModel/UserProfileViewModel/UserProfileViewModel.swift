@@ -10,6 +10,7 @@ import MapKit
 import Firebase
 
 extension UserProfileView {
+    
     @MainActor class UserProfileViewModel: ObservableObject {
         func signOut() {
             firebaseAuthService.signOut()
