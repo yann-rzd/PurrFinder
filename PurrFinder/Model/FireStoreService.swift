@@ -16,6 +16,7 @@ final class FireStoreService {
     private init() {}
     
     func createUser(user: User, completion: @escaping (Error?) -> Void) {
+        
         let data: [String: Any] = ["username": user.name,
             "email": user.email,
             "phone": user.phone,

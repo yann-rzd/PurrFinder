@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-import Photos
-import PhotosUI
 
 class ImagePickerViewModel: ObservableObject {
     @Published var image: UIImage?
     @Published var showPicker = false
-    @Published var source: Picker.Source = .library
+    @Published var source = "library"
     
     func showPhotoPicker() {
         showPicker = true
