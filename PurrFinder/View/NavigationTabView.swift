@@ -12,9 +12,9 @@ struct NavigationTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            UserView()
+            ChatHelpView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
+                    Image(systemName: "text.bubble.fill")
                         .font(.system(size: 50))
                 }
                 .tag(0)
@@ -27,9 +27,9 @@ struct NavigationTabView: View {
                 }
                 .tag(1)
             
-            ChatHelpView()
+            UserView()
                 .tabItem {
-                    Image(systemName: "text.bubble.fill")
+                    Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 50))
                     
                 }

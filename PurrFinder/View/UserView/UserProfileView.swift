@@ -16,7 +16,7 @@ struct UserProfileView: View {
     @State private var authorizationStatus = PHPhotoLibrary.authorizationStatus()
     
     @State var changeProfileImage = false
-    @State var imageSelected = UIImage()
+//    @State var imageSelected = UIImage()
 
     var body: some View {
         VStack {
