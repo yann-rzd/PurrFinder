@@ -12,6 +12,8 @@ enum AuthenticationServiceError: LocalizedError {
     case emailIdIsEmpty
     case passwordMismatch
     case resetPassword
+    case phoneNumberFormatIsIncorrect
+    case emailFormatIsInccorect
     
     var errorDescription: String {
         switch self {
@@ -23,6 +25,10 @@ enum AuthenticationServiceError: LocalizedError {
             return "Password mismacth"
         case .resetPassword:
             return "RESET"
+        case .phoneNumberFormatIsIncorrect:
+            return "Phone number format incorrect"
+        case .emailFormatIsInccorect:
+            return "Email address format incorrect"
         
         }
     }
