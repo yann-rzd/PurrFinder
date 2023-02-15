@@ -6,17 +6,10 @@
 //
 
 import SwiftUI
-import Photos
 
 struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
-    @State var presentNotAuthorizedProhibitedAlert = false
-    
-    @State private var authorizationStatus = PHPhotoLibrary.authorizationStatus()
-    
-    @State var changeProfileImage = false
-//    @State var imageSelected = UIImage()
 
     var body: some View {
         VStack {
@@ -36,7 +29,7 @@ struct UserProfileView: View {
                 }
                 
                 Button {
-                    self.checkAuthorization()
+                    imagePickerViewModel.checkAuthorization()
                 } label: {
                     Image(systemName: "plus")
                         .frame(width: 30, height: 30)
@@ -46,7 +39,7 @@ struct UserProfileView: View {
                 }
                 
             }
-            .sheet(isPresented: $changeProfileImage) {
+            .sheet(isPresented: $imagePickerViewModel.changeProfileImage) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: $imagePickerViewModel.image)
             }
             
@@ -70,35 +63,8 @@ struct UserProfileView: View {
             .cornerRadius(10)
             .padding(.top, 25)
         }
-        .alert(isPresented: $presentNotAuthorizedProhibitedAlert) {
+        .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {
             Alert(title: Text("Pas autorisé"), message: Text("Vous avez refusé l'accès à votre galerie. Vous pouvez changer cela dans les paramètres."), dismissButton: .default(Text("Fermer")))
-        }
-    }
-    
-    func checkAuthorization() {
-        authorizationStatus = PHPhotoLibrary.authorizationStatus()
-        switch authorizationStatus {
-        case .notDetermined, .restricted, .denied:
-            requestAccess()
-        case .authorized, .limited:
-            changeProfileImage = true
-        default:
-            break
-        }
-        
-    }
-    
-    
-    func requestAccess() {
-        PHPhotoLibrary.requestAuthorization { (status) in
-            self.authorizationStatus = status
-            switch status {
-            case .authorized:
-                changeProfileImage = true
-            default:
-                authorizationStatus = status
-                self .presentNotAuthorizedProhibitedAlert = true
-            }
         }
     }
 }
