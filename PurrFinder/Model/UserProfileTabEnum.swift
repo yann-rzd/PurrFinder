@@ -9,5 +9,5 @@ import Foundation
 
 enum Tab: String {
     case profile = "Profil"
-    case alerts = "Alertes"
+    case settings = "Settings"
 }

@@ -7,12 +7,13 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
-struct User {
-    let uid: String
+struct User: Identifiable {
+    let id = UUID()
     let name: String
     let email: String
     let phone: String
-    let profileImage: String
-    let location: CLLocation
+    let profileImage: UIImage?
+    let location: CLLocation?
 }

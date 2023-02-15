@@ -17,12 +17,11 @@ final class FireStoreService {
     
     func createUser(user: User, completion: @escaping (Error?) -> Void) {
         
-        let data: [String: Any] = ["username": user.name,
+        let data: [String: Any] = ["name": user.name,
             "email": user.email,
-            "phone": user.phone,
-            "location": user.location]
+            "phone": user.phone]
         
-        db.collection("users").document(user.uid).setData(data) { (error) in
+        db.collection("users").document(user.id.uuidString).setData(data) { (error) in
             if let error = error {
                 completion(error)
                 return
@@ -41,7 +40,7 @@ final class FireStoreService {
             "locationLatitude": post.location.latitude,
             "locationLongitude": post.location.longitude,
             "date": post.date,
-            "userId": post.user.uid
+            "userId": post.user.id
         ]
         
         postRef.setData(data) { error in

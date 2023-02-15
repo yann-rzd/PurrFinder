@@ -60,6 +60,7 @@
 		E4DF024E2992691A004E1CC6 /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024D2992691A004E1CC6 /* FireStoreService.swift */; };
 		E4DF0253299294F1004E1CC6 /* ChatHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0252299294F1004E1CC6 /* ChatHelpView.swift */; };
 		E4DF02552992985A004E1CC6 /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02542992985A004E1CC6 /* NavigationTabView.swift */; };
+		E4E66453299D2607002F5A79 /* FirestoreAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E66452299D2607002F5A79 /* FirestoreAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		E4DF024D2992691A004E1CC6 /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		E4DF0252299294F1004E1CC6 /* ChatHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelpView.swift; sourceTree = "<group>"; };
 		E4DF02542992985A004E1CC6 /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
+		E4E66452299D2607002F5A79 /* FirestoreAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreAuthService.swift; sourceTree = "<group>"; };
 		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */,
+				E4E66452299D2607002F5A79 /* FirestoreAuthService.swift */,
 				E4DF0205299187BC004E1CC6 /* AuthenticationServiceError.swift */,
 			);
 			path = Authentication;
@@ -615,6 +618,7 @@
 				E4DF0206299187BC004E1CC6 /* AuthenticationServiceError.swift in Sources */,
 				E4CA4855299401EF00CEEA3E /* ImagePicker.swift in Sources */,
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
+				E4E66453299D2607002F5A79 /* FirestoreAuthService.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
 				E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */,
 				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,

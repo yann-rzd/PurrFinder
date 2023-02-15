@@ -30,10 +30,10 @@ struct SignUpView: View {
             VStack {
                 Image("Logo")
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 50, height: 50)
                 
                 Text("PurrFinder")
-                    .font(Font.custom("AmaticSC-Bold", size: 32))
+                    .font(Font.custom("AmaticSC-Bold", size: 24))
                     .foregroundColor(Color("BluePurr"))
                 
                 Text("S'incrire")
@@ -41,6 +41,18 @@ struct SignUpView: View {
                     .fontWeight(.bold)
                     .foregroundColor(signUpViewModel.color)
                     .padding(.top, 35)
+                
+                TextField("Nom", text: $signUpViewModel.name)
+                    .textInputAutocapitalization(.never)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
+                    .padding(.top, 25)
+                
+                TextField("Téléphone", text: $signUpViewModel.phone)
+                    .textInputAutocapitalization(.never)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
+                    .padding(.top, 25)
                 
                 TextField("Email", text: $signUpViewModel.email)
                     .textInputAutocapitalization(.never)

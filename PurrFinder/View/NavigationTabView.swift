@@ -27,7 +27,7 @@ struct NavigationTabView: View {
                 }
                 .tag(1)
             
-            UserView()
+            UserProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 50))
