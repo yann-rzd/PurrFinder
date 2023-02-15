@@ -87,9 +87,9 @@ extension SignUpView {
         }
         
         private func isValidEmail(email: String) -> Bool {
-            let PHONE_REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-            let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-            let result = phoneTest.evaluate(with: email)
+            let EMAIL_REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let emailTest = NSPredicate(format: "SELF MATCHES %@", EMAIL_REGEX)
+            let result = emailTest.evaluate(with: email)
             return result
         }
         
