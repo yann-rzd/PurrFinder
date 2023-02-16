@@ -23,25 +23,25 @@ extension SignUpView {
         
         func register() {
             guard self.isValidEmail(email: self.email) else {
-                self.error = AuthenticationServiceError.emailFormatIsInccorect.errorDescription
+                self.error = FirebaseAuthServiceError.emailFormatIsInccorect.errorDescription
                 self.alert.toggle()
                 return
             }
             
             guard self.isValidPhoneNumber(phone: self.phone) else {
-                self.error = AuthenticationServiceError.phoneNumberFormatIsIncorrect.errorDescription
+                self.error = FirebaseAuthServiceError.phoneNumberFormatIsIncorrect.errorDescription
                 self.alert.toggle()
                 return
             }
             
             guard !self.email.isEmpty && !self.name.isEmpty && !self.phone.isEmpty else {
-                self.error = AuthenticationServiceError.contentsNotFilledProperly.errorDescription
+                self.error = FirebaseAuthServiceError.contentsNotFilledProperly.errorDescription
                 self.alert.toggle()
                 return
             }
             
             guard self.pass == self.repass else {
-                self.error = AuthenticationServiceError.passwordMismatch.errorDescription
+                self.error = FirebaseAuthServiceError.passwordMismatch.errorDescription
                 self.alert.toggle()
                 return
             }
@@ -64,17 +64,22 @@ extension SignUpView {
         
         /// Create user and save data in FireStore
         private func createUser() {
-            self.fireStoreService.createUser(user: User(name: self.name,
-                                                        email: self.email,
-                                                        phone: self.phone,
-                                                        profileImage: nil,
-                                                        location: nil)) { error in
-                if let error = error {
-                    // Gestion de l'erreur
-                    print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
-                } else {
-                    // Traitement réussi
+            Task {
+                let user = User(
+                    name: self.name,
+                    email: self.email,
+                    phone: self.phone,
+                    profileImage: nil,
+                    locationLatitude: nil,
+                    locationLongitude: nil
+                )
+                
+                do {
+                    try await fireStoreService.createUserData(user: user)
                     print("Utilisateur créé avec succès !")
+                } catch {
+                    
+                    print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
                 }
             }
         }
@@ -94,6 +99,6 @@ extension SignUpView {
         }
         
         private let firebaseAuthService = FirebaseAuthService.shared
-        private let fireStoreService = FireStoreService.shared
+        private let fireStoreService = FirestoreService.shared
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AuthenticationServiceError: LocalizedError {
+enum FirebaseAuthServiceError: LocalizedError {
     case contentsNotFilledProperly
     case emailIdIsEmpty
     case passwordMismatch

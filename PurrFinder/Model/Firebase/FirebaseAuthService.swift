@@ -11,6 +11,7 @@ import Firebase
 final class FirebaseAuthService {
     
     static let shared = FirebaseAuthService()
+    let currentUser = Auth.auth().currentUser
     
     private init() { }
     

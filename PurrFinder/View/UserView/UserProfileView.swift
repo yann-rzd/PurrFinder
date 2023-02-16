@@ -12,12 +12,6 @@ struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     
-    @State var isEditProfileInformation = false
-    
-    @State var userInfo: (name: String, phone: String) = ("", "")
-    
-    @State var color = Color.black.opacity(0.7)
-    
     var body: some View {
         
         VStack {
@@ -56,7 +50,7 @@ struct UserProfileView: View {
             Button(action: {
                 // Allow edit or save
             }) {
-                Text(isEditProfileInformation ? "Sauvegarder" : "Éditer")
+                Text(userProfileViewModel.isEditProfileInformation ? "Sauvegarder" : "Éditer")
                     .foregroundColor(.white)
                     .padding(.vertical, 5)
                     .frame(width: UIScreen.main.bounds.width - 250)
@@ -69,15 +63,17 @@ struct UserProfileView: View {
             
             
             /// Profile information
-            TextField("Nom", text: $userInfo.name)
+            TextField("Nom", text: $userProfileViewModel.name)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userInfo.name != "" ? Color("BluePurr") : color, lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.name != "" ? Color("BluePurr") : userProfileViewModel.color, lineWidth: 2))
                 .padding(.horizontal, 20)
             
-            TextField("Téléphone", text: $userInfo.phone)
+            TextField("Téléphone", text: $userProfileViewModel.phone)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userInfo.phone != "" ? Color("BluePurr") : color, lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.phone != "" ? Color("BluePurr") : userProfileViewModel.color, lineWidth: 2))
                 .padding(.horizontal, 20)
+            
+            Text(userProfileViewModel.name)
             
             Spacer()
             
@@ -97,8 +93,12 @@ struct UserProfileView: View {
             .cornerRadius(10)
             .padding(.top, 25)
         }
+        .task {
+            await userProfileViewModel.getUserData()
+        }
         .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {
             Alert(title: Text("Pas autorisé"), message: Text("Vous avez refusé l'accès à votre galerie. Vous pouvez changer cela dans les paramètres."), dismissButton: .default(Text("Fermer")))
+            
         }
     }
 }

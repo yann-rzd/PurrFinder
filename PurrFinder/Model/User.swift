@@ -6,14 +6,15 @@
 //
 
 import Foundation
-import CoreLocation
-import UIKit
+import Firebase
+import SwiftUI
 
 struct User: Identifiable {
-    let id = UUID()
-    let name: String
-    let email: String
-    let phone: String
-    let profileImage: UIImage?
-    let location: CLLocation?
-}
+    var id = UUID()
+    var name: String
+    var email: String
+    var phone: String
+    var profileImage: UIImage?
+    var locationLatitude: String?
+    var locationLongitude: String?
+    }

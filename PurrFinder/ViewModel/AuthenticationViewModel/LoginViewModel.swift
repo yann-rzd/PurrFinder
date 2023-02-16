@@ -33,7 +33,7 @@ extension LoginView {
                     }
                 }
             } else {
-                self.error = AuthenticationServiceError.contentsNotFilledProperly.errorDescription
+                self.error = FirebaseAuthServiceError.contentsNotFilledProperly.errorDescription
                 self.alert.toggle()
             }
             
@@ -44,7 +44,7 @@ extension LoginView {
                 firebaseAuthService.resetPassword(email: self.email) { (result) in
                     switch result {
                     case .success:
-                        self.error = AuthenticationServiceError.resetPassword.errorDescription
+                        self.error = FirebaseAuthServiceError.resetPassword.errorDescription
                         self.alert.toggle()
                     case .failure(let error):
                         self.error = error.localizedDescription
@@ -53,7 +53,7 @@ extension LoginView {
                     }
                 }
             } else {
-                self.error = AuthenticationServiceError.emailIdIsEmpty.errorDescription
+                self.error = FirebaseAuthServiceError.emailIdIsEmpty.errorDescription
                 self.alert.toggle()
             }
         }
