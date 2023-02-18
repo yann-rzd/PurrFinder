@@ -14,23 +14,45 @@ final class FirestoreService {
     
     let db = Firestore.firestore()
     
-    
     private init() {}
     
     
     private func getUserDocumentReference(user: User) -> DocumentReference {
-        db.collection("userData").document(user.id.uuidString)
+        return db.collection("userData").document(user.id.uuidString)
     }
     
-    func createUserData(user: User) async throws {
+    func saveUserData(user: User) async throws {
         let userData = user.createUserData()
         try await getUserDocumentReference(user: user).setData(myStruct: userData)
+        
     }
     
-    func getUserData(user: User) async throws -> UserDTO {
-        let docRef = db.collection("userData").document(user.id.uuidString)
-        return try await docRef.getDocument(as: UserDTO.self)
+    //    func getUserData(user: User) async throws -> UserDTO {
+    //        let docRef = db.collection("userData").document(user.id.uuidString)
+    //        print("DOC REF : \(docRef)")
+    //        return try await docRef.getDocument(as: UserDTO.self)
+    //    }
+    //
+    
+    func getUserData(currentUserEmail: String) async throws -> UserDTO {
+        let query = db.collection("userData").whereField("email", isEqualTo: currentUserEmail)
+        let querySnapshot = try await query.getDocuments()
+        
+        guard let document = querySnapshot.documents.first else {
+            throw NSError(domain: "UserData", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
+        }
+        
+        let userDict = document.data()
+        let userData = try JSONSerialization.data(withJSONObject: userDict, options: [])
+        let userDTO = try JSONDecoder().decode(UserDTO.self, from: userData)
+        
+        return userDTO
     }
+    
+    
+    
+    
+    
     
     
     func createPost(post: PostAlert) async throws {
@@ -49,4 +71,6 @@ final class FirestoreService {
             }
         }
     }
+    
+    private let firebaseAuthService = FirebaseAuthService.shared
 }

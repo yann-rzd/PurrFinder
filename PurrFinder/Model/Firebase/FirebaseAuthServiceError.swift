@@ -14,6 +14,7 @@ enum FirebaseAuthServiceError: LocalizedError {
     case resetPassword
     case phoneNumberFormatIsIncorrect
     case emailFormatIsInccorect
+    case currentUserNotFound
     
     var errorDescription: String {
         switch self {
@@ -29,6 +30,8 @@ enum FirebaseAuthServiceError: LocalizedError {
             return "Phone number format incorrect"
         case .emailFormatIsInccorect:
             return "Email address format incorrect"
+        case .currentUserNotFound:
+            return "Current user not found"
         
         }
     }

@@ -21,6 +21,9 @@ extension SignUpView {
         @Published var alert = false
         @Published var error = ""
         
+//        var userData = User(name: "", email: "", phone: "")
+        
+        
         func register() {
             guard self.isValidEmail(email: self.email) else {
                 self.error = FirebaseAuthServiceError.emailFormatIsInccorect.errorDescription
@@ -75,7 +78,7 @@ extension SignUpView {
                 )
                 
                 do {
-                    try await fireStoreService.createUserData(user: user)
+                    try await fireStoreService.saveUserData(user: user)
                     print("Utilisateur créé avec succès !")
                 } catch {
                     

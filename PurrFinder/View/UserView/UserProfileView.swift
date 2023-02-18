@@ -94,7 +94,12 @@ struct UserProfileView: View {
             .padding(.top, 25)
         }
         .task {
-            await userProfileViewModel.getUserData()
+            do {
+                try await userProfileViewModel.getUserData()
+            } catch {
+                // handle error
+            }
+            
         }
         .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {
             Alert(title: Text("Pas autorisé"), message: Text("Vous avez refusé l'accès à votre galerie. Vous pouvez changer cela dans les paramètres."), dismissButton: .default(Text("Fermer")))

@@ -17,4 +17,4 @@ struct User: Identifiable {
     var profileImage: UIImage?
     var locationLatitude: String?
     var locationLongitude: String?
-    }
+}

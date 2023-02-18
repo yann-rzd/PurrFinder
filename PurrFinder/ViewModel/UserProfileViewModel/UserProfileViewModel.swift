@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 
 extension UserProfileView {
     
@@ -18,37 +19,16 @@ extension UserProfileView {
         @Published var email: String = ""
         @Published var phone: String = ""
         @Published var profileImage: UIImage? = nil
-        @Published var locationLatitude: String = ""
-        @Published var locationLongitude: String = ""
-        
-        //        var currentUserId = ""
-        //
-        //        @Published var user = User(
-        //            name:  "",
-        //            email: "",
-        //            phone: "",
-        //            profileImage: nil,
-        //            locationLatitude: nil,
-        //            locationLongitude: nil
-        //        )
-        
-        
-        func getUserData() async {
+        @Published var locationLatitude: String? = nil
+        @Published var locationLongitude: String? = nil
+                
+        func getUserData() async throws {
+            let currentUserEmail = firebaseAuthService.getCurrentUserEmail()
             
-//            let user = User(id: UUID(uuidString: "1234")!, name: "", email: "", phone: "", profileImage: nil, locationLatitude: nil, locationLongitude: nil)
-//
-//            do {
-//                let userDTO = try await firestoreService.getUserData(user: user)
-//                print("USER DTO : \(userDTO)")
-//                self.name = userDTO.name
-//                self.email = userDTO.email
-//                self.phone = userDTO.phone
-//            } catch {
-//                print("Erreur lors de la récupération des données utilisateur : \(error.localizedDescription)")
-//            }
-            
+            let userDTO = try await firestoreService.getUserData(currentUserEmail: currentUserEmail)
+            name = userDTO.name
+            phone = userDTO.phone
         }
-        
         
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
@@ -58,8 +38,6 @@ extension UserProfileView {
         }
     }
 }
-
-// E068D0E1-6F7D-4E40-9785-23A1C638B3CD
 
 
 

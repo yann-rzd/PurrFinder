@@ -11,7 +11,6 @@ import Firebase
 final class FirebaseAuthService {
     
     static let shared = FirebaseAuthService()
-    let currentUser = Auth.auth().currentUser
     
     private init() { }
     
@@ -55,5 +54,12 @@ final class FirebaseAuthService {
     
     func signOut() {
         try! Auth.auth().signOut()
+    }
+    
+    func getCurrentUserEmail() -> String{
+        guard let email = Auth.auth().currentUser?.email else {
+            return ""
+        }
+        return email
     }
 }
