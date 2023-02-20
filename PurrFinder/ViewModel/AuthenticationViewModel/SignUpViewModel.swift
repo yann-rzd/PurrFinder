@@ -21,6 +21,8 @@ extension SignUpView {
         @Published var alert = false
         @Published var error = ""
         
+        var defaultProfileImage = Image("Profile")
+        
 //        var userData = User(name: "", email: "", phone: "")
         
         
@@ -75,7 +77,7 @@ extension SignUpView {
                     name: self.name,
                     email: self.email,
                     phone: self.phone,
-                    profileImage: nil,
+                    profileImage: UIImage(contentsOfFile: "Profile"),
                     locationLatitude: nil,
                     locationLongitude: nil
                 )

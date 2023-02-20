@@ -18,9 +18,10 @@ extension UserProfileView {
         @Published var name: String = ""
         @Published var email: String = ""
         @Published var phone: String = ""
-        @Published var profileImage: UIImage? = nil
+        @Published var profileImage: UIImage?
         @Published var locationLatitude: String? = nil
         @Published var locationLongitude: String? = nil
+        
                 
         func getUserData() async throws {
             let userUID = firebaseAuthService.getCurrentUserUID()

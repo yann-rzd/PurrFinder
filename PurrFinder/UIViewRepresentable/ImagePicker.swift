@@ -2,43 +2,53 @@
 //  ImagePicker.swift
 //  PurrFinder
 //
-//  Created by Yann Rouzaud on 08/02/2023.
+//  Created by Yann Rouzaud on 20/02/2023.
 //
 
-import Foundation
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
-
-    var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    @Binding var selectedImage: UIImage?
-    @Environment(\.presentationMode) private var presentationMode
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = sourceType
-        imagePicker.delegate = context.coordinator
-        return imagePicker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-    }
-
+    
+    @Binding var image: UIImage?
+    
+    private let controller = UIImagePickerController()
+    
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        return Coordinator(parent: self, storageService: StorageService.shared)
     }
-
-    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        var parent: ImagePicker
-        init(_ parent: ImagePicker) {
+    
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
+        let parent: ImagePicker
+        let storageService: StorageService
+        
+        init(parent: ImagePicker, storageService: StorageService) {
             self.parent = parent
+            self.storageService = storageService
         }
-
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selectedImage = image
+            parent.image = info[.originalImage] as? UIImage
+            if let image = parent.image {
+                storageService.persistImageToStorage(image: image)
+//                self.parent.parentViewModel.profileImage = image
             }
-            parent.presentationMode.wrappedValue.dismiss()
+            picker.dismiss(animated: true)
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
         }
     }
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        controller.delegate = context.coordinator
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+    
+//    private let storageService = StorageService.shared
 }

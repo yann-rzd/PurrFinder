@@ -15,9 +15,9 @@ class ImagePickerViewModel: ObservableObject {
     @Published private var authorizationStatus = PHPhotoLibrary.authorizationStatus()
     @Published var changeProfileImage = false
     
-    func showPhotoPicker() {
-        showPicker = true
-    }
+//    func showPhotoPicker() {
+//        showPicker = true
+//    }
     
     func checkAuthorization() {
         authorizationStatus = PHPhotoLibrary.authorizationStatus()

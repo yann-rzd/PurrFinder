@@ -12,7 +12,7 @@ struct UserDTO: Decodable {
     let name: String
     let email: String
     let phone: String
-    let profileImageData: Data?
+    let profileImage: Data?
     let locationLatitude: String?
     let locationLongitude: String?
 }

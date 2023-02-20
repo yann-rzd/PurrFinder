@@ -14,7 +14,7 @@ extension User {
             name: name,
             email: email,
             phone: phone,
-            profileImageData: profileImage?.pngData(),
+            profileImage: profileImage?.pngData(),
             locationLatitude: locationLatitude,
             locationLongitude: locationLongitude
         )

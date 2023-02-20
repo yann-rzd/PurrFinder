@@ -12,27 +12,31 @@ struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     
+    let storageService = StorageService.shared
+    
     var body: some View {
         
         VStack {
             /// Profile image and edit image button
             ZStack(alignment: .bottomTrailing) {
                 ZStack {
-                    if let image = imagePickerViewModel.profileImage {
+                    if let image = userProfileViewModel.profileImage {
                         Image(uiImage: image)
                             .resizable()
                             .frame(width: 120, height: 120)
                             .clipShape(Circle())
                     } else {
-                        Image("Profile")
+                        Image(systemName: "person.crop.circle")
                             .resizable()
                             .frame(width: 120, height: 120)
                             .clipShape(Circle())
+//                            .foregroundColor(Color("BluePurr"))
                     }
                 }
                 
                 Button {
                     imagePickerViewModel.checkAuthorization()
+                    
                 } label: {
                     Image(systemName: "plus")
                         .frame(width: 30, height: 30)
@@ -42,9 +46,10 @@ struct UserProfileView: View {
                 }
             }
             .padding(.top, 25)
-            .sheet(isPresented: $imagePickerViewModel.changeProfileImage) {
-                ImagePicker(sourceType: .photoLibrary, selectedImage: $imagePickerViewModel.profileImage)
-            }
+            //            .sheet(isPresented: $imagePickerViewModel.changeProfileImage) {
+            //                ImagePicker(sourceType: .photoLibrary, selectedImage: $imagePickerViewModel.profileImage)
+            //            }
+            
             
             /// Edit profile informations button
             Button(action: {
@@ -75,6 +80,8 @@ struct UserProfileView: View {
             
             Text(userProfileViewModel.name)
             
+            
+            
             Spacer()
             
             
@@ -101,11 +108,17 @@ struct UserProfileView: View {
             }
             
         }
+        
         .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {
             Alert(title: Text("Pas autorisé"), message: Text("Vous avez refusé l'accès à votre galerie. Vous pouvez changer cela dans les paramètres."), dismissButton: .default(Text("Fermer")))
             
         }
+        .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
+            ImagePicker(image: $userProfileViewModel.profileImage)
+        }
+        
     }
+    
 }
 
 struct UserProfileView_Previews: PreviewProvider {
