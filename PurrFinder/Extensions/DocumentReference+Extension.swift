@@ -10,14 +10,17 @@ import FirebaseFirestore
 
 extension DocumentReference {
     
-    func getDocument<T: Decodable>(as type: T.Type) async throws -> T {
+    func getDocument<T: Decodable>(as type: T.Type) async throws -> (String, T) {
         do {
-            let document = try await self.getDocument().data()
-            if let documentData = document {
+            let document = try await self.getDocument()
+           
+            let documentData = document.data()
+            
+            if let documentData = documentData {
                 let jsonData = try JSONSerialization.data(withJSONObject: documentData)
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(T.self, from: jsonData)
-                return decodedData
+                return (document.documentID, decodedData)
             } else {
                 throw FirestoreServiceError.documentNotFound
             }

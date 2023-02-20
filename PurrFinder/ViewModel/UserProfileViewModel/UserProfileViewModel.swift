@@ -23,9 +23,9 @@ extension UserProfileView {
         @Published var locationLongitude: String? = nil
                 
         func getUserData() async throws {
-            let currentUserEmail = firebaseAuthService.getCurrentUserEmail()
+            let userUID = firebaseAuthService.getCurrentUserUID()
             
-            let userDTO = try await firestoreService.getUserData(currentUserEmail: currentUserEmail)
+            let userDTO = try await firestoreService.getUserData(userUID: userUID)
             name = userDTO.name
             phone = userDTO.phone
         }

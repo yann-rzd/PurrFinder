@@ -13,7 +13,7 @@ struct PostAlertDTO: Encodable {
     let locationLatitude: Double
     let locationLongitude: Double
     let date: Date
-    let userId: UUID
+    let userId: String
     
     
     init(postAlert: PostAlert) {
@@ -22,7 +22,7 @@ struct PostAlertDTO: Encodable {
         self.locationLatitude = postAlert.location.latitude
         self.locationLongitude = postAlert.location.longitude
         self.date = postAlert.date
-        self.userId = postAlert.user.id
+        self.userId = postAlert.user.uid
         
     }
 }

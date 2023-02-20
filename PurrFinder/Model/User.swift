@@ -9,8 +9,8 @@ import Foundation
 import Firebase
 import SwiftUI
 
-struct User: Identifiable {
-    var id = UUID()
+struct User {
+    var uid: String
     var name: String
     var email: String
     var phone: String

@@ -10,6 +10,7 @@ import Foundation
 extension User {
     func createUserData() -> UserDTO {
         .init(
+            uid: uid,
             name: name,
             email: email,
             phone: phone,

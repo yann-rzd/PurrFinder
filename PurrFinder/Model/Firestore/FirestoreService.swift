@@ -18,7 +18,7 @@ final class FirestoreService {
     
     
     private func getUserDocumentReference(user: User) -> DocumentReference {
-        return db.collection("userData").document(user.id.uuidString)
+        return db.collection("userData").document(user.uid)
     }
     
     func saveUserData(user: User) async throws {
@@ -27,33 +27,14 @@ final class FirestoreService {
         
     }
     
-    //    func getUserData(user: User) async throws -> UserDTO {
-    //        let docRef = db.collection("userData").document(user.id.uuidString)
-    //        print("DOC REF : \(docRef)")
-    //        return try await docRef.getDocument(as: UserDTO.self)
-    //    }
-    //
-    
-    func getUserData(currentUserEmail: String) async throws -> UserDTO {
-        let query = db.collection("userData").whereField("email", isEqualTo: currentUserEmail)
-        let querySnapshot = try await query.getDocuments()
+    func getUserData(userUID: String) async throws -> UserDTO {
+        let docRef = db.collection("userData").document(userUID)
+        let userDTOResponse = try await docRef.getDocument(as: UserDTO.self)
         
-        guard let document = querySnapshot.documents.first else {
-            throw NSError(domain: "UserData", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
-        }
-        
-        let userDict = document.data()
-        let userData = try JSONSerialization.data(withJSONObject: userDict, options: [])
-        let userDTO = try JSONDecoder().decode(UserDTO.self, from: userData)
-        
-        return userDTO
+        let id = userDTOResponse.0
+        print(id)
+        return userDTOResponse.1
     }
-    
-    
-    
-    
-    
-    
     
     func createPost(post: PostAlert) async throws {
         let postRef = db.collection("postAlertData").document()
@@ -71,6 +52,4 @@ final class FirestoreService {
             }
         }
     }
-    
-    private let firebaseAuthService = FirebaseAuthService.shared
 }

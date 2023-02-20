@@ -68,7 +68,10 @@ extension SignUpView {
         /// Create user and save data in FireStore
         private func createUser() {
             Task {
+                let uid = firebaseAuthService.getCurrentUserUID()
+                
                 let user = User(
+                    uid: uid,
                     name: self.name,
                     email: self.email,
                     phone: self.phone,
@@ -79,7 +82,7 @@ extension SignUpView {
                 
                 do {
                     try await fireStoreService.saveUserData(user: user)
-                    print("Utilisateur créé avec succès !")
+                    print("USER UUID : \(user.uid)")
                 } catch {
                     
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")

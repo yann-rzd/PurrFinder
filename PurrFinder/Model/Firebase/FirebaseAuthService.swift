@@ -56,10 +56,17 @@ final class FirebaseAuthService {
         try! Auth.auth().signOut()
     }
     
-    func getCurrentUserEmail() -> String{
+    func getCurrentUserEmail() -> String {
         guard let email = Auth.auth().currentUser?.email else {
             return ""
         }
         return email
+    }
+    
+    func getCurrentUserUID() -> String {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return ""
+        }
+        return uid
     }
 }
