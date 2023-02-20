@@ -17,8 +17,8 @@ final class StorageService {
     private let firebaseAuthService = FirebaseAuthService.shared
     
     func persistImageToStorage(image: UIImage) {
-        let uid = firebaseAuthService.getCurrentUserUID()
-        let ref = Storage.storage().reference(withPath: uid)
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
         
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         
@@ -33,10 +33,22 @@ final class StorageService {
                     print("Failed to retreive downLoadURL : \(error)")
                     return
                 }
-                
                 print("Successfully stored image with url : \(url?.absoluteString ?? "")")
             }
             
         }
+    }
+    
+    
+    func downloadProfileImage() async throws -> UIImage? {
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let storage = Storage.storage().reference(withPath: "profileImages/\(userUID)")
+
+        let url = try await storage.downloadURL()
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        guard let profileImage = UIImage(data: data) else { return nil}
+        
+        return profileImage
     }
 }

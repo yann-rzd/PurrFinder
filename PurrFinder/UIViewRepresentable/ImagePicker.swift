@@ -31,7 +31,6 @@ struct ImagePicker: UIViewControllerRepresentable {
             parent.image = info[.originalImage] as? UIImage
             if let image = parent.image {
                 storageService.persistImageToStorage(image: image)
-//                self.parent.parentViewModel.profileImage = image
             }
             picker.dismiss(animated: true)
         }
@@ -49,6 +48,4 @@ struct ImagePicker: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
-    
-//    private let storageService = StorageService.shared
 }
