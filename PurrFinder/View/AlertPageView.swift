@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct AlertPageView: View {
-    
+    @StateObject var locationViewModel = LocationViewModel()
     var body: some View {
         
         VStack {
@@ -29,6 +30,11 @@ struct AlertPageView: View {
                 .padding(.horizontal, 50)
                 .padding(.top, 20)
                 .multilineTextAlignment(.center)
+            
+            Text("Lat : \(locationViewModel.latitude) \nLng : \(locationViewModel.longitude)")
+        }
+        .onAppear() {
+            locationViewModel.getUserLocation()
         }
     }
     

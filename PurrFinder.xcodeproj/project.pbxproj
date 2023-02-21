@@ -11,6 +11,7 @@
 		5460B51BFFC5BD4B0073CC1D /* Pods_PurrFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */; };
 		906E48FB95523ED004AD8EE0 /* Pods_PurrFinder_PurrFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5218D5C6DE1213B37BCB19 /* Pods_PurrFinder_PurrFinderUITests.framework */; };
 		E41B483B29A3D6F200341687 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B483A29A3D6F200341687 /* ImagePicker.swift */; };
+		E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4326FB329A52DE600A1592A /* LocationViewModel.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
 		E4CA485B299403F900CEEA3E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485A299403F900CEEA3E /* Picker.swift */; };
@@ -90,6 +91,7 @@
 		70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E41B483A29A3D6F200341687 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E4326FB329A52DE600A1592A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
 		E4CA485A299403F900CEEA3E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				E4DF020A29918889004E1CC6 /* AuthenticationViewModel */,
 				E4DF020729918808004E1CC6 /* UserProfileViewModel */,
+				E4326FB329A52DE600A1592A /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				E4E6645C299E6A34002F5A79 /* PostAlertDTO.swift in Sources */,
 				E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
+				E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */,
 				E4DF02552992985A004E1CC6 /* NavigationTabView.swift in Sources */,
 				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,
 				E4DF024429919C31004E1CC6 /* Notification.swift in Sources */,
@@ -856,12 +860,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PurrFinder/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need access to your location to identify where your pet has strayed and receive notifications from other users in the area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need access to your location to identify where your pet has strayed and receive notifications from other users in the area.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to your photo library to choose a photo to display.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -888,12 +895,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PurrFinder/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need access to your location to identify where your pet has strayed and receive notifications from other users in the area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need access to your location to identify where your pet has strayed and receive notifications from other users in the area.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to your photo library to choose a photo to display.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

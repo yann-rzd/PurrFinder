@@ -109,7 +109,7 @@ extension SignUpView {
         }
         
         private func isValidUserName(userName: String) -> Bool {
-            let USERNAME_REGEX = "^(?:[\\p{L}\\p{M}]|\\d)$|^(?:[\\p{L}\\p{M}]|\\d){25,}$"
+            let USERNAME_REGEX = "^[0-9a-zA-Z\\_]{2,18}$"
             let phoneTest = NSPredicate(format: "SELF MATCHES %@", USERNAME_REGEX)
             let result = phoneTest.evaluate(with: userName)
             return result

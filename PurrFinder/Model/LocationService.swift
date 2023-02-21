@@ -8,21 +8,22 @@
 import Foundation
 import CoreLocation
 
-protocol LocationServiceDelegate: AnyObject {
-    func locationDidUpdate(to location: CLLocation)
-    func locationUpdateDidFail(with error: Error)
-}
-
-class LocationService: NSObject {
+class LocationService: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
-    weak var delegate: LocationServiceDelegate?
-
-    func startUpdatingLocation() {
+    
+    @Published var latitude: Double = 0
+    @Published var longitude: Double = 0
+    
+    override init() {
+        super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func startUpdatingLocation() {
         locationManager.startUpdatingLocation()
     }
-
+    
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
     }
@@ -30,28 +31,15 @@ class LocationService: NSObject {
 
 extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        delegate?.locationDidUpdate(to: location)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        delegate?.locationUpdateDidFail(with: error)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse, .authorizedAlways:
-            manager.startUpdatingLocation()
-        case .denied, .restricted:
-            delegate?.locationUpdateDidFail(with: LocationError.authorizationDenied)
-        case .notDetermined:
-            break
-        @unknown default:
-            break
+        if let location = locations.last {
+            latitude = location.coordinate.latitude
+            longitude = location.coordinate.longitude
         }
     }
-}
-
-enum LocationError: Error {
-    case authorizationDenied
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+            if manager.authorizationStatus == .authorizedWhenInUse {
+                startUpdatingLocation()
+            }
+        }
 }
