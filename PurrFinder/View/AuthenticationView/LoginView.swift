@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @StateObject private var loginViewModel = LoginViewModel()
     @Binding var show: Bool
-
+    
     
     var body: some View {
         
@@ -37,7 +37,7 @@ struct LoginView: View {
                 Text("PurrFinder")
                     .font(Font.custom("AmaticSC-Bold", size: 32))
                     .foregroundColor(Color("BluePurr"))
-                    
+                
                 
                 Text("Se connecter")
                     .font(.title)
@@ -77,7 +77,9 @@ struct LoginView: View {
                     Spacer()
                     
                     Button(action: {
-                        loginViewModel.reset()
+                        Task {
+                            await loginViewModel.reset()
+                        }
                     }) {
                         Text("Mot de passe oublié")
                             .fontWeight(.bold)
@@ -87,7 +89,9 @@ struct LoginView: View {
                 .padding(.top, 20)
                 
                 Button(action: {
-                    loginViewModel.verify()
+                    Task {
+                        await loginViewModel.verify()
+                    }
                 }) {
                     Text("Je me connecte")
                         .foregroundColor(.white)

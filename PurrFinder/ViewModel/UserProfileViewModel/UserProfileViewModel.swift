@@ -25,12 +25,12 @@ extension UserProfileView {
                 
         func getUserData() async throws {
             let userUID = firebaseAuthService.getCurrentUserUID()
-            
-            try await getProfileImage()
-            
+
             let userDTO = try await firestoreService.getUserData(userUID: userUID)
             name = userDTO.name
             phone = userDTO.phone
+            
+            try await getProfileImage()
         }
         
         private func getProfileImage() async throws {

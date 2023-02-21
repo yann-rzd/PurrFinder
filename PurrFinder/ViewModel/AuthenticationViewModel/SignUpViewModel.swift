@@ -26,7 +26,48 @@ extension SignUpView {
 //        var userData = User(name: "", email: "", phone: "")
         
         
-        func register() {
+//        func register() {
+//            guard self.isValidEmail(email: self.email) else {
+//                self.error = FirebaseAuthServiceError.emailFormatIsInccorect.errorDescription
+//                self.alert.toggle()
+//                return
+//            }
+//
+//            guard self.isValidPhoneNumber(phone: self.phone) else {
+//                self.error = FirebaseAuthServiceError.phoneNumberFormatIsIncorrect.errorDescription
+//                self.alert.toggle()
+//                return
+//            }
+//
+//            guard !self.email.isEmpty && !self.name.isEmpty && !self.phone.isEmpty else {
+//                self.error = FirebaseAuthServiceError.contentsNotFilledProperly.errorDescription
+//                self.alert.toggle()
+//                return
+//            }
+//
+//            guard self.pass == self.repass else {
+//                self.error = FirebaseAuthServiceError.passwordMismatch.errorDescription
+//                self.alert.toggle()
+//                return
+//            }
+//
+//            firebaseAuthService.signUp(email: self.email, password: self.pass) { (result) in
+//                switch result {
+//                case .success(_):
+//                    UserDefaults.standard.set(true, forKey: "status")
+//                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+//
+//                    self.createUser()
+//
+//                case .failure(let error):
+//                    self.error = error.localizedDescription
+//                    self.alert.toggle()
+//                    return
+//                }
+//            }
+//        }
+        
+        func register() async {
             guard self.isValidEmail(email: self.email) else {
                 self.error = FirebaseAuthServiceError.emailFormatIsInccorect.errorDescription
                 self.alert.toggle()
@@ -51,19 +92,17 @@ extension SignUpView {
                 return
             }
             
-            firebaseAuthService.signUp(email: self.email, password: self.pass) { (result) in
-                switch result {
-                case .success(_):
-                    UserDefaults.standard.set(true, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                    
-                    self.createUser()
-                    
-                case .failure(let error):
-                    self.error = error.localizedDescription
-                    self.alert.toggle()
-                    return
-                }
+            do {
+                let result = try await firebaseAuthService.signUp(email: self.email, password: self.pass)
+                
+                UserDefaults.standard.set(true, forKey: "status")
+                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                
+                self.createUser()
+            } catch {
+                self.error = error.localizedDescription
+                self.alert.toggle()
+                return
             }
         }
         

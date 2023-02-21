@@ -14,41 +14,66 @@ final class FirebaseAuthService {
     
     private init() { }
     
-    func signIn(email: String,
-                password: String,
-                completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
-        
-        Auth.auth().signIn(withEmail: email, password: password) {(result, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            completion(.success(result!))
+//    func signIn(email: String,
+//                password: String,
+//                completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+//
+//        Auth.auth().signIn(withEmail: email, password: password) {(result, error) in
+//            if let error = error {
+//                completion(.failure(error))
+//                return
+//            }
+//            completion(.success(result!))
+//        }
+//    }
+    
+    func signIn(email: String, password: String) async throws -> AuthDataResult {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            return result
+        } catch {
+            throw error
         }
     }
     
-    func signUp(email: String,
-                password: String,
-                completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-          if let error = error {
-            completion(.failure(error))
-            return
-          }
-          completion(.success(result!))
-        }
-      }
+//    func signUp(email: String,
+//                password: String,
+//                completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+//
+//        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+//          if let error = error {
+//            completion(.failure(error))
+//            return
+//          }
+//          completion(.success(result!))
+//        }
+//      }
     
-    func resetPassword(email: String,
-                completion: @escaping (Result<Void, Error>) -> Void) {
-        
-        Auth.auth().sendPasswordReset(withEmail: email) {(error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            completion(.success(()))
+    func signUp(email: String, password: String) async throws {
+        do {
+            try await Auth.auth().createUser(withEmail: email, password: password)
+        } catch {
+            throw error
+        }
+    }
+    
+//    func resetPassword(email: String,
+//                completion: @escaping (Result<Void, Error>) -> Void) {
+//
+//        Auth.auth().sendPasswordReset(withEmail: email) {(error) in
+//            if let error = error {
+//                completion(.failure(error))
+//                return
+//            }
+//            completion(.success(()))
+//        }
+//    }
+    
+    func resetPassword(email: String) async throws {
+        do {
+            try await Auth.auth().sendPasswordReset(withEmail: email)
+        } catch {
+            throw error
         }
     }
     

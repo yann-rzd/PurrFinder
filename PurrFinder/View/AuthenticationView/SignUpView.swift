@@ -107,7 +107,9 @@ struct SignUpView: View {
                 .padding(.top, 25)
                 
                 Button(action: {
-                    signUpViewModel.register()
+                    Task {
+                        await signUpViewModel.register()
+                    }
                 }) {
                     Text("Je m'inscris")
                         .foregroundColor(.white)
