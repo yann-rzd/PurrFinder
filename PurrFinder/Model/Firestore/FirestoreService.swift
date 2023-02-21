@@ -36,6 +36,14 @@ final class FirestoreService {
         return userDTOResponse.1
     }
     
+    func updateUserDataNamePhone(userUID: String, name: String, phone: String) async throws {
+        let userRef = Firestore.firestore().collection("userData").document(userUID)
+        try await userRef.updateData([
+            "name": name,
+            "phone": phone
+        ])
+    }
+    
     func createPost(post: PostAlert) async throws {
         let postRef = db.collection("postAlertData").document()
         let postDTO = PostAlertDTO(postAlert: post)

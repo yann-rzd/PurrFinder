@@ -22,50 +22,7 @@ extension SignUpView {
         @Published var error = ""
         
         var defaultProfileImage = Image("Profile")
-        
-//        var userData = User(name: "", email: "", phone: "")
-        
-        
-//        func register() {
-//            guard self.isValidEmail(email: self.email) else {
-//                self.error = FirebaseAuthServiceError.emailFormatIsInccorect.errorDescription
-//                self.alert.toggle()
-//                return
-//            }
-//
-//            guard self.isValidPhoneNumber(phone: self.phone) else {
-//                self.error = FirebaseAuthServiceError.phoneNumberFormatIsIncorrect.errorDescription
-//                self.alert.toggle()
-//                return
-//            }
-//
-//            guard !self.email.isEmpty && !self.name.isEmpty && !self.phone.isEmpty else {
-//                self.error = FirebaseAuthServiceError.contentsNotFilledProperly.errorDescription
-//                self.alert.toggle()
-//                return
-//            }
-//
-//            guard self.pass == self.repass else {
-//                self.error = FirebaseAuthServiceError.passwordMismatch.errorDescription
-//                self.alert.toggle()
-//                return
-//            }
-//
-//            firebaseAuthService.signUp(email: self.email, password: self.pass) { (result) in
-//                switch result {
-//                case .success(_):
-//                    UserDefaults.standard.set(true, forKey: "status")
-//                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-//
-//                    self.createUser()
-//
-//                case .failure(let error):
-//                    self.error = error.localizedDescription
-//                    self.alert.toggle()
-//                    return
-//                }
-//            }
-//        }
+
         
         func register() async {
             guard self.isValidEmail(email: self.email) else {
@@ -80,7 +37,13 @@ extension SignUpView {
                 return
             }
             
-            guard !self.email.isEmpty && !self.name.isEmpty && !self.phone.isEmpty else {
+            guard self.isValidUserName(userName: self.name) else {
+                self.error = FirebaseAuthServiceError.userNameFormatIsInccorect.errorDescription
+                self.alert.toggle()
+                return
+            }
+            
+            guard !self.email.isEmpty || !self.name.isEmpty || !self.phone.isEmpty else {
                 self.error = FirebaseAuthServiceError.contentsNotFilledProperly.errorDescription
                 self.alert.toggle()
                 return
@@ -142,6 +105,13 @@ extension SignUpView {
             let EMAIL_REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
             let emailTest = NSPredicate(format: "SELF MATCHES %@", EMAIL_REGEX)
             let result = emailTest.evaluate(with: email)
+            return result
+        }
+        
+        private func isValidUserName(userName: String) -> Bool {
+            let USERNAME_REGEX = "^(?:[\\p{L}\\p{M}]|\\d)$|^(?:[\\p{L}\\p{M}]|\\d){25,}$"
+            let phoneTest = NSPredicate(format: "SELF MATCHES %@", USERNAME_REGEX)
+            let result = phoneTest.evaluate(with: userName)
             return result
         }
         

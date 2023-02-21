@@ -15,7 +15,6 @@ struct UserProfileView: View {
     let storageService = StorageService.shared
     
     var body: some View {
-        
         VStack {
             /// Profile image and edit image button
             ZStack(alignment: .bottomTrailing) {
@@ -30,7 +29,7 @@ struct UserProfileView: View {
                             .resizable()
                             .frame(width: 120, height: 120)
                             .clipShape(Circle())
-//                            .foregroundColor(Color("BluePurr"))
+                        //                            .foregroundColor(Color("BluePurr"))
                     }
                 }
                 
@@ -46,14 +45,36 @@ struct UserProfileView: View {
                 }
             }
             .padding(.top, 25)
-            //            .sheet(isPresented: $imagePickerViewModel.changeProfileImage) {
-            //                ImagePicker(sourceType: .photoLibrary, selectedImage: $imagePickerViewModel.profileImage)
-            //            }
+            
+            Spacer()
+            
+            /// Profile information
+            
+            TextField("Nom", text: $userProfileViewModel.name)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 2))
+                .padding(.horizontal, 20)
+                .disabled(!userProfileViewModel.isEditProfileInformation)
+            
+            
+            
+            TextField("Téléphone", text: $userProfileViewModel.phone)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 2))
+                .padding(.horizontal, 20)
+                .disabled(!userProfileViewModel.isEditProfileInformation)
             
             
             /// Edit profile informations button
+            ///
             Button(action: {
-                // Allow edit or save
+                userProfileViewModel.isEditProfileInformation.toggle()
+                if !userProfileViewModel.isEditProfileInformation {
+                    Task {
+                        try
+                        await userProfileViewModel.saveUserDataNamePhone()
+                    }
+                }
             }) {
                 Text(userProfileViewModel.isEditProfileInformation ? "Sauvegarder" : "Éditer")
                     .foregroundColor(.white)
@@ -64,26 +85,8 @@ struct UserProfileView: View {
             .cornerRadius(10)
             .padding(.top, 25)
             
-            Spacer()
-            
-            
-            /// Profile information
-            TextField("Nom", text: $userProfileViewModel.name)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.name != "" ? Color("BluePurr") : userProfileViewModel.color, lineWidth: 2))
-                .padding(.horizontal, 20)
-            
-            TextField("Téléphone", text: $userProfileViewModel.phone)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.phone != "" ? Color("BluePurr") : userProfileViewModel.color, lineWidth: 2))
-                .padding(.horizontal, 20)
-            
-            Text(userProfileViewModel.name)
-            
-            
             
             Spacer()
-            
             
             /// Signout button
             Button(action: {
@@ -98,7 +101,7 @@ struct UserProfileView: View {
             }
             .background(Color("BluePurr"))
             .cornerRadius(10)
-            .padding(.top, 25)
+            .padding(.bottom, 25)
         }
         .task {
             do {
@@ -108,16 +111,24 @@ struct UserProfileView: View {
             }
             
         }
-        
         .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {
             Alert(title: Text("Pas autorisé"), message: Text("Vous avez refusé l'accès à votre galerie. Vous pouvez changer cela dans les paramètres."), dismissButton: .default(Text("Fermer")))
             
         }
+        .alert(isPresented: $userProfileViewModel.alert) {
+            Alert(title: Text(self.userProfileViewModel.error == "Information updated" ? "Message" : "Error"),
+                  message: Text(self.userProfileViewModel.error == "Information updated" ? "Information updated successfully" : self.userProfileViewModel.error),
+                  dismissButton: .default(Text(self.userProfileViewModel.error == "Information updated" ? "Ok" : "Cancel")))
+        }
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
             ImagePicker(image: $userProfileViewModel.profileImage)
         }
-        
     }
+    
+    //        if userProfileViewModel.alert {
+    //            UserProfileErrorView(alert: $userProfileViewModel.alert, error: $userProfileViewModel.error)
+    //        }
+    
     
 }
 
