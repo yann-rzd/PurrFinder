@@ -44,6 +44,14 @@ final class FirestoreService {
         ])
     }
     
+    func updateUserLocationData(userUID: String, latitude: String, longitude: String) async throws {
+        let userRef = Firestore.firestore().collection("userData").document(userUID)
+        try await userRef.updateData([
+            "locationLatitude": latitude,
+            "locationLongitude": longitude
+        ])
+    }
+    
     func createPost(post: PostAlert) async throws {
         let postRef = db.collection("postAlertData").document()
         let postDTO = PostAlertDTO(postAlert: post)

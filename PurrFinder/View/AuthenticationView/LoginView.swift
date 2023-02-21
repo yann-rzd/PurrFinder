@@ -50,6 +50,7 @@ struct LoginView: View {
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.email != "" ? Color("BluePurr") : loginViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
+                    .keyboardType(.emailAddress)
                 
                 HStack(spacing: 15) {
                     VStack {
