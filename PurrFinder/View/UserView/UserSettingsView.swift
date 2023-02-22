@@ -30,7 +30,6 @@ struct UserSettingsView: View {
             
             Spacer()
             Button(action: {
-                // Afficher un message d'alerte avec un titre, un message, deux choix "oui" et "non"
                 showAlert.toggle()
             }) {
                 Text("Supprimer mon compte")

@@ -10,6 +10,8 @@ import CoreLocation
 
 struct AlertPageView: View {
     @StateObject var locationViewModel = LocationViewModel()
+    @State private var showPetForm = false
+    
     var body: some View {
         
         VStack {
@@ -20,18 +22,23 @@ struct AlertPageView: View {
                 .padding(.horizontal, 40)
                 .multilineTextAlignment(.center)
             
-            Image("Paw")
-                .resizable()
-                .frame(width: 300, height: 300)
-                .padding(.top, 50)
+            Button(action: {
+                showPetForm.toggle()
+            }) {
+                Image("Paw")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .padding(.top, 50)
+            }
+            .sheet(isPresented: $showPetForm) {
+                PetFormView(isPresented: $showPetForm)
+            }
             
             Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
                 .foregroundColor(Color("BluePurr"))
                 .padding(.horizontal, 50)
                 .padding(.top, 20)
                 .multilineTextAlignment(.center)
-            
-            Text("Lat : \(locationViewModel.latitude) \nLng : \(locationViewModel.longitude)")
         }
         .onAppear() {
             locationViewModel.getUserLocation()

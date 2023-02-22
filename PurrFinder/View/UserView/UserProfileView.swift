@@ -78,7 +78,7 @@ struct UserProfileView: View {
             
             TextField("Nom", text: $userProfileViewModel.name)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 1))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                 .padding(.horizontal, 20)
                 .disabled(!userProfileViewModel.isEditProfileInformation)
             
@@ -86,7 +86,7 @@ struct UserProfileView: View {
             
             TextField("Téléphone", text: $userProfileViewModel.phone)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 1))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                 .padding(.horizontal, 20)
                 .disabled(!userProfileViewModel.isEditProfileInformation)
             
