@@ -38,13 +38,12 @@ final class FirestoreService {
     
     func deleteUserData(uid: String) async throws {
         let db = Firestore.firestore()
-        let userRef = db.collection("users").document(uid)
+        let userRef = db.collection("userData").document(uid)
         let snapshot = try await userRef.getDocument()
         guard snapshot.exists else {
             throw NSError(domain: "UserNotFound", code: 404, userInfo: nil)
         }
         try await userRef.delete()
-        print("Données utilisateur supprimées avec succès.")
     }
     
     func updateUserDataNamePhone(userUID: String, name: String, phone: String) async throws {

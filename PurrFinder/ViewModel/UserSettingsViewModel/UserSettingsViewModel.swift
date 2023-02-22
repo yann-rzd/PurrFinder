@@ -14,7 +14,8 @@ extension UserSettingsView {
         
         func deleteUser() async {
             await deleteUserData()
-            await deleteUserAccount()
+            await deleteUserImage()
+            deleteUserAccount()
         }
         
         private func deleteUserData() async {
@@ -28,17 +29,21 @@ extension UserSettingsView {
             }
         }
         
-        private func deleteUserAccount() async {
+        private func deleteUserAccount() {
+            firebaseAuthService.deleteUser()
+        }
+        
+        private func deleteUserImage() async {
             do {
-                try await firebaseAuthService.deleteUser()
+                try await storageService.deleteImageFromStorage()
             } catch {
                 self.error = error.localizedDescription
                 self.alert.toggle()
             }
-            
         }
         
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
+        private let storageService = StorageService.shared
     }
 }

@@ -51,4 +51,15 @@ final class StorageService {
         
         return profileImage
     }
+    
+    func deleteImageFromStorage() async throws {
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
+        
+        do {
+            try await ref.delete()
+        } catch {
+            throw error
+        }
+    }
 }
