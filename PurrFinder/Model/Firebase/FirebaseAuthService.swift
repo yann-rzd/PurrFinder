@@ -43,6 +43,18 @@ final class FirebaseAuthService {
         try! Auth.auth().signOut()
     }
     
+    func deleteUser() async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No user currently logged in"])
+        }
+        
+        do {
+            try await user.delete()
+        } catch {
+            throw error
+        }
+    }
+    
     func getCurrentUserEmail() -> String {
         guard let email = Auth.auth().currentUser?.email else {
             return ""

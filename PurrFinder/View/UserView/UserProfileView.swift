@@ -12,10 +12,37 @@ struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     
+    @State private var showUserSettingsView = false
+    
     let storageService = StorageService.shared
     
     var body: some View {
         VStack {
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    showUserSettingsView.toggle()
+                }) {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color("BluePurr"))
+                        .font(.system(size: 20))
+                }
+                .sheet(isPresented: $showUserSettingsView) {
+                    UserSettingsView(isPresented: $showUserSettingsView)
+                }
+            }
+            .padding(.trailing, 20)
+            .padding(.top, 20)
+            
+            
+            Text("PurrFinder Profil")
+                .font(Font.custom("AmaticSC-Bold", size: 32))
+                .foregroundColor(Color("BluePurr"))
+                .padding(.top, 25)
+            
+            Spacer()
+            
             /// Profile image and edit image button
             ZStack(alignment: .bottomTrailing) {
                 ZStack {
@@ -44,7 +71,6 @@ struct UserProfileView: View {
                         .clipShape(Circle())
                 }
             }
-            .padding(.top, 25)
             
             Spacer()
             
@@ -52,7 +78,7 @@ struct UserProfileView: View {
             
             TextField("Nom", text: $userProfileViewModel.name)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 1))
                 .padding(.horizontal, 20)
                 .disabled(!userProfileViewModel.isEditProfileInformation)
             
@@ -60,7 +86,7 @@ struct UserProfileView: View {
             
             TextField("Téléphone", text: $userProfileViewModel.phone)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 1))
                 .padding(.horizontal, 20)
                 .disabled(!userProfileViewModel.isEditProfileInformation)
             
