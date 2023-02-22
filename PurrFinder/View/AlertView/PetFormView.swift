@@ -68,7 +68,7 @@ struct PetFormView: View {
                 Text("Type de votre animal :")
                 TextField("Chat, chient, rongeur, tortue ...", text: $petFormViewModel.petType)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petName != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petType != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
             
@@ -76,7 +76,7 @@ struct PetFormView: View {
                 Text("Race de votre animal :")
                 TextField("Bengal, labrador, berger australien ...", text: $petFormViewModel.petBreed)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petName != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petBreed != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
             
@@ -84,7 +84,7 @@ struct PetFormView: View {
                 Text("Description de votre animal :")
                 TextEditor(text: $petFormViewModel.petDescription)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petName != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
             
