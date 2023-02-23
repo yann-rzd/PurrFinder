@@ -22,5 +22,31 @@ extension PetFormView {
         
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
+        private let firebaseAuthService = FirebaseAuthService.shared
+        
+        func createPostAlert() {
+            Task {
+                let uid = firebaseAuthService.getCurrentUserUID()
+                let currentDate = Date()
+                
+                let posetAlert = PostAlert(
+                    uid: uid,
+                    animalName: petName,
+                    animalType: petType,
+                    animalBreed: petBreed,
+                    animalDescription: petDescription,
+                    postDate: currentDate,
+                    ownerUid: uid)
+                
+                do {
+                    try await firestoreService.createPost(post: posetAlert)
+                } catch {
+                    
+                    print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
+                }
+                
+                storageService.persistAnimalImageToStorage(image: UIImage(imageLiteralResourceName: "Cat"))
+            }
+        }
     }
 }

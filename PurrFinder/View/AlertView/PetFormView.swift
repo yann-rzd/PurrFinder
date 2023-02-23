@@ -90,7 +90,7 @@ struct PetFormView: View {
             
             Button(action: {
                 Task {
-                    // Enregistrer l'alerte et envoyer l'alerte
+                    petFormViewModel.createPostAlert()
                 }
             }) {
                 Text("Envoyer l'alerte")

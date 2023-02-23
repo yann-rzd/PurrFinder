@@ -15,7 +15,7 @@
 		E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */; };
 		E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AF29A67BD800CCD79C /* PetFormView.swift */; };
 		E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */; };
-		E41F01B529A7A11800CCD79C /* Animal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B429A7A11800CCD79C /* Animal+Extension.swift */; };
+		E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */; };
 		E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4326FB329A52DE600A1592A /* LocationViewModel.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
@@ -51,16 +51,15 @@
 		E4DF023629919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
 		E4DF023729919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
 		E4DF023829919601004E1CC6 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */; };
-		E4DF023C29919BF4004E1CC6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* Animal.swift */; };
-		E4DF023D29919BF4004E1CC6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* Animal.swift */; };
-		E4DF023E29919BF4004E1CC6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* Animal.swift */; };
+		E4DF023C29919BF4004E1CC6 /* PostAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* PostAlert.swift */; };
+		E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* PostAlert.swift */; };
+		E4DF023E29919BF4004E1CC6 /* PostAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023B29919BF4004E1CC6 /* PostAlert.swift */; };
 		E4DF024029919C1E004E1CC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* User.swift */; };
 		E4DF024129919C1E004E1CC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* User.swift */; };
 		E4DF024229919C1E004E1CC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF023F29919C1E004E1CC6 /* User.swift */; };
 		E4DF024429919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
 		E4DF024529919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
 		E4DF024629919C31004E1CC6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024329919C31004E1CC6 /* Notification.swift */; };
-		E4DF024829925F49004E1CC6 /* PostAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024729925F49004E1CC6 /* PostAlert.swift */; };
 		E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024B29926247004E1CC6 /* LocationService.swift */; };
 		E4DF024E2992691A004E1CC6 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF024D2992691A004E1CC6 /* FirestoreService.swift */; };
 		E4DF0253299294F1004E1CC6 /* ChatHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0252299294F1004E1CC6 /* ChatHelpView.swift */; };
@@ -68,7 +67,7 @@
 		E4E66456299E68F0002F5A79 /* DocumentReference+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E66455299E68F0002F5A79 /* DocumentReference+Extension.swift */; };
 		E4E66458299E691B002F5A79 /* FirestoreServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E66457299E691B002F5A79 /* FirestoreServiceError.swift */; };
 		E4E6645A299E69E0002F5A79 /* User+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E66459299E69E0002F5A79 /* User+Extension.swift */; };
-		E4E6645C299E6A34002F5A79 /* AnimalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645B299E6A34002F5A79 /* AnimalDTO.swift */; };
+		E4E6645C299E6A34002F5A79 /* PostAlertDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645B299E6A34002F5A79 /* PostAlertDTO.swift */; };
 		E4E6645E299E6AFD002F5A79 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645D299E6AFD002F5A79 /* UserDTO.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +99,7 @@
 		E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
 		E41F01AF29A67BD800CCD79C /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
 		E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PertFormViewModel.swift; sourceTree = "<group>"; };
-		E41F01B429A7A11800CCD79C /* Animal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+Extension.swift"; sourceTree = "<group>"; };
+		E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostAlert+Extension.swift"; sourceTree = "<group>"; };
 		E4326FB329A52DE600A1592A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
@@ -134,10 +133,9 @@
 		E4DF022E29919601004E1CC6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E4DF022F29919601004E1CC6 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
 		E4DF02392991979C004E1CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E4DF023B29919BF4004E1CC6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		E4DF023B29919BF4004E1CC6 /* PostAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlert.swift; sourceTree = "<group>"; };
 		E4DF023F29919C1E004E1CC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E4DF024329919C31004E1CC6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		E4DF024729925F49004E1CC6 /* PostAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlert.swift; sourceTree = "<group>"; };
 		E4DF024B29926247004E1CC6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		E4DF024D2992691A004E1CC6 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		E4DF0252299294F1004E1CC6 /* ChatHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelpView.swift; sourceTree = "<group>"; };
@@ -145,7 +143,7 @@
 		E4E66455299E68F0002F5A79 /* DocumentReference+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentReference+Extension.swift"; sourceTree = "<group>"; };
 		E4E66457299E691B002F5A79 /* FirestoreServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceError.swift; sourceTree = "<group>"; };
 		E4E66459299E69E0002F5A79 /* User+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extension.swift"; sourceTree = "<group>"; };
-		E4E6645B299E6A34002F5A79 /* AnimalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDTO.swift; sourceTree = "<group>"; };
+		E4E6645B299E6A34002F5A79 /* PostAlertDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertDTO.swift; sourceTree = "<group>"; };
 		E4E6645D299E6AFD002F5A79 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,9 +348,8 @@
 				E4DE139329A3D2D80007EDD4 /* Storage */,
 				E4E6645F299E6CA4002F5A79 /* Firestore */,
 				E4DF023A29919BC4004E1CC6 /* Firebase */,
-				E4DF023B29919BF4004E1CC6 /* Animal.swift */,
+				E4DF023B29919BF4004E1CC6 /* PostAlert.swift */,
 				E4DF023F29919C1E004E1CC6 /* User.swift */,
-				E4DF024729925F49004E1CC6 /* PostAlert.swift */,
 				E4DF024329919C31004E1CC6 /* Notification.swift */,
 				E4DF024B29926247004E1CC6 /* LocationService.swift */,
 			);
@@ -424,7 +421,7 @@
 			children = (
 				E4E66455299E68F0002F5A79 /* DocumentReference+Extension.swift */,
 				E4E66459299E69E0002F5A79 /* User+Extension.swift */,
-				E41F01B429A7A11800CCD79C /* Animal+Extension.swift */,
+				E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,7 +439,7 @@
 		E4E66460299E6CED002F5A79 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				E4E6645B299E6A34002F5A79 /* AnimalDTO.swift */,
+				E4E6645B299E6A34002F5A79 /* PostAlertDTO.swift */,
 				E4E6645D299E6AFD002F5A79 /* UserDTO.swift */,
 			);
 			path = DTO;
@@ -705,7 +702,7 @@
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
 				E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */,
 				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,
-				E41F01B529A7A11800CCD79C /* Animal+Extension.swift in Sources */,
+				E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */,
 				E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */,
 				E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */,
 				E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */,
@@ -713,16 +710,15 @@
 				E4E66458299E691B002F5A79 /* FirestoreServiceError.swift in Sources */,
 				E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
-				E4DF023C29919BF4004E1CC6 /* Animal.swift in Sources */,
+				E4DF023C29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 				E4CA485B299403F900CEEA3E /* Picker.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
 				E41B483B29A3D6F200341687 /* ImagePicker.swift in Sources */,
-				E4DF024829925F49004E1CC6 /* PostAlert.swift in Sources */,
 				E4DF02092991882A004E1CC6 /* UserProfileViewModel.swift in Sources */,
 				E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */,
 				E4DF024E2992691A004E1CC6 /* FirestoreService.swift in Sources */,
 				E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */,
-				E4E6645C299E6A34002F5A79 /* AnimalDTO.swift in Sources */,
+				E4E6645C299E6A34002F5A79 /* PostAlertDTO.swift in Sources */,
 				E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
 				E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */,
@@ -745,7 +741,7 @@
 				E4DF024129919C1E004E1CC6 /* User.swift in Sources */,
 				E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */,
 				E4DF024529919C31004E1CC6 /* Notification.swift in Sources */,
-				E4DF023D29919BF4004E1CC6 /* Animal.swift in Sources */,
+				E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */,
-				E4DF023E29919BF4004E1CC6 /* Animal.swift in Sources */,
+				E4DF023E29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 				E4DF024229919C1E004E1CC6 /* User.swift in Sources */,
 				E4DF024629919C31004E1CC6 /* Notification.swift in Sources */,
 				E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */,

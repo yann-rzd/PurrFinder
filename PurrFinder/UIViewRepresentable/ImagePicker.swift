@@ -30,7 +30,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             parent.image = info[.originalImage] as? UIImage
             if let image = parent.image {
-                storageService.persistImageToStorage(image: image)
+                storageService.persistProfileImageToStorage(image: image)
             }
             picker.dismiss(animated: true)
         }

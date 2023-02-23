@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct AnimalDTO: Decodable {
+struct PostAlertDTO: Decodable {
+    let uid: String
     let animalName: String
     let animalType: String
-    let locationLatitude: Double
-    let locationLongitude: Double
-    let date: Date
-    let userId: String
+    let animalBreed: String
+    let animalDescription: String
+    let postDate: Date
+    let ownerUid: String
 }

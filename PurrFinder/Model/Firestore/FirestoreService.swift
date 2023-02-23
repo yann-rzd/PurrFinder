@@ -62,11 +62,11 @@ final class FirestoreService {
         ])
     }
     
-//    func createPost(post: PostAlert) async throws {
-//        let postRef = db.collection("postAlertData").document()
-//        let postDTO = PostAlertDTO(postAlert: post)
-//        try await postRef.setData(myStruct: postDTO)
-//    }
+    func createPost(post: PostAlert) async throws {
+        let postRef = db.collection("postAlertData").document()
+        let postAlertData = post.createPostAlertData()
+        try await postRef.setData(myStruct: postAlertData)
+    }
     
     func deletePost(postId: String, completion: @escaping (Error?) -> Void) {
         let postRef = db.collection("postAlertData").document(postId)

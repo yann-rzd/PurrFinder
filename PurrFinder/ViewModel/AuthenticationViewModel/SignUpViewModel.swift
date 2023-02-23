@@ -91,7 +91,7 @@ extension SignUpView {
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
                 }
                 
-                storageService.persistImageToStorage(image: UIImage(imageLiteralResourceName: "Profile"))
+                storageService.persistProfileImageToStorage(image: UIImage(imageLiteralResourceName: "Profile"))
             }
         }
         

@@ -16,9 +16,32 @@ final class StorageService {
     
     private let firebaseAuthService = FirebaseAuthService.shared
     
-    func persistImageToStorage(image: UIImage) {
+    func persistProfileImageToStorage(image: UIImage) {
         let userUID = firebaseAuthService.getCurrentUserUID()
         let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+        
+        ref.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                print("Failed to push image to Storage : \(error)")
+                return
+            }
+            
+            ref.downloadURL { url, error in
+                if let error = error {
+                    print("Failed to retreive downLoadURL : \(error)")
+                    return
+                }
+                print("Successfully stored image with url : \(url?.absoluteString ?? "")")
+            }
+            
+        }
+    }
+    
+    func persistAnimalImageToStorage(image: UIImage) {
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let ref = Storage.storage().reference(withPath: "animalImages/\(userUID)")
         
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         
