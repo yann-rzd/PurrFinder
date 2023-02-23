@@ -15,6 +15,8 @@ extension PetFormView {
         @Published var petType = ""
         @Published var petBreed = ""
         @Published var petDescription = ""
+        @Published var alert = false
+        @Published var error = ""
         
         private func getProfileImage() async throws {
             self.petImage = try await storageService.downloadProfileImage()
@@ -25,6 +27,47 @@ extension PetFormView {
         private let firebaseAuthService = FirebaseAuthService.shared
         
         func createPostAlert() {
+            guard !petName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                error = PostAlertError.petNameIsEmpty.errorDescription
+                alert.toggle()
+                return
+            }
+            guard !petType.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                error = PostAlertError.petTypeIsEmpty.errorDescription
+                alert.toggle()
+                return
+            }
+            guard !petBreed.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                error = PostAlertError.petBreedIsEmpty.errorDescription
+                alert.toggle()
+                return
+            }
+            guard !petDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                error = PostAlertError.petDescriptionIsEmpty.errorDescription
+                alert.toggle()
+                return
+            }
+            
+            if containsExtraSpaces(text: petName) {
+                petName = removeExtraSpaces(text: petName)
+            }
+            
+            if containsExtraSpaces(text: petType) {
+                petType = removeExtraSpaces(text: petType)
+            }
+            
+            if containsExtraSpaces(text: petBreed) {
+                petBreed = removeExtraSpaces(text: petBreed)
+            }
+            
+            if containsExtraSpaces(text: petDescription) {
+                petDescription = removeExtraSpaces(text: petDescription)
+            }
+            
+            savePostAlert()
+        }
+        
+        private func savePostAlert() {
             Task {
                 let uid = firebaseAuthService.getCurrentUserUID()
                 let currentDate = Date()
@@ -36,7 +79,8 @@ extension PetFormView {
                     animalBreed: petBreed,
                     animalDescription: petDescription,
                     postDate: currentDate,
-                    ownerUid: uid)
+                    ownerUid: uid
+                )
                 
                 do {
                     try await firestoreService.createPost(post: posetAlert)
@@ -47,6 +91,18 @@ extension PetFormView {
                 
                 storageService.persistAnimalImageToStorage(image: UIImage(imageLiteralResourceName: "Cat"))
             }
+        }
+        
+        private func containsExtraSpaces(text: String) -> Bool {
+            let words = text.split(separator: " ")
+            let cleanedText = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: " ")
+            return cleanedText != text
+        }
+        
+        private func removeExtraSpaces(text: String) -> String {
+            let words = text.split(separator: " ")
+            let cleanedWords = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            return cleanedWords.joined(separator: " ")
         }
     }
 }

@@ -16,6 +16,7 @@
 		E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AF29A67BD800CCD79C /* PetFormView.swift */; };
 		E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */; };
 		E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */; };
+		E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B629A7D7C100CCD79C /* PostAlertError.swift */; };
 		E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4326FB329A52DE600A1592A /* LocationViewModel.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
@@ -100,6 +101,7 @@
 		E41F01AF29A67BD800CCD79C /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
 		E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PertFormViewModel.swift; sourceTree = "<group>"; };
 		E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostAlert+Extension.swift"; sourceTree = "<group>"; };
+		E41F01B629A7D7C100CCD79C /* PostAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertError.swift; sourceTree = "<group>"; };
 		E4326FB329A52DE600A1592A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				E4DF023F29919C1E004E1CC6 /* User.swift */,
 				E4DF024329919C31004E1CC6 /* Notification.swift */,
 				E4DF024B29926247004E1CC6 /* LocationService.swift */,
+				E41F01B629A7D7C100CCD79C /* PostAlertError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
 				E41F01AA29A6617E00CCD79C /* UserSettingsView.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
+				E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */,
 				E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */,
 				E4DF0210299188C4004E1CC6 /* SignUpViewModel.swift in Sources */,
 				E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */,

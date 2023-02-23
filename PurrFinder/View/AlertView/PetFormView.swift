@@ -107,6 +107,9 @@ struct PetFormView: View {
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
             ImagePicker(image: $petFormViewModel.petImage)
         }
+        .alert(isPresented: $petFormViewModel.alert) {
+            Alert(title: Text("Erreur"), message: Text(petFormViewModel.error), dismissButton: .cancel())
+        }
     }
 }
 
