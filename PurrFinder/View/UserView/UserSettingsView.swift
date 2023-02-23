@@ -9,8 +9,8 @@ import SwiftUI
 
 struct UserSettingsView: View {
     @StateObject var userSettingsViewModel = UserSettingsViewModel()
-    @Binding var isPresented: Bool
     @State private var showAlert = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -18,7 +18,7 @@ struct UserSettingsView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    isPresented = false
+                    dismiss()
                 }) {
                     Image(systemName: "xmark")
                         .foregroundColor(Color("BluePurr"))
@@ -46,10 +46,11 @@ struct UserSettingsView: View {
                 Task {
                     await userSettingsViewModel.deleteUser()
                 }
-                isPresented = false
-                UserDefaults.standard.set(false, forKey: "status")
-                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-//                HomeView()
+                dismiss()
+                
+//                UserDefaults.standard.set(false, forKey: "status")
+//                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                
             }, secondaryButton: .cancel(Text("Non")))
         }
     }
@@ -58,6 +59,6 @@ struct UserSettingsView: View {
 struct UserSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         let isPresented = Binding.constant(false)
-        return UserSettingsView(isPresented: isPresented)
+        return UserSettingsView()
     }
 }

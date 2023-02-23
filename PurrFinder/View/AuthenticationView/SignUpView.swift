@@ -13,20 +13,6 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            NavigationView {
-                VStack {
-                    Text("")
-                }
-                .navigationBarItems(leading: Button(action: {
-                    self.show.toggle()
-                }) {
-                    Image(systemName: "chevron.left")
-                        .font(.title)
-                        .foregroundColor(Color("BluePurr"))
-                })
-            }
-            .navigationBarBackButtonHidden(true)
-            
             VStack {
                 Image("Logo")
                     .resizable()

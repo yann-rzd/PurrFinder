@@ -20,8 +20,7 @@ extension SignUpView {
         @Published var revisible = false
         @Published var alert = false
         @Published var error = ""
-        
-        var defaultProfileImage = Image("Profile")
+        let profileImage = UIImage(systemName: "person.crop.circle")
 
         
         func register() async {
@@ -91,6 +90,8 @@ extension SignUpView {
                     
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
                 }
+                
+                storageService.persistImageToStorage(image: UIImage(imageLiteralResourceName: "Profile"))
             }
         }
         
@@ -117,5 +118,6 @@ extension SignUpView {
         
         private let firebaseAuthService = FirebaseAuthService.shared
         private let fireStoreService = FirestoreService.shared
+        private let storageService = StorageService.shared
     }
 }

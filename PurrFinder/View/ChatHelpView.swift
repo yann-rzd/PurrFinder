@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ChatHelpView: View {
     var body: some View {
-        Text("Chat for Help")
+        NavigationView {
+            Text("Chat for Help")
+        }
+       
     }
 }
 

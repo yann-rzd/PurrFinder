@@ -17,6 +17,8 @@ enum FirebaseAuthServiceError: LocalizedError {
     case userNameFormatIsInccorect
     case currentUserNotFound
     case dataChanged
+    case failedToSignOut
+    case failedToDeleteUser
     
     var errorDescription: String {
         switch self {
@@ -38,6 +40,10 @@ enum FirebaseAuthServiceError: LocalizedError {
             return "Information updated"
         case .userNameFormatIsInccorect:
             return "Name format incorrect"
+        case.failedToSignOut:
+            return "Failed to sign out"
+        case .failedToDeleteUser:
+            return "Failed to delete user"
         
         }
     }

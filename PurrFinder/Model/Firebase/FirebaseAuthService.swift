@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 
+
+
 final class FirebaseAuthService {
     
     static let shared = FirebaseAuthService()
@@ -39,16 +41,22 @@ final class FirebaseAuthService {
         }
     }
     
-    func signOut() {
-        try! Auth.auth().signOut()
+    func signOut() throws {
+        guard let _ = try? Auth.auth().signOut() else {
+            throw FirebaseAuthServiceError.failedToSignOut
+        }
     }
     
-    func deleteUser() {
+    func deleteUser() throws {
         guard let user = Auth.auth().currentUser else {
-            return
+            throw FirebaseAuthServiceError.failedToDeleteUser
         }
         
         user.delete()
+    }
+    
+    var isLoggedIn: Bool {
+        Auth.auth().currentUser != nil
     }
     
     func getCurrentUserEmail() -> String {

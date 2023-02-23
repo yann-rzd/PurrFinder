@@ -8,9 +8,34 @@
 import Foundation
 import MapKit
 
+
+enum RootViewType {
+    case authentication
+    case main
+}
+
+
 extension HomeView {
     @MainActor class HomeViewModel: ObservableObject {
-        @Published var show = false
-        @Published var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+        
+        init() {
+            updateActiveRootType()
+        }
+        
+        @Published var activeRootType: RootViewType = .authentication
+        
+        var isUserLoggedIn: Bool {
+            FirebaseAuthService.shared.isLoggedIn
+        }
+        
+        func updateActiveRootType() {
+            
+            switch (isUserLoggedIn) {
+            case (true):
+                activeRootType = .main
+            case (false):
+                activeRootType = .authentication
+            }
+        }
     }
 }

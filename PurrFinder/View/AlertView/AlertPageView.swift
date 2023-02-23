@@ -13,35 +13,36 @@ struct AlertPageView: View {
     @State private var showPetForm = false
     
     var body: some View {
-        
-        VStack {
-            Text("Push pour lancer une alerte")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(Color("BluePurr"))
-                .padding(.horizontal, 40)
-                .multilineTextAlignment(.center)
-            
-            Button(action: {
-                showPetForm.toggle()
-            }) {
-                Image("Paw")
-                    .resizable()
-                    .frame(width: 300, height: 300)
-                    .padding(.top, 50)
+        NavigationView {
+            VStack {
+                Text("Push pour lancer une alerte")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("BluePurr"))
+                    .padding(.horizontal, 40)
+                    .multilineTextAlignment(.center)
+                
+                Button(action: {
+                    showPetForm.toggle()
+                }) {
+                    Image("Paw")
+                        .resizable()
+                        .frame(width: 300, height: 300)
+                        .padding(.top, 50)
+                }
+                .sheet(isPresented: $showPetForm) {
+                    PetFormView(isPresented: $showPetForm)
+                }
+                
+                Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
+                    .foregroundColor(Color("BluePurr"))
+                    .padding(.horizontal, 50)
+                    .padding(.top, 20)
+                    .multilineTextAlignment(.center)
             }
-            .sheet(isPresented: $showPetForm) {
-                PetFormView(isPresented: $showPetForm)
+            .onAppear() {
+                locationViewModel.getUserLocation()
             }
-            
-            Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
-                .foregroundColor(Color("BluePurr"))
-                .padding(.horizontal, 50)
-                .padding(.top, 20)
-                .multilineTextAlignment(.center)
-        }
-        .onAppear() {
-            locationViewModel.getUserLocation()
         }
     }
     

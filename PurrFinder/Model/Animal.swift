@@ -6,17 +6,15 @@
 //
 
 import Foundation
-import CoreLocation
+import SwiftUI
 
 struct Animal {
-    let name: String
-    let type: String
-    let breed: String
-    let color: String
-    let age: Int
-    let size: String
-    let location: CLLocation
-    let imageUrl: String
-    let ownerId: String
-    let postDate: Date
+    var name: String
+    var type: String
+    var breed: String
+    var profileImage: UIImage?
+    var locationLatitude: String?
+    var locationLongitude: String?
+    var ownerId: String
+    var postDate: Date
 }

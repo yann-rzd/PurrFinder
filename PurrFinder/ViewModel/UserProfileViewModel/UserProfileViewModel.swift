@@ -76,7 +76,14 @@ extension UserProfileView {
         }
         
         func signOut() {
-            firebaseAuthService.signOut()
+            do {
+                try firebaseAuthService.signOut()
+                UserDefaults.standard.set(false, forKey: "status")
+                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+            } catch {
+                self.error = error.localizedDescription
+                self.alert.toggle()
+            }
         }
         
         
