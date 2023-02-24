@@ -140,7 +140,7 @@ struct UserProfileView: View {
                       dismissButton: .default(Text(self.userProfileViewModel.error == "Information updated" ? "Ok" : "Cancel")))
             }
             .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
-                ImagePicker(image: $userProfileViewModel.profileImage)
+                ProfileImagePicker(image: $userProfileViewModel.profileImage)
             }
         }
     }

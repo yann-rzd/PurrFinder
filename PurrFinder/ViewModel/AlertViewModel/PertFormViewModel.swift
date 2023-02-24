@@ -18,9 +18,9 @@ extension PetFormView {
         @Published var alert = false
         @Published var error = ""
         
-        private func getProfileImage() async throws {
-            self.petImage = try await storageService.downloadProfileImage()
-        }
+//        private func getProfileImage() async throws {
+//            self.petImage = try await storageService.downloadProfileImage()
+//        }
         
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared

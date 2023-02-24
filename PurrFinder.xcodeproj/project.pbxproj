@@ -10,13 +10,14 @@
 		14B8BEDE9D15CCA97923EEB7 /* Pods_PurrFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */; };
 		5460B51BFFC5BD4B0073CC1D /* Pods_PurrFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */; };
 		906E48FB95523ED004AD8EE0 /* Pods_PurrFinder_PurrFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5218D5C6DE1213B37BCB19 /* Pods_PurrFinder_PurrFinderUITests.framework */; };
-		E41B483B29A3D6F200341687 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B483A29A3D6F200341687 /* ImagePicker.swift */; };
+		E41B483B29A3D6F200341687 /* ProfileImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */; };
 		E41F01AA29A6617E00CCD79C /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01A929A6617E00CCD79C /* UserSettingsView.swift */; };
 		E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */; };
 		E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AF29A67BD800CCD79C /* PetFormView.swift */; };
 		E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */; };
 		E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */; };
 		E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B629A7D7C100CCD79C /* PostAlertError.swift */; };
+		E41F01B929A9148A00CCD79C /* AnimalImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */; };
 		E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4326FB329A52DE600A1592A /* LocationViewModel.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
@@ -95,13 +96,14 @@
 		6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E41B483A29A3D6F200341687 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
 		E41F01A929A6617E00CCD79C /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
 		E41F01AF29A67BD800CCD79C /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
 		E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PertFormViewModel.swift; sourceTree = "<group>"; };
 		E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostAlert+Extension.swift"; sourceTree = "<group>"; };
 		E41F01B629A7D7C100CCD79C /* PostAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertError.swift; sourceTree = "<group>"; };
+		E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImagePicker.swift; sourceTree = "<group>"; };
 		E4326FB329A52DE600A1592A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
@@ -242,8 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				E4CA485A299403F900CEEA3E /* Picker.swift */,
-				E41B483A29A3D6F200341687 /* ImagePicker.swift */,
+				E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */,
 				E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */,
+				E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */,
 			);
 			path = UIViewRepresentable;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				E4DF0206299187BC004E1CC6 /* FirebaseAuthServiceError.swift in Sources */,
 				E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */,
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
+				E41F01B929A9148A00CCD79C /* AnimalImagePicker.swift in Sources */,
 				E41F01AA29A6617E00CCD79C /* UserSettingsView.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
 				E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */,
@@ -717,7 +721,7 @@
 				E4DF023C29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 				E4CA485B299403F900CEEA3E /* Picker.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
-				E41B483B29A3D6F200341687 /* ImagePicker.swift in Sources */,
+				E41B483B29A3D6F200341687 /* ProfileImagePicker.swift in Sources */,
 				E4DF02092991882A004E1CC6 /* UserProfileViewModel.swift in Sources */,
 				E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */,
 				E4DF024E2992691A004E1CC6 /* FirestoreService.swift in Sources */,

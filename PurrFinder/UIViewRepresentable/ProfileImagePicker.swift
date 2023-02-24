@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct ProfileImagePicker: UIViewControllerRepresentable {
     
     @Binding var image: UIImage?
     
@@ -19,10 +19,10 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
-        let parent: ImagePicker
+        let parent: ProfileImagePicker
         let storageService: StorageService
         
-        init(parent: ImagePicker, storageService: StorageService) {
+        init(parent: ProfileImagePicker, storageService: StorageService) {
             self.parent = parent
             self.storageService = storageService
         }
