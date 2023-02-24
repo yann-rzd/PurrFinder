@@ -11,6 +11,7 @@ struct PetFormView: View {
     @StateObject var petFormViewModel = PetFormViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     @Binding var isPresented: Bool
+    @Binding var alertInProgress: Bool
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -92,7 +93,9 @@ struct PetFormView: View {
             Button(action: {
                 Task {
                     petFormViewModel.createPostAlert()
-                    dismiss()
+                    alertInProgress = true
+                    
+                    isPresented = false
                 }
             }) {
                 Text("Envoyer l'alerte")
@@ -115,9 +118,5 @@ struct PetFormView: View {
     }
 }
 
-struct PetFormView_Previews: PreviewProvider {
-    static var previews: some View {
-        let isPresented = Binding.constant(false)
-        PetFormView(isPresented: isPresented)
-    }
-}
+//struct PetFormView_Previews: PreviewProvider {
+

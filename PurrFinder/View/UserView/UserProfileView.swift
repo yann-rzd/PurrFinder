@@ -17,9 +17,6 @@ struct UserProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
-                
-                
                 Text("PurrFinder Profil")
                     .font(Font.custom("AmaticSC-Bold", size: 32))
                     .foregroundColor(Color("BluePurr"))
@@ -144,12 +141,6 @@ struct UserProfileView: View {
             }
         }
     }
-    
-    //        if userProfileViewModel.alert {
-    //            UserProfileErrorView(alert: $userProfileViewModel.alert, error: $userProfileViewModel.error)
-    //        }
-    
-    
 }
 
 struct UserProfileView_Previews: PreviewProvider {

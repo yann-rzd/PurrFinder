@@ -10,45 +10,59 @@ import CoreLocation
 
 struct AlertPageView: View {
     @StateObject var locationViewModel = LocationViewModel()
-    @State private var showPetForm = false
+    @StateObject var alertPageViewModel = AlertPageViewModel()
+    
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Push pour lancer une alerte")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("BluePurr"))
-                    .padding(.horizontal, 40)
-                    .multilineTextAlignment(.center)
-                
-                Button(action: {
-                    showPetForm.toggle()
-                }) {
-                    Image("Paw")
-                        .resizable()
-                        .frame(width: 300, height: 300)
-                        .padding(.top, 50)
+            
+            if alertPageViewModel.alertInProgress {
+                CurrentAlertPageView()
+            } else {
+                VStack {
+                    Text("Push pour lancer une alerte")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("BluePurr"))
+                        .padding(.horizontal, 40)
+                        .multilineTextAlignment(.center)
+                    
+                    Button(action: {
+                        alertPageViewModel.showPetForm.toggle()
+                    }) {
+                        Image("Paw")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                            .padding(.top, 50)
+                    }
+                    .sheet(isPresented: $alertPageViewModel.showPetForm) {
+                        PetFormView(isPresented: $alertPageViewModel.showPetForm, alertInProgress: $alertPageViewModel.alertInProgress)
+                    }
+                    
+                    Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
+                        .foregroundColor(Color("BluePurr"))
+                        .padding(.horizontal, 50)
+                        .padding(.top, 20)
+                        .multilineTextAlignment(.center)
                 }
-                .sheet(isPresented: $showPetForm) {
-                    PetFormView(isPresented: $showPetForm)
+                .onAppear() {
+                    locationViewModel.getUserLocation()
                 }
-                
-                Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
-                    .foregroundColor(Color("BluePurr"))
-                    .padding(.horizontal, 50)
-                    .padding(.top, 20)
-                    .multilineTextAlignment(.center)
             }
-            .onAppear() {
-                locationViewModel.getUserLocation()
+            
+        }
+        .onAppear() {
+            Task {
+                await alertPageViewModel.checkIfAlertInProgress()
             }
         }
     }
-    
-    struct AlertPageView_Previews: PreviewProvider {
-        static var previews: some View {
-            AlertPageView()
-        }
+}
+
+
+
+struct AlertPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        AlertPageView()
     }
 }

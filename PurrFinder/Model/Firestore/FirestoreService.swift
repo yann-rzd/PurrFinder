@@ -68,6 +68,23 @@ final class FirestoreService {
         try await postRef.setData(myStruct: postAlertData)
     }
     
+    func checkIfAlertInProgress(userUID: String) async -> Bool {
+        let collectionRef = db.collection("postAlertData")
+        
+        do {
+            let querySnapshot = try await collectionRef.whereField("ownerUid", isEqualTo: userUID).getDocuments()
+            
+            if querySnapshot.count > 0 {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            print("Erreur lors de la récupération des documents: \(error.localizedDescription)")
+            return false
+        }
+    }
+    
     func deletePost(postId: String, completion: @escaping (Error?) -> Void) {
         let postRef = db.collection("postAlertData").document(postId)
         postRef.delete { (error) in
