@@ -11,13 +11,14 @@ struct PetFormView: View {
     @StateObject var petFormViewModel = PetFormViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     @Binding var isPresented: Bool
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 Button(action: {
-                    isPresented = false
+                    dismiss()
                 }) {
                     Image(systemName: "xmark")
                         .foregroundColor(Color("BluePurr"))
@@ -91,6 +92,7 @@ struct PetFormView: View {
             Button(action: {
                 Task {
                     petFormViewModel.createPostAlert()
+                    dismiss()
                 }
             }) {
                 Text("Envoyer l'alerte")
