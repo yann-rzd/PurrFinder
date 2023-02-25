@@ -92,7 +92,13 @@ extension PetFormModalView {
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")
                 }
                 
-                storageService.persistAnimalImageToStorage(image: UIImage(imageLiteralResourceName: "Cat"))
+                guard let petImage = petImage else {
+                    storageService.persistAnimalImageToStorage(image: UIImage(imageLiteralResourceName: "Cat"))
+                    return
+                }
+                
+                storageService.persistAnimalImageToStorage(image: petImage)
+                
             }
         }
         

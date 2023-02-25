@@ -16,15 +16,11 @@ extension CurrentAlertView {
         @Published var animalBreed = ""
         @Published var animalDescription = ""
         @Published var animalLostDate = ""
-//        @Published var ownerLatitude = 0.0
-//        @Published var ownerLongitude = 0.0
-        
         
         func getCurrentAlertData() async throws {
             
             try await getAnimalImage()
             try await getAnimalData()
-//            try await getOwnerLocation()
         }
         
         private let firebaseAuthService = FirebaseAuthService.shared
@@ -46,32 +42,5 @@ extension CurrentAlertView {
             animalDescription = animalDTO.animalDescription
             animalLostDate = animalDTO.postDate
         }
-        
-//        private func getOwnerLocation() async throws {
-//            let userUID = firebaseAuthService.getCurrentUserUID()
-//            let userDTO = try await firestoreService.getUserData(userUID: userUID)
-//            
-//            guard let latitude = userDTO.locationLatitude else {
-//                return
-//            }
-//            
-//            guard let longitude = userDTO.locationLongitude else {
-//                return
-//            }
-//            
-//            ownerLatitude = stringToDoubleConvertor(stringNumber: latitude)
-//            ownerLongitude = stringToDoubleConvertor(stringNumber: longitude)
-//            
-//            print("OWNER LATITUDE : \(ownerLatitude)")
-//            print("OWNER LONGITUDE : \(ownerLongitude)")
-//        }
-//        
-//        private func stringToDoubleConvertor(stringNumber: String) -> Double {
-//            if let doubleNumber = Double(stringNumber) {
-//                return doubleNumber
-//            } else {
-//                return 0.0
-//            }
-//        }
     }
 }
