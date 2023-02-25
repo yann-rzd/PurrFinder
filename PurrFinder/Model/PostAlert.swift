@@ -14,6 +14,6 @@ struct PostAlert {
     var animalType: String
     var animalBreed: String
     var animalDescription: String
-    var postDate: Date
+    var postDate: String
     var ownerUid: String
 }

@@ -62,10 +62,19 @@ final class FirestoreService {
         ])
     }
     
-    func createPost(post: PostAlert) async throws {
-        let postRef = db.collection("postAlertData").document()
+    func createPostAlert(post: PostAlert, userUID: String) async throws {
+        let postRef = db.collection("postAlertData").document(userUID)
         let postAlertData = post.createPostAlertData()
         try await postRef.setData(myStruct: postAlertData)
+    }
+    
+    func getPostAlertData(userUID: String) async throws -> PostAlertDTO {
+        let docRef = db.collection("postAlertData").document(userUID)
+        let postAlertDTOResponse = try await docRef.getDocument(as: PostAlertDTO.self)
+        
+        let id = postAlertDTOResponse.0
+        print(id)
+        return postAlertDTOResponse.1
     }
     
     func checkIfAlertInProgress(userUID: String) async -> Bool {

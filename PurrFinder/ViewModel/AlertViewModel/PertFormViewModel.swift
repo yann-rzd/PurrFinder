@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension PetFormView {
+extension PetFormModalView {
     @MainActor class PetFormViewModel: ObservableObject {
         @Published var petImage: UIImage?
         @Published var petName = ""
@@ -71,6 +71,9 @@ extension PetFormView {
             Task {
                 let uid = firebaseAuthService.getCurrentUserUID()
                 let currentDate = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+                let dateString = dateFormatter.string(from: currentDate)
                 
                 let posetAlert = PostAlert(
                     uid: uid,
@@ -78,12 +81,12 @@ extension PetFormView {
                     animalType: petType,
                     animalBreed: petBreed,
                     animalDescription: petDescription,
-                    postDate: currentDate,
+                    postDate: dateString,
                     ownerUid: uid
                 )
                 
                 do {
-                    try await firestoreService.createPost(post: posetAlert)
+                    try await firestoreService.createPostAlert(post: posetAlert, userUID: uid)
                 } catch {
                     
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")

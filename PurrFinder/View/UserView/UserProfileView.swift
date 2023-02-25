@@ -114,7 +114,6 @@ struct UserProfileView: View {
                 } catch {
                     // handle error
                 }
-                
             }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {

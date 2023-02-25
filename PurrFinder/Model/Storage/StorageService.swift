@@ -75,6 +75,18 @@ final class StorageService {
         return profileImage
     }
     
+    func downloadAnimalImage() async throws -> UIImage? {
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let storage = Storage.storage().reference(withPath: "animalImages/\(userUID)")
+
+        let url = try await storage.downloadURL()
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        guard let animalImage = UIImage(data: data) else { return nil}
+        
+        return animalImage
+    }
+    
     func deleteImageFromStorage() async throws {
         let userUID = firebaseAuthService.getCurrentUserUID()
         let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")

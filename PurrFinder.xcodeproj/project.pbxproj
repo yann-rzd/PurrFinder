@@ -13,14 +13,18 @@
 		E41B483B29A3D6F200341687 /* ProfileImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */; };
 		E41F01AA29A6617E00CCD79C /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01A929A6617E00CCD79C /* UserSettingsView.swift */; };
 		E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */; };
-		E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AF29A67BD800CCD79C /* PetFormView.swift */; };
+		E41F01B029A67BD800CCD79C /* PetFormModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01AF29A67BD800CCD79C /* PetFormModalView.swift */; };
 		E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */; };
 		E41F01B529A7A11800CCD79C /* PostAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */; };
 		E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B629A7D7C100CCD79C /* PostAlertError.swift */; };
 		E41F01B929A9148A00CCD79C /* AnimalImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */; };
-		E41F01BB29A917F500CCD79C /* CurrentAlertPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01BA29A917F500CCD79C /* CurrentAlertPageView.swift */; };
-		E41F01BD29A9309D00CCD79C /* AlertPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01BC29A9309D00CCD79C /* AlertPageViewModel.swift */; };
+		E41F01BB29A917F500CCD79C /* CurrentAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01BA29A917F500CCD79C /* CurrentAlertView.swift */; };
+		E41F01BD29A9309D00CCD79C /* PostAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F01BC29A9309D00CCD79C /* PostAlertViewModel.swift */; };
 		E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4326FB329A52DE600A1592A /* LocationViewModel.swift */; };
+		E440DE7E29AA5365000A832F /* CurrentAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE7D29AA5365000A832F /* CurrentAlertViewModel.swift */; };
+		E440DE8029AA64C9000A832F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE7F29AA64C9000A832F /* MapView.swift */; };
+		E440DE8429AA6CEE000A832F /* MapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8329AA6CEE000A832F /* MapModalView.swift */; };
+		E440DE8629AA6F19000A832F /* MapModalVoewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8529AA6F19000A832F /* MapModalVoewModel.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
 		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
 		E4CA485B299403F900CEEA3E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485A299403F900CEEA3E /* Picker.swift */; };
@@ -42,7 +46,7 @@
 		E4DF0212299188E2004E1CC6 /* AuthenticationErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0211299188E2004E1CC6 /* AuthenticationErrorViewModel.swift */; };
 		E4DF021429918931004E1CC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021329918931004E1CC6 /* ContentView.swift */; };
 		E4DF02162991893C004E1CC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02152991893C004E1CC6 /* HomeView.swift */; };
-		E4DF02182991894B004E1CC6 /* AlertPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02172991894B004E1CC6 /* AlertPageView.swift */; };
+		E4DF02182991894B004E1CC6 /* PostAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02172991894B004E1CC6 /* PostAlertView.swift */; };
 		E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021929918954004E1CC6 /* LoginView.swift */; };
 		E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021B2991895F004E1CC6 /* SignUpView.swift */; };
 		E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF021D29918969004E1CC6 /* AuthenticationErrorView.swift */; };
@@ -101,14 +105,18 @@
 		E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
 		E41F01A929A6617E00CCD79C /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
-		E41F01AF29A67BD800CCD79C /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
+		E41F01AF29A67BD800CCD79C /* PetFormModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormModalView.swift; sourceTree = "<group>"; };
 		E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PertFormViewModel.swift; sourceTree = "<group>"; };
 		E41F01B429A7A11800CCD79C /* PostAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostAlert+Extension.swift"; sourceTree = "<group>"; };
 		E41F01B629A7D7C100CCD79C /* PostAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertError.swift; sourceTree = "<group>"; };
 		E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImagePicker.swift; sourceTree = "<group>"; };
-		E41F01BA29A917F500CCD79C /* CurrentAlertPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAlertPageView.swift; sourceTree = "<group>"; };
-		E41F01BC29A9309D00CCD79C /* AlertPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPageViewModel.swift; sourceTree = "<group>"; };
+		E41F01BA29A917F500CCD79C /* CurrentAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAlertView.swift; sourceTree = "<group>"; };
+		E41F01BC29A9309D00CCD79C /* PostAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertViewModel.swift; sourceTree = "<group>"; };
 		E4326FB329A52DE600A1592A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		E440DE7D29AA5365000A832F /* CurrentAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAlertViewModel.swift; sourceTree = "<group>"; };
+		E440DE7F29AA64C9000A832F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E440DE8329AA6CEE000A832F /* MapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalView.swift; sourceTree = "<group>"; };
+		E440DE8529AA6F19000A832F /* MapModalVoewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalVoewModel.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
 		E4CA485A299403F900CEEA3E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
@@ -133,7 +141,7 @@
 		E4DF0211299188E2004E1CC6 /* AuthenticationErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorViewModel.swift; sourceTree = "<group>"; };
 		E4DF021329918931004E1CC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4DF02152991893C004E1CC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		E4DF02172991894B004E1CC6 /* AlertPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPageView.swift; sourceTree = "<group>"; };
+		E4DF02172991894B004E1CC6 /* PostAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertView.swift; sourceTree = "<group>"; };
 		E4DF021929918954004E1CC6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4DF021B2991895F004E1CC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E4DF021D29918969004E1CC6 /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
@@ -221,9 +229,10 @@
 		E41F01AE29A67BB800CCD79C /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				E4DF02172991894B004E1CC6 /* AlertPageView.swift */,
-				E41F01AF29A67BD800CCD79C /* PetFormView.swift */,
-				E41F01BA29A917F500CCD79C /* CurrentAlertPageView.swift */,
+				E4DF02172991894B004E1CC6 /* PostAlertView.swift */,
+				E41F01AF29A67BD800CCD79C /* PetFormModalView.swift */,
+				E41F01BA29A917F500CCD79C /* CurrentAlertView.swift */,
+				E440DE8329AA6CEE000A832F /* MapModalView.swift */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -232,7 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				E41F01B229A67E9000CCD79C /* PertFormViewModel.swift */,
-				E41F01BC29A9309D00CCD79C /* AlertPageViewModel.swift */,
+				E41F01BC29A9309D00CCD79C /* PostAlertViewModel.swift */,
+				E440DE7D29AA5365000A832F /* CurrentAlertViewModel.swift */,
+				E440DE8529AA6F19000A832F /* MapModalVoewModel.swift */,
 			);
 			path = AlertViewModel;
 			sourceTree = "<group>";
@@ -253,6 +264,7 @@
 				E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */,
 				E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */,
 				E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */,
+				E440DE7F29AA64C9000A832F /* MapView.swift */,
 			);
 			path = UIViewRepresentable;
 			sourceTree = "<group>";
@@ -711,7 +723,7 @@
 				E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */,
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
 				E41F01B929A9148A00CCD79C /* AnimalImagePicker.swift in Sources */,
-				E41F01BD29A9309D00CCD79C /* AlertPageViewModel.swift in Sources */,
+				E41F01BD29A9309D00CCD79C /* PostAlertViewModel.swift in Sources */,
 				E41F01AA29A6617E00CCD79C /* UserSettingsView.swift in Sources */,
 				E4DF020C299188A4004E1CC6 /* HomeViewModel.swift in Sources */,
 				E41F01B729A7D7C100CCD79C /* PostAlertError.swift in Sources */,
@@ -722,6 +734,7 @@
 				E4DF024C29926247004E1CC6 /* LocationService.swift in Sources */,
 				E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */,
 				E4E6645A299E69E0002F5A79 /* User+Extension.swift in Sources */,
+				E440DE7E29AA5365000A832F /* CurrentAlertViewModel.swift in Sources */,
 				E4E66458299E691B002F5A79 /* FirestoreServiceError.swift in Sources */,
 				E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
@@ -729,22 +742,25 @@
 				E4CA485B299403F900CEEA3E /* Picker.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
 				E41B483B29A3D6F200341687 /* ProfileImagePicker.swift in Sources */,
+				E440DE8029AA64C9000A832F /* MapView.swift in Sources */,
 				E4DF02092991882A004E1CC6 /* UserProfileViewModel.swift in Sources */,
-				E41F01B029A67BD800CCD79C /* PetFormView.swift in Sources */,
+				E41F01B029A67BD800CCD79C /* PetFormModalView.swift in Sources */,
 				E4DF024E2992691A004E1CC6 /* FirestoreService.swift in Sources */,
 				E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */,
 				E4E6645C299E6A34002F5A79 /* PostAlertDTO.swift in Sources */,
 				E4DF021E29918969004E1CC6 /* AuthenticationErrorView.swift in Sources */,
-				E41F01BB29A917F500CCD79C /* CurrentAlertPageView.swift in Sources */,
+				E41F01BB29A917F500CCD79C /* CurrentAlertView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
 				E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */,
 				E4DF02552992985A004E1CC6 /* NavigationTabView.swift in Sources */,
 				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,
 				E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */,
 				E4DF024429919C31004E1CC6 /* Notification.swift in Sources */,
-				E4DF02182991894B004E1CC6 /* AlertPageView.swift in Sources */,
+				E440DE8629AA6F19000A832F /* MapModalVoewModel.swift in Sources */,
+				E4DF02182991894B004E1CC6 /* PostAlertView.swift in Sources */,
 				E4DE139529A3D2EE0007EDD4 /* StorageService.swift in Sources */,
 				E4E66456299E68F0002F5A79 /* DocumentReference+Extension.swift in Sources */,
+				E440DE8429AA6CEE000A832F /* MapModalView.swift in Sources */,
 				E4E6645E299E6AFD002F5A79 /* UserDTO.swift in Sources */,
 				E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */,
 			);

@@ -8,16 +8,16 @@
 import SwiftUI
 import CoreLocation
 
-struct AlertPageView: View {
+struct PostAlertView: View {
     @StateObject var locationViewModel = LocationViewModel()
-    @StateObject var alertPageViewModel = AlertPageViewModel()
+    @StateObject var viewModel = PostAlertViewModel()
     
     
     var body: some View {
         NavigationView {
             
-            if alertPageViewModel.alertInProgress {
-                CurrentAlertPageView()
+            if viewModel.alertInProgress {
+                CurrentAlertView()
             } else {
                 VStack {
                     Text("Push pour lancer une alerte")
@@ -28,15 +28,15 @@ struct AlertPageView: View {
                         .multilineTextAlignment(.center)
                     
                     Button(action: {
-                        alertPageViewModel.showPetForm.toggle()
+                        viewModel.showPetForm.toggle()
                     }) {
                         Image("Paw")
                             .resizable()
                             .frame(width: 300, height: 300)
                             .padding(.top, 50)
                     }
-                    .sheet(isPresented: $alertPageViewModel.showPetForm) {
-                        PetFormView(isPresented: $alertPageViewModel.showPetForm, alertInProgress: $alertPageViewModel.alertInProgress)
+                    .sheet(isPresented: $viewModel.showPetForm) {
+                        PetFormModalView(isPresented: $viewModel.showPetForm, alertInProgress: $viewModel.alertInProgress)
                     }
                     
                     Text("Les utilisateurs dans la zone seront alertés et pourrons vous contacter en cas d'informations")
@@ -53,7 +53,7 @@ struct AlertPageView: View {
         }
         .onAppear() {
             Task {
-                await alertPageViewModel.checkIfAlertInProgress()
+                await viewModel.checkIfAlertInProgress()
             }
         }
     }
@@ -63,6 +63,6 @@ struct AlertPageView: View {
 
 struct AlertPageView_Previews: PreviewProvider {
     static var previews: some View {
-        AlertPageView()
+        PostAlertView()
     }
 }

@@ -13,6 +13,6 @@ struct PostAlertDTO: Decodable {
     let animalType: String
     let animalBreed: String
     let animalDescription: String
-    let postDate: Date
+    let postDate: String
     let ownerUid: String
 }

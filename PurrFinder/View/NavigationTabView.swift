@@ -20,7 +20,7 @@ struct NavigationTabView: View {
                 }
                 .tag(0)
             
-            AlertPageView()
+            PostAlertView()
                 .tabItem {
                     Image(systemName: "bell.fill")
                         .font(.system(size: 50))

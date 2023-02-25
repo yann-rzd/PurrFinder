@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PetFormView: View {
+struct PetFormModalView: View {
     @StateObject var petFormViewModel = PetFormViewModel()
     @StateObject var imagePickerViewModel = ImagePickerViewModel()
     @Binding var isPresented: Bool

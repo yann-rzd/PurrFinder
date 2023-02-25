@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension AlertPageView {
-    @MainActor class AlertPageViewModel: ObservableObject {
+extension PostAlertView {
+    @MainActor class PostAlertViewModel: ObservableObject {
         @Published var showPetForm = false
         @Published var alertInProgress = false
         
