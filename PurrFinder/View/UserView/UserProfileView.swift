@@ -37,7 +37,6 @@ struct UserProfileView: View {
                                 .resizable()
                                 .frame(width: 120, height: 120)
                                 .clipShape(Circle())
-                            //                            .foregroundColor(Color("BluePurr"))
                         }
                     }
                     

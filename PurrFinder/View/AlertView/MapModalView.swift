@@ -10,11 +10,12 @@ import MapKit
 
 struct MapModalView: View {
     @StateObject var viewModel = MapModalViewModel()
+    @State private var centerCoordinate = CLLocationCoordinate2D()
     @Binding var isPresented: Bool
     
     var body: some View {
         NavigationView {
-            MapView(latitude: viewModel.ownerLatitude, longitude: viewModel.ownerLongitude)
+            MapView(centerCoordinate: $centerCoordinate)
                 .ignoresSafeArea()
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
@@ -28,8 +29,13 @@ struct MapModalView: View {
                     }
                     
                 })
+                .onAppear {
+                    Task {
+                        try await viewModel.getOwnerLocation()
+                        centerCoordinate = CLLocationCoordinate2D(latitude: viewModel.ownerLatitude, longitude: viewModel.ownerLongitude)
+                    }
+                }
         }
     }
-    
 }
 
