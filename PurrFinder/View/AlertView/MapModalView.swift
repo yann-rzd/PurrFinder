@@ -16,19 +16,16 @@ struct MapModalView: View {
     var body: some View {
         NavigationView {
             MapView(centerCoordinate: $centerCoordinate)
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
                 .navigationBarTitle("", displayMode: .inline)
-                .navigationBarBackButtonHidden(true)
+//                .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: Button(action: {
-                    self.isPresented.toggle()
-                }) {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.blue)
-                        Text("Back")
-                    }
-                    
-                })
+                        self.isPresented.toggle()
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title)
+                            .foregroundColor(Color("BluePurr"))
+                    })
                 .onAppear {
                     Task {
                         try await viewModel.getOwnerLocation()
