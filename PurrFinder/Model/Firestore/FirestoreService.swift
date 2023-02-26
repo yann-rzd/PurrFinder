@@ -94,14 +94,12 @@ final class FirestoreService {
         }
     }
     
-    func deletePost(postId: String, completion: @escaping (Error?) -> Void) {
-        let postRef = db.collection("postAlertData").document(postId)
-        postRef.delete { (error) in
-            if let error = error {
-                completion(error)
-            } else {
-                completion(nil)
-            }
+    func deletePostAlert(userUID: String) async throws {
+        let postAlertRef = db.collection("postAlertData").document(userUID)
+        let snapshot = try await postAlertRef.getDocument()
+        guard snapshot.exists else {
+            throw NSError(domain: "PostAlertNotFound", code: 404, userInfo: nil)
         }
+        try await postAlertRef.delete()
     }
 }

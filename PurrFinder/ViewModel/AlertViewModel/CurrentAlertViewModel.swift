@@ -16,11 +16,39 @@ extension CurrentAlertView {
         @Published var animalBreed = ""
         @Published var animalDescription = ""
         @Published var animalLostDate = ""
+        @Published var alert = false
+        @Published var error = ""
+        
+        
+        private func loadData() async throws {
+            try await getCurrentAlertData()
+        }
+        
+        func refresh() {
+            Task {
+                do {
+                    try await loadData()
+                } catch {
+                    // handle error
+                }
+            }
+        }
+        
         
         func getCurrentAlertData() async throws {
             
             try await getAnimalImage()
             try await getAnimalData()
+        }
+        
+        func deleteAlertData() async throws {
+            do {
+                try await deleteAnimalData()
+                try await deleteAnimalImage()
+            } catch {
+                self.error = error.localizedDescription
+                self.alert.toggle()
+            }
         }
         
         private let firebaseAuthService = FirebaseAuthService.shared
@@ -41,6 +69,15 @@ extension CurrentAlertView {
             animalBreed = animalDTO.animalBreed
             animalDescription = animalDTO.animalDescription
             animalLostDate = animalDTO.postDate
+        }
+        
+        private func deleteAnimalData() async throws {
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            try await firestoreService.deletePostAlert(userUID: userUID)
+        }
+        
+        private func deleteAnimalImage() async throws {
+            try await storageService.deleteAnimalImageFromStorage()
         }
     }
 }

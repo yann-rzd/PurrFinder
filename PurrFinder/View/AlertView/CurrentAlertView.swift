@@ -10,6 +10,8 @@ import SwiftUI
 struct CurrentAlertView: View {
     @StateObject var viewModel = CurrentAlertViewModel()
     @State private var showMap = false
+    @State private var showAlert = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -86,11 +88,11 @@ struct CurrentAlertView: View {
             .frame(width: UIScreen.main.bounds.width - 50)
             .padding(.top, 25)
             .padding(.bottom, 25)
-            .background(Color.orange)
+            .background(Color.blue.opacity(0.5))
             .cornerRadius(30)
             
             Button(action: {
-                // Cloturer l'alerte
+                showAlert.toggle()
             }) {
                 Text("Clôturer l'alerte")
                     .foregroundColor(.white)
@@ -103,7 +105,6 @@ struct CurrentAlertView: View {
             .padding(.bottom, 25)
         }
         
-        
         .fullScreenCover(isPresented: $showMap, content: {
             MapModalView(isPresented: $showMap)
         })
@@ -113,6 +114,15 @@ struct CurrentAlertView: View {
             } catch {
                 // handle error
             }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Êtes-vous sûr de vouloir supprimer l'alerte ?"), message: Text("Cette action est irréversible."), primaryButton: .destructive(Text("Oui")) {
+                Task {
+                    try await viewModel.deleteAlertData()
+                }
+                
+                dismiss()
+            }, secondaryButton: .cancel(Text("Non")))
         }
         
     }

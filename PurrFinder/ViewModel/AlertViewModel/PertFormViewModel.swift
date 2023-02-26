@@ -17,6 +17,7 @@ extension PetFormModalView {
         @Published var petDescription = ""
         @Published var alert = false
         @Published var error = ""
+        @Published var isAlertPosted = false
         
 //        private func getProfileImage() async throws {
 //            self.petImage = try await storageService.downloadProfileImage()
@@ -65,6 +66,11 @@ extension PetFormModalView {
             }
             
             savePostAlert()
+        }
+        
+        func isAlertPosted() async {
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
         }
         
         private func savePostAlert() {

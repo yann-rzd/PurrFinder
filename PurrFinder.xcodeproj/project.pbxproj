@@ -218,14 +218,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E41F01AB29A666FC00CCD79C /* UserSettingsViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */,
-			);
-			path = UserSettingsViewModel;
-			sourceTree = "<group>";
-		};
 		E41F01AE29A67BB800CCD79C /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +350,6 @@
 				E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */,
 				E41F01B129A67E6C00CCD79C /* AlertViewModel */,
 				E4DF020A29918889004E1CC6 /* AuthenticationViewModel */,
-				E41F01AB29A666FC00CCD79C /* UserSettingsViewModel */,
 				E4DF020729918808004E1CC6 /* UserProfileViewModel */,
 				E4326FB329A52DE600A1592A /* LocationViewModel.swift */,
 			);
@@ -395,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				E4DF02082991882A004E1CC6 /* UserProfileViewModel.swift */,
+				E41F01AC29A6671B00CCD79C /* UserSettingsViewModel.swift */,
 			);
 			path = UserProfileViewModel;
 			sourceTree = "<group>";

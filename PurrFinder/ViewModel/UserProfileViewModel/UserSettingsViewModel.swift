@@ -37,7 +37,7 @@ extension UserSettingsView {
         }
         
         private func deleteUserImage() async throws {
-            try await storageService.deleteImageFromStorage()
+            try await storageService.deleteUserProfileImageFromStorage()
         }
         
         private func signOut() throws {

@@ -15,6 +15,8 @@ struct PetFormModalView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
+        
+        
         VStack {
             HStack {
                 Spacer()
@@ -93,8 +95,8 @@ struct PetFormModalView: View {
             Button(action: {
                 Task {
                     petFormViewModel.createPostAlert()
+                    await Task.sleep(1 * NSEC_PER_SEC)
                     alertInProgress = true
-                    
                     isPresented = false
                 }
             }) {
@@ -107,6 +109,8 @@ struct PetFormModalView: View {
             .cornerRadius(10)
             .padding(.top, 25)
             
+            
+            
             Spacer()
         }
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
@@ -115,6 +119,7 @@ struct PetFormModalView: View {
         .alert(isPresented: $petFormViewModel.alert) {
             Alert(title: Text("Erreur"), message: Text(petFormViewModel.error), dismissButton: .cancel())
         }
+        
     }
 }
 

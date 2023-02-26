@@ -87,9 +87,20 @@ final class StorageService {
         return animalImage
     }
     
-    func deleteImageFromStorage() async throws {
+    func deleteUserProfileImageFromStorage() async throws {
         let userUID = firebaseAuthService.getCurrentUserUID()
         let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
+        
+        do {
+            try await ref.delete()
+        } catch {
+            throw error
+        }
+    }
+    
+    func deleteAnimalImageFromStorage() async throws {
+        let userUID = firebaseAuthService.getCurrentUserUID()
+        let ref = Storage.storage().reference(withPath: "animalImages/\(userUID)")
         
         do {
             try await ref.delete()

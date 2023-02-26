@@ -15,20 +15,6 @@ struct UserSettingsView: View {
     var body: some View {
         
         VStack {
-//            HStack {
-//                Spacer()
-//                Button(action: {
-//                    dismiss()
-//                }) {
-//                    Image(systemName: "xmark")
-//                        .foregroundColor(Color("BluePurr"))
-//                        .font(.system(size: 20))
-//                }
-//            }
-//            .padding(.trailing, 20)
-//            .padding(.top, 20)
-//
-//            Spacer()
             Button(action: {
                 showAlert.toggle()
             }) {
@@ -39,7 +25,6 @@ struct UserSettingsView: View {
             }
             .background(Color("BluePurr"))
             .cornerRadius(10)
-//            Spacer()
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Êtes-vous sûr de vouloir supprimer votre compte ?"), message: Text("Cette action est irréversible."), primaryButton: .destructive(Text("Oui")) {
@@ -47,10 +32,6 @@ struct UserSettingsView: View {
                     await userSettingsViewModel.deleteUser()
                 }
                 dismiss()
-                
-//                UserDefaults.standard.set(false, forKey: "status")
-//                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                
             }, secondaryButton: .cancel(Text("Non")))
         }
     }
