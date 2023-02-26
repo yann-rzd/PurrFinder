@@ -56,14 +56,16 @@ struct CurrentAlertView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(
-                )
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+                .padding(.horizontal, 25)
                 
                 Text("Perdue le " + viewModel.animalLostDate.prefix(10) + " à " + viewModel.animalLostDate.suffix(8))
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .font(.system(size: 20))
                     .multilineTextAlignment(.center)
+                    .padding(.top, 10)
                 
                 HStack {
                     Text("Voir la localisation")
@@ -79,7 +81,7 @@ struct CurrentAlertView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .padding(.top, 50)
+                .padding(.top, 40)
             }
             .frame(width: UIScreen.main.bounds.width - 50)
             .padding(.top, 25)
