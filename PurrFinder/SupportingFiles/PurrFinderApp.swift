@@ -13,6 +13,7 @@ struct PurrFinderApp: App {
     
     init() {
         FirebaseApp.configure()
+        OpenAIAPICaller.shared.setup()
       }
     
     var body: some Scene {

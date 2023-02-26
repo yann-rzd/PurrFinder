@@ -9,9 +9,7 @@ import SwiftUI
 
 struct CurrentAlertView: View {
     @StateObject var viewModel = CurrentAlertViewModel()
-    @State private var showMap = false
-    @State private var showAlert = false
-    @Binding var alertInpRogress: Bool
+    @Binding var alertInProgress: Bool
     @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     
@@ -77,7 +75,7 @@ struct CurrentAlertView: View {
                         .fontWeight(.medium)
                         .font(.system(size: 20))
                     Button(action: {
-                        showMap = true
+                        viewModel.showMap = true
                     }) {
                         Image(systemName: "map.fill")
                             .resizable()
@@ -94,7 +92,7 @@ struct CurrentAlertView: View {
             .cornerRadius(30)
             
             Button(action: {
-                showAlert.toggle()
+                viewModel.showAlert.toggle()
             }) {
                 Text("Clôturer l'alerte")
                     .foregroundColor(.white)
@@ -107,8 +105,8 @@ struct CurrentAlertView: View {
             .padding(.bottom, 25)
         }
         
-        .fullScreenCover(isPresented: $showMap, content: {
-            MapModalView(isPresented: $showMap)
+        .fullScreenCover(isPresented: $viewModel.showMap, content: {
+            MapModalView(isPresented: $viewModel.showMap)
         })
         .task {
             do {
@@ -117,11 +115,11 @@ struct CurrentAlertView: View {
                 // handle error
             }
         }
-        .alert(isPresented: $showAlert) {
+        .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text("Êtes-vous sûr de vouloir supprimer l'alerte ?"), message: Text("Cette action est irréversible."), primaryButton: .destructive(Text("Oui")) {
                 Task {
                     try await viewModel.deleteAlertData()
-                    alertInpRogress = false
+                    alertInProgress = false
                 }
                 
                 dismiss()

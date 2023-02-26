@@ -11,6 +11,7 @@ extension PostAlertView {
     @MainActor class PostAlertViewModel: ObservableObject {
         @Published var showPetForm = false
         @Published var alertInProgress = false
+        @Published var alertStillInProgressResponse = true
         
         func checkIfAlertInProgress() async {
             let userUID = firestoreAuthService.getCurrentUserUID()

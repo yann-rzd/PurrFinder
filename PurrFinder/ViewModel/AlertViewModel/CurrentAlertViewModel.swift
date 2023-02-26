@@ -18,6 +18,8 @@ extension CurrentAlertView {
         @Published var animalLostDate = ""
         @Published var alert = false
         @Published var error = ""
+        @Published var showMap = false
+        @Published var showAlert = false
         
         
         private func loadData() async throws {
