@@ -11,7 +11,9 @@ struct CurrentAlertView: View {
     @StateObject var viewModel = CurrentAlertViewModel()
     @State private var showMap = false
     @State private var showAlert = false
+    @Binding var alertInpRogress: Bool
     @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         
@@ -119,17 +121,12 @@ struct CurrentAlertView: View {
             Alert(title: Text("Êtes-vous sûr de vouloir supprimer l'alerte ?"), message: Text("Cette action est irréversible."), primaryButton: .destructive(Text("Oui")) {
                 Task {
                     try await viewModel.deleteAlertData()
+                    alertInpRogress = false
                 }
                 
                 dismiss()
             }, secondaryButton: .cancel(Text("Non")))
         }
         
-    }
-}
-
-struct CurrentAlertPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrentAlertView()
     }
 }

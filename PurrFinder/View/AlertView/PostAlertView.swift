@@ -11,13 +11,14 @@ import CoreLocation
 struct PostAlertView: View {
     @StateObject var locationViewModel = LocationViewModel()
     @StateObject var viewModel = PostAlertViewModel()
+    @State private var alertInProgress = true
     
     
     var body: some View {
         NavigationView {
             
             if viewModel.alertInProgress {
-                CurrentAlertView()
+                CurrentAlertView(alertInpRogress: $alertInProgress)
             } else {
                 VStack {
                     Text("Push pour lancer une alerte")
@@ -54,6 +55,12 @@ struct PostAlertView: View {
         .onAppear() {
             Task {
                 await viewModel.checkIfAlertInProgress()
+            }
+        }
+        .onChange(of: alertInProgress) { newValue in
+            Task {
+                await viewModel.checkIfAlertInProgress()
+                alertInProgress = true
             }
         }
     }
