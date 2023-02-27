@@ -15,8 +15,6 @@ struct PetFormModalView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        
-        
         VStack {
             HStack {
                 Spacer()
@@ -31,7 +29,7 @@ struct PetFormModalView: View {
             .padding(.trailing, 20)
             .padding(.top, 20)
             
-//            Spacer()
+            //            Spacer()
             
             ZStack(alignment: .bottomTrailing) {
                 ZStack {
@@ -90,18 +88,20 @@ struct PetFormModalView: View {
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
+            .padding(.bottom, 50)
             .padding()
             
             Button(action: {
                 Task {
                     petFormViewModel.createPostAlert()
+                    await petFormViewModel.isAlertPosted()
                     await Task.sleep(1 * NSEC_PER_SEC)
+                    
                     if petFormViewModel.isAlertPosted {
                         alertInProgress = true
                         isPresented = false
-                    } else {
-                        isPresented = false
                     }
+                    
                 }
             }) {
                 Text("Envoyer l'alerte")
@@ -115,17 +115,24 @@ struct PetFormModalView: View {
             
             
             
-//            Spacer()
+            //            Spacer()
         }
+        .ignoresSafeArea(.keyboard)
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
             AnimalImagePicker(image: $petFormViewModel.petImage)
         }
         .alert(isPresented: $petFormViewModel.alert) {
             Alert(title: Text("Erreur"), message: Text(petFormViewModel.error), dismissButton: .cancel())
         }
-        
+        .onTapGesture {
+                    hideKeyboard()
+            }
     }
 }
 
-//struct PetFormView_Previews: PreviewProvider {
-
+extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+    }
+}
