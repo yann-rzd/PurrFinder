@@ -86,11 +86,10 @@ extension UserProfileView {
             }
         }
         
-        
-        
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
+        
         
         private func isValidPhoneNumber(phone: String) -> Bool {
             let PHONE_REGEX = "^0[1-9](\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}$"

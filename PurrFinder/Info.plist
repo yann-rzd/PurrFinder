@@ -7,5 +7,12 @@
 		<string>AmaticSC-Bold.ttf</string>
 		<string>AmaticSC-Regular.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>nearby-interaction</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

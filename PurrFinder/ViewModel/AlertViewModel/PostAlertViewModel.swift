@@ -18,7 +18,12 @@ extension PostAlertView {
             alertInProgress = await firestoreService.checkIfAlertInProgress(userUID: userUID)
         }
         
+        func requestNotificationAuthorization() {
+            notificationService.requestNotificationAuthorization()
+        }
+        
         private let firestoreService = FirestoreService.shared
         private let firestoreAuthService = FirebaseAuthService.shared
+        private let notificationService = Notification.shared
     }
 }

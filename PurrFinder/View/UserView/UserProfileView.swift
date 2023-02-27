@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
+import UserNotifications
 
 struct UserProfileView: View {
     @StateObject private var userProfileViewModel = UserProfileViewModel()
@@ -122,7 +122,7 @@ struct UserProfileView: View {
                         Image(systemName: "gearshape")
                             .resizable()
                     }
-
+                    
                 }
             })
             .alert(isPresented: $imagePickerViewModel.presentNotAuthorizedProhibitedAlert) {

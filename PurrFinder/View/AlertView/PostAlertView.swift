@@ -55,6 +55,7 @@ struct PostAlertView: View {
             Task {
                 await viewModel.checkIfAlertInProgress()
             }
+            viewModel.requestNotificationAuthorization()
         }
         .onChange(of: viewModel.alertStillInProgressResponse) { newValue in
             Task {
