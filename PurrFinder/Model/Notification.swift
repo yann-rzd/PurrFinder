@@ -32,18 +32,18 @@ final class Notification {
         })
     }
     
-    func checkForPermission(animalLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
+    func checkForPermission(ownerLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .authorized:
-                self.scheduleNotification(animalLocation: animalLocation, animalName: animalName, animalType: animalType)
+                self.scheduleNotification(ownerLocation: ownerLocation, animalName: animalName, animalType: animalType)
             case .denied:
                 return
             case .notDetermined:
                 notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAlllow, error in
                     if didAlllow {
-                        self.scheduleNotification(animalLocation: animalLocation, animalName: animalName, animalType: animalType)
+                        self.scheduleNotification(ownerLocation: ownerLocation, animalName: animalName, animalType: animalType)
                     }
                 }
             default:
@@ -52,7 +52,7 @@ final class Notification {
         }
     }
     
-    private func scheduleNotification(animalLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
+    private func scheduleNotification(ownerLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
         
         let identifier = "Un animale s'est égaré dans votre zone"
         
@@ -61,9 +61,11 @@ final class Notification {
         content.body = "Description : \(animalType)"
         content.sound = UNNotificationSound.default
         
-        let trigger = UNLocationNotificationTrigger(region: getRegion(from: animalLocation), repeats: false)
+        let trigger = UNLocationNotificationTrigger(region: getRegion(from: ownerLocation), repeats: false)
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        print("REQUEST NOTIFICATION : \(request)")
         
         notificationCenter.add(request) { (error) in
             if let error = error {
@@ -76,6 +78,8 @@ final class Notification {
         let region = CLCircularRegion(center: location, radius: 1000, identifier: "PetLocation")
         region.notifyOnEntry = true
         region.notifyOnExit = false
+        print("REGION : \(region)")
+        
         return region
     }
     

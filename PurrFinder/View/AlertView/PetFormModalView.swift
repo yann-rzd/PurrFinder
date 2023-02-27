@@ -31,7 +31,7 @@ struct PetFormModalView: View {
             .padding(.trailing, 20)
             .padding(.top, 20)
             
-            Spacer()
+//            Spacer()
             
             ZStack(alignment: .bottomTrailing) {
                 ZStack {
@@ -63,7 +63,7 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Nom de votre animal :")
                 TextField("Son nom", text: $petFormViewModel.petName)
-                    .padding()
+                    .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petName != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
@@ -71,7 +71,7 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Type de votre animal :")
                 TextField("Chat, chient, rongeur, tortue ...", text: $petFormViewModel.petType)
-                    .padding()
+                    .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petType != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
@@ -79,7 +79,7 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Race de votre animal :")
                 TextField("Bengal, labrador, berger australien ...", text: $petFormViewModel.petBreed)
-                    .padding()
+                    .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petBreed != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
@@ -87,7 +87,7 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Description de votre animal :")
                 TextEditor(text: $petFormViewModel.petDescription)
-                    .padding()
+                    .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
             }
             .padding()
@@ -96,8 +96,12 @@ struct PetFormModalView: View {
                 Task {
                     petFormViewModel.createPostAlert()
                     await Task.sleep(1 * NSEC_PER_SEC)
-                    alertInProgress = true
-                    isPresented = false
+                    if petFormViewModel.isAlertPosted {
+                        alertInProgress = true
+                        isPresented = false
+                    } else {
+                        isPresented = false
+                    }
                 }
             }) {
                 Text("Envoyer l'alerte")
@@ -111,7 +115,7 @@ struct PetFormModalView: View {
             
             
             
-            Spacer()
+//            Spacer()
         }
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
             AnimalImagePicker(image: $petFormViewModel.petImage)

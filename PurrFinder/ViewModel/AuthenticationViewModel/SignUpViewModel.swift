@@ -85,7 +85,6 @@ extension SignUpView {
                 
                 do {
                     try await fireStoreService.saveUserData(user: user)
-                    print("USER UUID : \(user.uid)")
                 } catch {
                     
                     print("Erreur lors de la création de l'utilisateur : \(error.localizedDescription)")

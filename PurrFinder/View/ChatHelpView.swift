@@ -43,7 +43,6 @@ struct ChatHelpView: View {
                 switch result {
                 case .success(let output):
                     self.models.append(output)
-                    print("MODELS : \(models)")
                     DispatchQueue.main.async {
                         self.text = ""
                     }

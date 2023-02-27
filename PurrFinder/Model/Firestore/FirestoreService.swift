@@ -32,7 +32,6 @@ final class FirestoreService {
         let userDTOResponse = try await docRef.getDocument(as: UserDTO.self)
         
         let id = userDTOResponse.0
-        print(id)
         return userDTOResponse.1
     }
     
@@ -73,7 +72,6 @@ final class FirestoreService {
         let postAlertDTOResponse = try await docRef.getDocument(as: PostAlertDTO.self)
         
         let id = postAlertDTOResponse.0
-        print(id)
         return postAlertDTOResponse.1
     }
     

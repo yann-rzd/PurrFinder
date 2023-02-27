@@ -26,9 +26,6 @@ extension MapModalView {
             
             ownerLatitude = stringToDoubleConvertor(stringNumber: latitude)
             ownerLongitude = stringToDoubleConvertor(stringNumber: longitude)
-            
-            print("OWNER LATITUDE : \(ownerLatitude)")
-            print("OWNER LONGITUDE : \(ownerLongitude)")
         }
         
         private let firebaseAuthService = FirebaseAuthService.shared

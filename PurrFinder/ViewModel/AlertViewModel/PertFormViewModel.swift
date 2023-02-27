@@ -23,9 +23,7 @@ extension PetFormModalView {
 //            self.petImage = try await storageService.downloadProfileImage()
 //        }
         
-        private let firestoreService = FirestoreService.shared
-        private let storageService = StorageService.shared
-        private let firebaseAuthService = FirebaseAuthService.shared
+        
         
         func createPostAlert() {
             guard !petName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
@@ -71,6 +69,23 @@ extension PetFormModalView {
         func isAlertPosted() async {
             let userUID = firebaseAuthService.getCurrentUserUID()
             isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
+        }  
+        
+        private let firestoreService = FirestoreService.shared
+        private let storageService = StorageService.shared
+        private let firebaseAuthService = FirebaseAuthService.shared
+        
+        
+        private func containsExtraSpaces(text: String) -> Bool {
+            let words = text.split(separator: " ")
+            let cleanedText = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: " ")
+            return cleanedText != text
+        }
+        
+        private func removeExtraSpaces(text: String) -> String {
+            let words = text.split(separator: " ")
+            let cleanedWords = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            return cleanedWords.joined(separator: " ")
         }
         
         private func savePostAlert() {
@@ -106,18 +121,6 @@ extension PetFormModalView {
                 storageService.persistAnimalImageToStorage(image: petImage)
                 
             }
-        }
-        
-        private func containsExtraSpaces(text: String) -> Bool {
-            let words = text.split(separator: " ")
-            let cleanedText = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: " ")
-            return cleanedText != text
-        }
-        
-        private func removeExtraSpaces(text: String) -> String {
-            let words = text.split(separator: " ")
-            let cleanedWords = words.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-            return cleanedWords.joined(separator: " ")
         }
     }
 }
