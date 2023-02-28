@@ -11,16 +11,13 @@ import CoreLocation
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    private var locationManager: CLLocationManager?
-    private var error = ""
-    private var alert = false
-    
-//    let notAuthorizedLatitudelatitude: Double = 0
-//    let notAuthorizedLatitudelongitude: Double = 0
+    // MARK: - INTERNAL: properties
     
     @Published var latitude: Double = 0
     @Published var longitude: Double = 0
     
+    
+    // MARK: - INTERNAL: methods
     
     func getUserLocation() {
         locationManager = CLLocationManager()
@@ -47,22 +44,12 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    
+    // MARK: - PRIVATE: properties
+    
     private let firestoreService = FirestoreService.shared
     private let firebaseAuthService = FirebaseAuthService.shared
+    private var locationManager: CLLocationManager?
+    private var error = ""
+    private var alert = false
 }
-
-
-
-
-
-
-
-
-
-//            let userUID = firebaseAuthService.getCurrentUserUID()
-//            do {
-//                try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
-//            } catch {
-//                self.error = error.localizedDescription
-//                self.alert.toggle()
-//            }

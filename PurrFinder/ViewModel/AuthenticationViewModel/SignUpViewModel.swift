@@ -10,6 +10,9 @@ import SwiftUI
 
 extension SignUpView {
     @MainActor class SignUpViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var color = Color.black.opacity(0.7)
         @Published var email = ""
         @Published var pass = ""
@@ -22,6 +25,8 @@ extension SignUpView {
         @Published var error = ""
         let profileImage = UIImage(systemName: "person.crop.circle")
 
+        
+        // MARK: - INTERNAL: methods
         
         func register() async {
             guard self.isValidEmail(email: self.email) else {
@@ -55,7 +60,7 @@ extension SignUpView {
             }
             
             do {
-                let result = try await firebaseAuthService.signUp(email: self.email, password: self.pass)
+                try await firebaseAuthService.signUp(email: self.email, password: self.pass)
                 
                 UserDefaults.standard.set(true, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
@@ -68,7 +73,16 @@ extension SignUpView {
             }
         }
         
-        /// Create user and save data in FireStore
+        
+        // MARK: - PRIVATE: properties
+        
+        private let firebaseAuthService = FirebaseAuthService.shared
+        private let fireStoreService = FirestoreService.shared
+        private let storageService = StorageService.shared
+
+        
+        // MARK: - PRIVATE: methods
+        
         private func createUser() {
             Task {
                 let uid = firebaseAuthService.getCurrentUserUID()
@@ -114,9 +128,5 @@ extension SignUpView {
             let result = phoneTest.evaluate(with: userName)
             return result
         }
-        
-        private let firebaseAuthService = FirebaseAuthService.shared
-        private let fireStoreService = FirestoreService.shared
-        private let storageService = StorageService.shared
     }
 }

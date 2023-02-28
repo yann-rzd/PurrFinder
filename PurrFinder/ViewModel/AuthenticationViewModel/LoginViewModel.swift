@@ -11,12 +11,18 @@ import SwiftUI
 
 extension LoginView {
     @MainActor class LoginViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var color = Color.black.opacity(0.7)
         @Published var email = ""
         @Published var pass = ""
         @Published var visible = false
         @Published var alert = false
         @Published var error = ""
+        
+        
+        // MARK: - INTERNAL: methods
         
         func verify() async {
             guard !self.email.isEmpty && !self.pass.isEmpty else {
@@ -26,7 +32,7 @@ extension LoginView {
             }
             
             do {
-                let result = try await firebaseAuthService.signIn(email: self.email, password: self.pass)
+                _ = try await firebaseAuthService.signIn(email: self.email, password: self.pass)
                 UserDefaults.standard.set(true, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
             } catch {
@@ -51,6 +57,9 @@ extension LoginView {
                 self.alert.toggle()
             }
         }
+        
+        
+        // MARK: - PRIVATE: properties
         
         private let firebaseAuthService = FirebaseAuthService.shared
     }

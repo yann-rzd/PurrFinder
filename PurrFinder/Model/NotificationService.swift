@@ -9,11 +9,16 @@ import Foundation
 import UserNotifications
 import CoreLocation
 
-final class Notification {
+final class NotificationService {
     
-    static let shared = Notification()
+    // MARK: - PATTERN: singleton
+    
+    static let shared = NotificationService()
     
     private init() { }
+    
+    
+    // MARK: - INTERNAL: methods
     
     func requestNotificationAuthorization() {
         let center = UNUserNotificationCenter.current()
@@ -52,6 +57,14 @@ final class Notification {
         }
     }
     
+    
+    // MARK: - PRIVATE: properties
+    
+    private let notificationCenter = UNUserNotificationCenter.current()
+    
+    
+    // MARK: - PRIVATE: methods
+    
     private func scheduleNotification(ownerLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
         
         let identifier = "Un animale s'est égaré dans votre zone"
@@ -82,6 +95,4 @@ final class Notification {
         
         return region
     }
-    
-    private let notificationCenter = UNUserNotificationCenter.current()
 }

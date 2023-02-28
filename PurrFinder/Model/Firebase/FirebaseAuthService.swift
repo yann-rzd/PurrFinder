@@ -12,9 +12,21 @@ import Firebase
 
 final class FirebaseAuthService {
     
+    // MARK: - PATTERN: singleton
+    
     static let shared = FirebaseAuthService()
     
     private init() { }
+    
+    
+    // MARK: - INTERNAL: properties
+    
+    var isLoggedIn: Bool {
+        Auth.auth().currentUser != nil
+    }
+    
+    
+    // MARK: - INTERNAL: methods
     
     func signIn(email: String, password: String) async throws -> AuthDataResult {
         do {
@@ -53,10 +65,6 @@ final class FirebaseAuthService {
         }
         
         user.delete()
-    }
-    
-    var isLoggedIn: Bool {
-        Auth.auth().currentUser != nil
     }
     
     func getCurrentUserEmail() -> String {

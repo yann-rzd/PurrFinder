@@ -11,6 +11,9 @@ import CoreLocation
 
 extension CurrentAlertView {
     @MainActor class CurrentAlertViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var animalImage: UIImage?
         @Published var animalName = ""
         @Published var animalType = ""
@@ -23,9 +26,7 @@ extension CurrentAlertView {
         @Published var showAlert = false
         
         
-        private func loadData() async throws {
-            try await getCurrentAlertData()
-        }
+        // MARK: - INTERNAL: methods
         
         func refresh() {
             Task {
@@ -73,10 +74,16 @@ extension CurrentAlertView {
             notificationService.checkForPermission(ownerLocation: location, animalName: animalName, animalType: animalType)
         }
         
+        
+        // MARK: - PRIVATE: properties
+        
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
-        private let notificationService = Notification.shared
+        private let notificationService = NotificationService.shared
+        
+        
+        // MARK: - PRIVATE: methods
         
         private func getAnimalImage() async throws {
             self.animalImage = try await storageService.downloadAnimalImage()
@@ -100,6 +107,10 @@ extension CurrentAlertView {
         
         private func deleteAnimalImage() async throws {
             try await storageService.deleteAnimalImageFromStorage()
+        }
+        
+        private func loadData() async throws {
+            try await getCurrentAlertData()
         }
         
         private func stringToDoubleConvertor(stringNumber: String) -> Double {

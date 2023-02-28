@@ -9,9 +9,15 @@ import Foundation
 
 extension PostAlertView {
     @MainActor class PostAlertViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var showPetForm = false
         @Published var alertInProgress = false
         @Published var alertStillInProgressResponse = true
+        
+        
+        // MARK: - INTERNAL: methods
         
         func checkIfAlertInProgress() async {
             let userUID = firestoreAuthService.getCurrentUserUID()
@@ -22,8 +28,10 @@ extension PostAlertView {
             notificationService.requestNotificationAuthorization()
         }
         
+        // MARK: - PRIVATE: properties
+        
         private let firestoreService = FirestoreService.shared
         private let firestoreAuthService = FirebaseAuthService.shared
-        private let notificationService = Notification.shared
+        private let notificationService = NotificationService.shared
     }
 }

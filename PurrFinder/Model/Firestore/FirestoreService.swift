@@ -10,28 +10,25 @@ import FirebaseFirestore
 import Firebase
 
 final class FirestoreService {
-    static let shared = FirestoreService()
     
-    let db = Firestore.firestore()
+    // MARK: - PATTERN: singleton
+    
+    static let shared = FirestoreService()
     
     private init() {}
     
     
-    private func getUserDocumentReference(user: User) -> DocumentReference {
-        return db.collection("userData").document(user.uid)
-    }
+    // MARK: - INTERNAL: methods
     
     func saveUserData(user: User) async throws {
         let userData = user.createUserData()
         try await getUserDocumentReference(user: user).setData(myStruct: userData)
-        
     }
     
     func getUserData(userUID: String) async throws -> UserDTO {
         let docRef = db.collection("userData").document(userUID)
         let userDTOResponse = try await docRef.getDocument(as: UserDTO.self)
-        
-        let id = userDTOResponse.0
+
         return userDTOResponse.1
     }
     
@@ -99,5 +96,17 @@ final class FirestoreService {
             throw NSError(domain: "PostAlertNotFound", code: 404, userInfo: nil)
         }
         try await postAlertRef.delete()
+    }
+    
+    
+    // MARK: - PRIVATE: properties
+    
+    private let db = Firestore.firestore()
+    
+    
+    // MARK: - PRIVATE: methods
+    
+    private func getUserDocumentReference(user: User) -> DocumentReference {
+        return db.collection("userData").document(user.uid)
     }
 }

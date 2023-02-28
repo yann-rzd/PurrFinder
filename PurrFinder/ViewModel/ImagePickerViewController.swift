@@ -9,15 +9,17 @@ import SwiftUI
 import Photos
 
 class ImagePickerViewModel: ObservableObject {
+    
+    // MARK: - INTERNAL: properties
+    
     @Published var profileImage: UIImage?
     @Published var showPicker = false
     @Published var presentNotAuthorizedProhibitedAlert = false
     @Published private var authorizationStatus = PHPhotoLibrary.authorizationStatus()
     @Published var changeProfileImage = false
+
     
-//    func showPhotoPicker() {
-//        showPicker = true
-//    }
+    // MARK: - INTERNAL: methods
     
     func checkAuthorization() {
         authorizationStatus = PHPhotoLibrary.authorizationStatus()

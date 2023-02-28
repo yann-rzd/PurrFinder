@@ -22,11 +22,16 @@ extension HomeView {
             updateActiveRootType()
         }
         
+        // MARK: - INTERNAL: properties
+        
         @Published var activeRootType: RootViewType = .authentication
         
         var isUserLoggedIn: Bool {
             FirebaseAuthService.shared.isLoggedIn
         }
+        
+        
+        // MARK: - INTERNAL: methods
         
         func updateActiveRootType() {
             

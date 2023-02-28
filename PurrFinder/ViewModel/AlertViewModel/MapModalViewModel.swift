@@ -9,8 +9,14 @@ import Foundation
 
 extension MapModalView {
     @MainActor class MapModalViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var ownerLatitude = 0.0
         @Published var ownerLongitude = 0.0
+        
+        
+        // MARK: - INTERNAL: methods
         
         func getOwnerLocation() async throws {
             let userUID = firebaseAuthService.getCurrentUserUID()
@@ -28,9 +34,15 @@ extension MapModalView {
             ownerLongitude = stringToDoubleConvertor(stringNumber: longitude)
         }
         
+        
+        // MARK: - PRIVATE: properties
+        
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
+        
+        
+        // MARK: - PRIVATE: methods
         
         private func stringToDoubleConvertor(stringNumber: String) -> Double {
             if let doubleNumber = Double(stringNumber) {

@@ -10,11 +10,13 @@ import FirebaseStorage
 
 final class StorageService {
     
+    // MARK: - PATTERN: singleton
     static let shared = StorageService()
     
     private init() {}
     
-    private let firebaseAuthService = FirebaseAuthService.shared
+    
+    // MARK: - INTERNAL: properties
     
     func persistProfileImageToStorage(image: UIImage) {
         let userUID = firebaseAuthService.getCurrentUserUID()
@@ -108,4 +110,9 @@ final class StorageService {
             throw error
         }
     }
+    
+    
+    // MARK: - PRIVATE: properties
+    
+    private let firebaseAuthService = FirebaseAuthService.shared
 }

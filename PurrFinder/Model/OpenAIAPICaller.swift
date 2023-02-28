@@ -9,18 +9,18 @@ import Foundation
 import OpenAISwift
 
 final class OpenAIAPICaller {
+    
+    // MARK: - PATTERN: singleton
+    
     static let shared = OpenAIAPICaller()
-    
-    @frozen enum Constants {
-        static let key = "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"
-    }
-    
-    private var client: OpenAISwift?
     
     private init() {}
     
+    
+    // MARK: - INTERNAL: methods
+    
     public func setup() {
-        self.client = OpenAISwift(authToken: Constants.key)
+        self.client = OpenAISwift(authToken: APIKeys.OpenAiKey)
     }
     
     public func getResponse(input: String,
@@ -36,4 +36,9 @@ final class OpenAIAPICaller {
             }
         })
     }
+    
+    
+    // MARK: - PRIVATE: properties
+    
+    private var client: OpenAISwift?
 }

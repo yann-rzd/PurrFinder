@@ -10,6 +10,9 @@ import SwiftUI
 
 extension PetFormModalView {
     @MainActor class PetFormViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var petImage: UIImage?
         @Published var petName = ""
         @Published var petType = ""
@@ -19,11 +22,8 @@ extension PetFormModalView {
         @Published var error = ""
         @Published var isAlertPosted = false
         
-//        private func getProfileImage() async throws {
-//            self.petImage = try await storageService.downloadProfileImage()
-//        }
         
-        
+        // MARK: - INTERNAL: methods
         
         func createPostAlert() {
             guard !petName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
@@ -71,10 +71,14 @@ extension PetFormModalView {
             isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
         }  
         
+        // MARK: - PRIVATE: properties
+        
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
         private let firebaseAuthService = FirebaseAuthService.shared
         
+        
+        // MARK: - PRIVATE: methods
         
         private func containsExtraSpaces(text: String) -> Bool {
             let words = text.split(separator: " ")
