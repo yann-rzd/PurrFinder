@@ -8,8 +8,6 @@
 import Foundation
 import Firebase
 
-
-
 final class FirebaseAuthService {
     
     // MARK: - PATTERN: singleton
@@ -28,6 +26,11 @@ final class FirebaseAuthService {
     
     // MARK: - INTERNAL: methods
     
+    /// The function allows a user to connect to his account using an email address and a password.
+    /// - parameter Email: email of the user.
+    /// - parameter Password: password of the user.
+    /// - throws: Error
+    /// - returns:AuthDataResult object resulting from the authentication operation.
     func signIn(email: String, password: String) async throws -> AuthDataResult {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
@@ -37,6 +40,10 @@ final class FirebaseAuthService {
         }
     }
     
+    /// The function allows a user to signup using an email address and a password.
+    /// - parameter Email: email of the user.
+    /// - parameter Password: password of the user.
+    /// - throws: Error
     func signUp(email: String, password: String) async throws {
         do {
             try await Auth.auth().createUser(withEmail: email, password: password)

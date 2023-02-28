@@ -19,11 +19,14 @@ final class OpenAIAPICaller {
     
     // MARK: - INTERNAL: methods
     
-    public func setup() {
+    func setup() {
         self.client = OpenAISwift(authToken: APIKeys.OpenAiKey)
     }
     
-    public func getResponse(input: String,
+    
+    /// The function uses a client instance to send a completion request with the input provided to the OpenAI GPT-3 API.
+    /// - parameter input: String the prompt.
+    func getResponse(input: String,
                             completion: @escaping (Result<String, Error>) -> Void) {
         client?.sendCompletion(with: input, model: .gpt3(.davinci), maxTokens: 1000, completionHandler: { result in
             switch result {
