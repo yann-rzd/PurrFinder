@@ -9,8 +9,7 @@ import Foundation
 import CoreLocation
 
 extension LocationService: CLLocationManagerDelegate {
-    
-    
+
     /// This function is called whenever new location data is available. It updates the latitude and longitude variables according to the last received location.
     /// - parameter CLLocationManager: represent the geographical coordinates of the user.
     /// - parameter [CLLocation]:  represent the geographical coordinates of the user.

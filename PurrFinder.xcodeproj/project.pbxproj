@@ -25,6 +25,8 @@
 		E440DE8029AA64C9000A832F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE7F29AA64C9000A832F /* MapView.swift */; };
 		E440DE8429AA6CEE000A832F /* MapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8329AA6CEE000A832F /* MapModalView.swift */; };
 		E440DE8629AA6F19000A832F /* MapModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8529AA6F19000A832F /* MapModalViewModel.swift */; };
+		E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */; };
+		E46A6E1929AF4CCC003B0373 /* FirestoreServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1829AF4CCC003B0373 /* FirestoreServiceTests.swift */; };
 		E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37829AE55CB00794657 /* View+Extension.swift */; };
 		E4B5D37B29AE5CB800794657 /* LocationService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37A29AE5CB800794657 /* LocationService+Extension.swift */; };
 		E4B5D37D29AE5E6300794657 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37C29AE5E6300794657 /* APIKey.swift */; };
@@ -36,9 +38,7 @@
 		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
 		E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01D7299183D9004E1CC6 /* Assets.xcassets */; };
 		E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */; };
-		E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */; };
-		E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */; };
-		E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */; };
+		E4DF01E5299183DA004E1CC6 /* OpenAIAPICallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */; };
 		E4DF01FE299186AE004E1CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */; };
 		E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */; };
 		E4DF0206299187BC004E1CC6 /* FirebaseAuthServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0205299187BC004E1CC6 /* FirebaseAuthServiceError.swift */; };
@@ -122,6 +122,8 @@
 		E440DE7F29AA64C9000A832F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E440DE8329AA6CEE000A832F /* MapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalView.swift; sourceTree = "<group>"; };
 		E440DE8529AA6F19000A832F /* MapModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalViewModel.swift; sourceTree = "<group>"; };
+		E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
+		E46A6E1829AF4CCC003B0373 /* FirestoreServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceTests.swift; sourceTree = "<group>"; };
 		E4B5D37829AE55CB00794657 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		E4B5D37A29AE5CB800794657 /* LocationService+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationService+Extension.swift"; sourceTree = "<group>"; };
 		E4B5D37C29AE5E6300794657 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -135,10 +137,8 @@
 		E4DF01D7299183D9004E1CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderTests.swift; sourceTree = "<group>"; };
+		E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPICallerTests.swift; sourceTree = "<group>"; };
 		E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITests.swift; sourceTree = "<group>"; };
-		E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurrFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		E4DF0205299187BC004E1CC6 /* FirebaseAuthServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceError.swift; sourceTree = "<group>"; };
@@ -250,6 +250,13 @@
 			path = AlertViewModel;
 			sourceTree = "<group>";
 		};
+		E46A6E1729AF4C03003B0373 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		E4C3F8372992B9EF0016B665 /* UserView */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +291,6 @@
 			children = (
 				E4DF01D2299183D8004E1CC6 /* PurrFinder */,
 				E4DF01E3299183DA004E1CC6 /* PurrFinderTests */,
-				E4DF01ED299183DA004E1CC6 /* PurrFinderUITests */,
 				E4DF01D1299183D8004E1CC6 /* Products */,
 				76F958FD70B17F17AB039892 /* Pods */,
 				417C8C53C16AE44CBEF5EFFD /* Frameworks */,
@@ -327,18 +333,12 @@
 		E4DF01E3299183DA004E1CC6 /* PurrFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				E4DF01E4299183DA004E1CC6 /* PurrFinderTests.swift */,
+				E46A6E1729AF4C03003B0373 /* Mock */,
+				E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */,
+				E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */,
+				E46A6E1829AF4CCC003B0373 /* FirestoreServiceTests.swift */,
 			);
 			path = PurrFinderTests;
-			sourceTree = "<group>";
-		};
-		E4DF01ED299183DA004E1CC6 /* PurrFinderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E4DF01EE299183DA004E1CC6 /* PurrFinderUITests.swift */,
-				E4DF01F0299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift */,
-			);
-			path = PurrFinderUITests;
 			sourceTree = "<group>";
 		};
 		E4DF01FF299186D6004E1CC6 /* View */ = {
@@ -787,7 +787,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DF024129919C1E004E1CC6 /* User.swift in Sources */,
-				E4DF01E5299183DA004E1CC6 /* PurrFinderTests.swift in Sources */,
+				E46A6E1929AF4CCC003B0373 /* FirestoreServiceTests.swift in Sources */,
+				E4DF01E5299183DA004E1CC6 /* OpenAIAPICallerTests.swift in Sources */,
+				E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */,
 				E4DF024529919C31004E1CC6 /* NotificationService.swift in Sources */,
 				E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 			);
@@ -797,11 +799,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DF01EF299183DA004E1CC6 /* PurrFinderUITests.swift in Sources */,
 				E4DF023E29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 				E4DF024229919C1E004E1CC6 /* User.swift in Sources */,
 				E4DF024629919C31004E1CC6 /* NotificationService.swift in Sources */,
-				E4DF01F1299183DA004E1CC6 /* PurrFinderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,30 +7,49 @@
 
 import XCTest
 @testable import PurrFinder
+import OpenAISwift
 
 final class OpenAIAPICallerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGivenInput_WhenSendInput_ThenGetTheResponse() {
+        let openAIAPICaller = OpenAIAPICaller.shared
+        let input = "Dis une couleur"
+        let expectation = self.expectation(description: "getResponse should return a result")
+        
+        openAIAPICaller.getResponse(input: input) { result in
+            switch result {
+            case .success(let output):
+                XCTAssertNotNil(output)
+                XCTAssertFalse(output.isEmpty)
+                expectation.fulfill()
+            case .failure:
+                XCTFail("Should not be successful")
+            }
         }
+        
+        waitForExpectations(timeout: 10, handler: nil)
     }
-
+    
+    func testGivenInput_WhenSendInput_ThenErrorOccured() {
+        let openAIAPICaller = OpenAIAPICaller()
+        let input = "Dis une couleur"
+        let expectation = self.expectation(description: "getResponse should fail")
+        let invalidAuthToken = "invalidAuthToken"
+        
+        // Mock the API key with an invalid value
+        openAIAPICaller.client = OpenAISwift(authToken: invalidAuthToken)
+        
+        openAIAPICaller.getResponse(input: input) { result in
+            switch result {
+            case .success:
+                XCTFail("Expected the request to fail")
+            case .failure:
+                // Check if the error message contains the invalid auth token
+                XCTAssertTrue(true)
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+    }
 }

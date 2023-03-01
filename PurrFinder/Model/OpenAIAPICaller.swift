@@ -14,7 +14,7 @@ final class OpenAIAPICaller {
     
     static let shared = OpenAIAPICaller()
     
-    private init() {}
+    init() {}
     
     
     // MARK: - INTERNAL: methods
@@ -31,8 +31,9 @@ final class OpenAIAPICaller {
         client?.sendCompletion(with: input, model: .gpt3(.davinci), maxTokens: 1000, completionHandler: { result in
             switch result {
             case .success(let model):
-                print(String(describing: model.choices.first?.text))
-                let output = model.choices.first?.text ?? ""
+                guard let output = model.choices.first?.text else {
+                    return
+                }
                 completion(.success(output))
             case .failure(let error):
                 completion(.failure(error))
@@ -43,5 +44,5 @@ final class OpenAIAPICaller {
     
     // MARK: - PRIVATE: properties
     
-    private var client: OpenAISwift?
+     var client: OpenAISwift?
 }

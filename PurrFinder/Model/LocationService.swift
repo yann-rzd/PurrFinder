@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 class LocationService: NSObject, ObservableObject {
+    var isUpdatingLocation = false
     
     override init() {
         super.init()
@@ -27,10 +28,12 @@ class LocationService: NSObject, ObservableObject {
     
     func startUpdatingLocation() {
         locationManager.startUpdatingLocation()
+        isUpdatingLocation = true
     }
     
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
+        isUpdatingLocation = false
     }
     
     

@@ -25,6 +25,21 @@ extension PetFormModalView {
         
         // MARK: - INTERNAL: methods
         
+        /*
+         [BackgroundTask] Background Task 4 ("GTMSessionFetcher-securetoken.googleapis.com"), was created over 30 seconds ago. In applications running in the background, this creates a risk of termination. Remember to call UIApplication.endBackgroundTask(_:) for your task in a timely manner to avoid this.
+         */
+//        func doSomeBackgroundTask() {
+//            let taskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
+//
+//            DispatchQueue.global().async {
+//                // Effectuez votre tâche en arrière-plan ici.
+//
+//                // Une fois que la tâche est terminée, terminez-la.
+//                UIApplication.shared.endBackgroundTask(taskID)
+//            }
+//        }
+//
+        
         func createPostAlert() {
             guard !petName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
                 error = PostAlertError.petNameIsEmpty.errorDescription
@@ -69,7 +84,7 @@ extension PetFormModalView {
         func isAlertPosted() async {
             let userUID = firebaseAuthService.getCurrentUserUID()
             isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
-        }  
+        }
         
         // MARK: - PRIVATE: properties
         
