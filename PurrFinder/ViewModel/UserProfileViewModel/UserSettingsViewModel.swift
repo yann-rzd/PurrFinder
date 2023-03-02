@@ -17,10 +17,11 @@ extension UserSettingsView {
             do {
                 try await deleteUserData()
                 try await deleteUserImage()
+                try deleteUserAccount()
                 try firebaseAuthService.signOut()
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                try deleteUserAccount()
+                
             } catch {
                 self.error = error.localizedDescription
                 self.alert.toggle()
