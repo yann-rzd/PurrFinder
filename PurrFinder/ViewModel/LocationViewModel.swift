@@ -25,24 +25,6 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
         locationManager?.startUpdatingLocation()
-
-        // Schedule location updates every 10 minutes
-        locationUpdateTimer = Timer.scheduledTimer(withTimeInterval: 600, repeats: true) { [weak self] _ in
-            self?.updateUserLocation()
-        }
-    }
-    
-    func updateUserLocation() {
-        let userUID = firebaseAuthService.getCurrentUserUID()
-        
-        Task {
-            do {
-                try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
-            } catch {
-                self.error = error.localizedDescription
-                self.alert.toggle()
-            }
-        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -52,31 +34,19 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
         
         let userUID = firebaseAuthService.getCurrentUserUID()
-        
-        Task {
-            do {
-                try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
-            } catch {
-                self.error = error.localizedDescription
-                self.alert.toggle()
+        if !userUID.isEmpty {
+            Task {
+                do {
+                    try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
+                } catch {
+                    self.error = error.localizedDescription
+                    self.alert.toggle()
+                }
             }
+        } else {
+            self.error = "User UID is empty or nil."
+            self.alert.toggle()
         }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedAlways, .authorizedWhenInUse:
-            getUserLocation()
-        case .denied, .restricted, .notDetermined:
-            cancelLocationUpdateTimer()
-        @unknown default:
-            break
-        }
-    }
-    
-    private func cancelLocationUpdateTimer() {
-        locationUpdateTimer?.invalidate()
-        locationUpdateTimer = nil
     }
     
     
