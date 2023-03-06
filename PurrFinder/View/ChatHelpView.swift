@@ -6,51 +6,40 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ChatHelpView: View {
-    @State private var models = [String]()
-    @State private var text = ""
+    @StateObject var viewModel = ChatHelpViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                
-                
-                List(models, id: \.self) { model in
-                    Text(model)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                }
-                TextField("Type here...", text: $text)
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.black, lineWidth: 1)
-                    )
-                    .padding(.horizontal)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom, 10)
-                    .onSubmit(addModel)
-            }
-        }
-        
-    }
-    
-    func addModel() {
-        if !text.isEmpty {
-            models.append(text)
-            OpenAIAPICaller.shared.getResponse(input: text) { result in
-                switch result {
-                case .success(let output):
-                    self.models.append(output)
-                    DispatchQueue.main.async {
-                        self.text = ""
+        VStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.chatMessages, id: \.id) { message in
+                            viewModel.messageView(message: message)
                     }
-                case .failure:
-                    print("Failed")
                 }
             }
+            HStack {
+                TextField("Entrer un message", text: $viewModel.messagetext) {
+                    
+                }
+                    .padding()
+                    .background(.gray.opacity(0.1))
+                    .cornerRadius(12)
+                Button {
+                    viewModel.sendMessage()
+                } label: {
+                    Text("Envoyer")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(.black)
+                        .cornerRadius(12)
+                }
+
+            }
         }
+        .padding()
     }
 }
 
@@ -59,3 +48,6 @@ struct ChatHelpView_Previews: PreviewProvider {
         ChatHelpView()
     }
 }
+
+
+

@@ -8,6 +8,7 @@ target 'PurrFinder' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'Alamofire'
 
   # Pods for PurrFinder
 
