@@ -87,7 +87,6 @@
 		E4E6645E299E6AFD002F5A79 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645D299E6AFD002F5A79 /* UserDTO.swift */; };
 		E4ED191529ABE1C8006662B5 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4ED191429ABE1C8006662B5 /* OpenAISwift */; };
 		E4ED191729ABE20A006662B5 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ED191629ABE20A006662B5 /* OpenAIService.swift */; };
-		E4F9245629B63DB800D6DAF6 /* FirebaseAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9245529B63DB800D6DAF6 /* FirebaseAuthServiceProtocol.swift */; };
 		E4F9245829B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9245729B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift */; };
 /* End PBXBuildFile section */
 
@@ -182,7 +181,6 @@
 		E4E6645B299E6A34002F5A79 /* PostAlertDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertDTO.swift; sourceTree = "<group>"; };
 		E4E6645D299E6AFD002F5A79 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		E4ED191629ABE20A006662B5 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
-		E4F9245529B63DB800D6DAF6 /* FirebaseAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceProtocol.swift; sourceTree = "<group>"; };
 		E4F9245729B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseAuthServiceMock.swift; path = PurrFinder/Model/Firebase/FirebaseAuthServiceMock.swift; sourceTree = SOURCE_ROOT; };
 		ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BC800BA92D8502EB760EEA /* Pods_PurrFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -457,7 +455,6 @@
 			children = (
 				E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */,
 				E4DF0205299187BC004E1CC6 /* FirebaseAuthServiceError.swift */,
-				E4F9245529B63DB800D6DAF6 /* FirebaseAuthServiceProtocol.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -778,7 +775,6 @@
 				E4E6645A299E69E0002F5A79 /* User+Extension.swift in Sources */,
 				E440DE7E29AA5365000A832F /* CurrentAlertViewModel.swift in Sources */,
 				E4666FA529B65A1100768FE4 /* ChatHelpViewModel.swift in Sources */,
-				E4F9245629B63DB800D6DAF6 /* FirebaseAuthServiceProtocol.swift in Sources */,
 				E4E66458299E691B002F5A79 /* FirestoreServiceError.swift in Sources */,
 				E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
