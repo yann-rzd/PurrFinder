@@ -26,6 +26,10 @@
 		E440DE8429AA6CEE000A832F /* MapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8329AA6CEE000A832F /* MapModalView.swift */; };
 		E440DE8629AA6F19000A832F /* MapModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440DE8529AA6F19000A832F /* MapModalViewModel.swift */; };
 		E4666FA529B65A1100768FE4 /* ChatHelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4666FA429B65A1100768FE4 /* ChatHelpViewModel.swift */; };
+		E4666FA829B65D7800768FE4 /* OpenAICompletionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4666FA729B65D7800768FE4 /* OpenAICompletionBody.swift */; };
+		E4666FAA29B65DDF00768FE4 /* OpenAICompletionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4666FA929B65DDF00768FE4 /* OpenAICompletionsResponse.swift */; };
+		E4666FAC29B65E2A00768FE4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4666FAB29B65E2A00768FE4 /* ChatMessage.swift */; };
+		E4666FAE29B65E4800768FE4 /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4666FAD29B65E4800768FE4 /* MessageSender.swift */; };
 		E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */; };
 		E46A6E1929AF4CCC003B0373 /* FirebaseAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */; };
 		E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37829AE55CB00794657 /* View+Extension.swift */; };
@@ -126,6 +130,10 @@
 		E440DE8329AA6CEE000A832F /* MapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalView.swift; sourceTree = "<group>"; };
 		E440DE8529AA6F19000A832F /* MapModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalViewModel.swift; sourceTree = "<group>"; };
 		E4666FA429B65A1100768FE4 /* ChatHelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelpViewModel.swift; sourceTree = "<group>"; };
+		E4666FA729B65D7800768FE4 /* OpenAICompletionBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompletionBody.swift; sourceTree = "<group>"; };
+		E4666FA929B65DDF00768FE4 /* OpenAICompletionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompletionsResponse.swift; sourceTree = "<group>"; };
+		E4666FAB29B65E2A00768FE4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		E4666FAD29B65E4800768FE4 /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
 		E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
 		E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceTests.swift; sourceTree = "<group>"; };
 		E4B5D37829AE55CB00794657 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -256,6 +264,18 @@
 			path = AlertViewModel;
 			sourceTree = "<group>";
 		};
+		E4666FA629B65D5D00768FE4 /* OpenAI */ = {
+			isa = PBXGroup;
+			children = (
+				E4ED191629ABE20A006662B5 /* OpenAIService.swift */,
+				E4666FA729B65D7800768FE4 /* OpenAICompletionBody.swift */,
+				E4666FA929B65DDF00768FE4 /* OpenAICompletionsResponse.swift */,
+				E4666FAB29B65E2A00768FE4 /* ChatMessage.swift */,
+				E4666FAD29B65E4800768FE4 /* MessageSender.swift */,
+			);
+			path = OpenAI;
+			sourceTree = "<group>";
+		};
 		E46A6E1729AF4C03003B0373 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,12 +397,12 @@
 		E4DF0201299186F0004E1CC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4666FA629B65D5D00768FE4 /* OpenAI */,
 				E4DE139329A3D2D80007EDD4 /* Storage */,
 				E4E6645F299E6CA4002F5A79 /* Firestore */,
 				E4DF023A29919BC4004E1CC6 /* Firebase */,
 				E4DF024329919C31004E1CC6 /* NotificationService.swift */,
 				E4DF024B29926247004E1CC6 /* LocationService.swift */,
-				E4ED191629ABE20A006662B5 /* OpenAIService.swift */,
 				E4DF023F29919C1E004E1CC6 /* User.swift */,
 				E4DF023B29919BF4004E1CC6 /* PostAlert.swift */,
 				E41F01B629A7D7C100CCD79C /* PostAlertError.swift */,
@@ -776,17 +796,21 @@
 				E41F01BB29A917F500CCD79C /* CurrentAlertView.swift in Sources */,
 				E4DF021C2991895F004E1CC6 /* SignUpView.swift in Sources */,
 				E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */,
+				E4666FAC29B65E2A00768FE4 /* ChatMessage.swift in Sources */,
 				E4326FB429A52DE600A1592A /* LocationViewModel.swift in Sources */,
 				E4DF02552992985A004E1CC6 /* NavigationTabView.swift in Sources */,
 				E4ED191729ABE20A006662B5 /* OpenAIService.swift in Sources */,
 				E4DF021A29918954004E1CC6 /* LoginView.swift in Sources */,
 				E41F01B329A67E9100CCD79C /* PertFormViewModel.swift in Sources */,
+				E4666FA829B65D7800768FE4 /* OpenAICompletionBody.swift in Sources */,
+				E4666FAA29B65DDF00768FE4 /* OpenAICompletionsResponse.swift in Sources */,
 				E4DF024429919C31004E1CC6 /* NotificationService.swift in Sources */,
 				E440DE8629AA6F19000A832F /* MapModalViewModel.swift in Sources */,
 				E4DF02182991894B004E1CC6 /* PostAlertView.swift in Sources */,
 				E4B5D37D29AE5E6300794657 /* APIKeys.swift in Sources */,
 				E4DE139529A3D2EE0007EDD4 /* StorageService.swift in Sources */,
 				E4E66456299E68F0002F5A79 /* DocumentReference+Extension.swift in Sources */,
+				E4666FAE29B65E4800768FE4 /* MessageSender.swift in Sources */,
 				E440DE8429AA6CEE000A832F /* MapModalView.swift in Sources */,
 				E4E6645E299E6AFD002F5A79 /* UserDTO.swift in Sources */,
 				E4DF020E299188B4004E1CC6 /* LoginViewModel.swift in Sources */,

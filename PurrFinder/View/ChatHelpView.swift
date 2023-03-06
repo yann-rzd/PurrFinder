@@ -13,6 +13,11 @@ struct ChatHelpView: View {
     
     var body: some View {
         VStack {
+            Text("Posez vos questions")
+                .font(Font.custom("AmaticSC-Bold", size: 32))
+                .foregroundColor(Color("BluePurr"))
+                .padding(.top, 20)
+            
             ScrollView {
                 LazyVStack {
                     ForEach(viewModel.chatMessages, id: \.id) { message in
@@ -20,6 +25,7 @@ struct ChatHelpView: View {
                     }
                 }
             }
+            
             HStack {
                 TextField("Entrer un message", text: $viewModel.messagetext) {
                     

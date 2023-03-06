@@ -35,18 +35,4 @@ class OpenAIService {
     }
 }
 
-struct OpenAICompletionBody: Encodable {
-    let model: String
-    let prompt: String
-    let temperature: Float?
-    let max_tokens: Int
-}
 
-struct OpenAICompletionsResponse: Decodable {
-    let id: String
-    let choices: [OpenAICompletionChoice]
-}
-
-struct OpenAICompletionChoice: Decodable {
-    let text: String
-}

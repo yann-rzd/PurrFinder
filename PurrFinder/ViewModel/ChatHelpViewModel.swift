@@ -47,15 +47,3 @@ extension ChatHelpView {
         }
     }
 }
-
-struct ChatMessage {
-    let id: String
-    let content: String
-    let dateCreated: Date
-    let sender: MessageSender
-}
-
-enum MessageSender {
-    case user
-    case gpt
-}
