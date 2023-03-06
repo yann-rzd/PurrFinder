@@ -113,6 +113,9 @@ struct LoginView: View {
                 AuthenticationErrorView(alert: $loginViewModel.alert, error: $loginViewModel.error)
             }
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
         
     }
 }

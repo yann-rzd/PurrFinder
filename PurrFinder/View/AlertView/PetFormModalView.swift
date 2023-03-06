@@ -112,10 +112,6 @@ struct PetFormModalView: View {
             .background(Color("BluePurr"))
             .cornerRadius(10)
             .padding(.top, 25)
-            
-            
-            
-            //            Spacer()
         }
         .ignoresSafeArea(.keyboard)
         .fullScreenCover(isPresented: $imagePickerViewModel.changeProfileImage) {
@@ -125,8 +121,8 @@ struct PetFormModalView: View {
             Alert(title: Text("Erreur"), message: Text(petFormViewModel.error), dismissButton: .cancel())
         }
         .onTapGesture {
-                    hideKeyboard()
-            }
+            hideKeyboard()
+        }
     }
 }
 

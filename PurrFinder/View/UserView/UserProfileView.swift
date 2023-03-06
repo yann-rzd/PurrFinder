@@ -138,6 +138,9 @@ struct UserProfileView: View {
                 ProfileImagePicker(image: $userProfileViewModel.profileImage)
             }
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 
