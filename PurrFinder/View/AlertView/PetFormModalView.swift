@@ -15,6 +15,7 @@ struct PetFormModalView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
+        
         VStack {
             HStack {
                 Spacer()
@@ -63,6 +64,7 @@ struct PetFormModalView: View {
                 TextField("Son nom", text: $petFormViewModel.petName)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petName != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .submitLabel(.done)
             }
             .padding()
             
@@ -71,6 +73,7 @@ struct PetFormModalView: View {
                 TextField("Chat, chient, rongeur, tortue ...", text: $petFormViewModel.petType)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petType != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .submitLabel(.done)
             }
             .padding()
             
@@ -79,6 +82,7 @@ struct PetFormModalView: View {
                 TextField("Bengal, labrador, berger australien ...", text: $petFormViewModel.petBreed)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petBreed != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .submitLabel(.done)
             }
             .padding()
             
@@ -86,9 +90,10 @@ struct PetFormModalView: View {
                 Text("Description de votre animal :")
                 TextEditor(text: $petFormViewModel.petDescription)
                     .padding(5)
+                    .frame(minHeight: 100, maxHeight: .infinity)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .submitLabel(.done)
             }
-            .padding(.bottom, 50)
             .padding()
             
             Button(action: {
@@ -124,6 +129,10 @@ struct PetFormModalView: View {
             hideKeyboard()
         }
     }
+    
+        
+    
 }
+
 
 

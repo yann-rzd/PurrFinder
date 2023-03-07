@@ -33,27 +33,40 @@ struct SignUpView: View {
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
+                    .submitLabel(.done)
                 
                 TextField("Téléphone", text: $signUpViewModel.phone)
                     .textInputAutocapitalization(.never)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
+                    .keyboardType(.numberPad)
+                    .toolbar {
+                        ToolbarItem(placement: .keyboard) {
+                            Button("Done") {
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                            }
+                        }
+                    }
                 
                 TextField("Email", text: $signUpViewModel.email)
                     .textInputAutocapitalization(.never)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
+                    .keyboardType(.emailAddress)
+                    .submitLabel(.done)
                 
                 HStack(spacing: 15) {
                     VStack {
                         if signUpViewModel.visible {
                             TextField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
+                                .submitLabel(.done)
                         } else {
                             SecureField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
+                                .submitLabel(.done)
                         }
                     }
                     
@@ -74,9 +87,11 @@ struct SignUpView: View {
                         if signUpViewModel.revisible {
                             TextField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
+                                .submitLabel(.done)
                         } else {
                             SecureField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
+                                .submitLabel(.done)
                         }
                     }
                     

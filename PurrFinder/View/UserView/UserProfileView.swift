@@ -61,6 +61,7 @@ struct UserProfileView: View {
                     .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                     .padding(.horizontal, 20)
                     .disabled(!userProfileViewModel.isEditProfileInformation)
+                    .submitLabel(.done)
                 
                 
                 
@@ -69,6 +70,7 @@ struct UserProfileView: View {
                     .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                     .padding(.horizontal, 20)
                     .disabled(!userProfileViewModel.isEditProfileInformation)
+                    .submitLabel(.done)
                 
                 
                 /// Edit profile informations button

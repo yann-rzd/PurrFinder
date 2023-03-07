@@ -38,15 +38,18 @@ struct LoginView: View {
                         .background(RoundedRectangle(cornerRadius: 4).stroke(loginViewModel.email != "" ? Color("BluePurr") : loginViewModel.color, lineWidth: 2))
                         .padding(.top, 25)
                         .keyboardType(.emailAddress)
+                        .submitLabel(.done)
                     
                     HStack(spacing: 15) {
                         VStack {
                             if loginViewModel.visible {
                                 TextField("Mot de passe", text: $loginViewModel.pass)
                                     .textInputAutocapitalization(.never)
+                                    .submitLabel(.done)
                             } else {
                                 SecureField("Mot de passe", text: $loginViewModel.pass)
                                     .textInputAutocapitalization(.never)
+                                    .submitLabel(.done)
                             }
                         }
                         
