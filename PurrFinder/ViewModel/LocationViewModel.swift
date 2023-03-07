@@ -11,50 +11,47 @@ import CoreLocation
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    // MARK: - INTERNAL: properties
-    
     @Published var latitude: Double = 0
     @Published var longitude: Double = 0
     
-    private var locationUpdateTimer: Timer?
-    
-    // MARK: - INTERNAL: methods
+    private let locationService = LocationService()
     
     func getUserLocation() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.startUpdatingLocation()
+        locationService.startUpdatingLocation()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            self.latitude = location.coordinate.latitude
-            self.longitude = location.coordinate.longitude
-        }
-        
+    private func updateUserLocationData() async {
         let userUID = firebaseAuthService.getCurrentUserUID()
-        if !userUID.isEmpty {
-            Task {
-                do {
-                    try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
-                } catch {
-                    self.error = error.localizedDescription
-                    self.alert.toggle()
-                }
-            }
-        } else {
+        guard !userUID.isEmpty else {
             self.error = "User UID is empty or nil."
+            self.alert.toggle()
+            return
+        }
+        do {
+            try await firestoreService.updateUserLocationData(userUID: userUID, latitude: latitude.description, longitude: longitude.description)
+        } catch {
+            self.error = error.localizedDescription
             self.alert.toggle()
         }
     }
     
-    
-    // MARK: - PRIVATE: properties
-    
     private let firestoreService = FirestoreService.shared
     private let firebaseAuthService = FirebaseAuthService.shared
-    private var locationManager: CLLocationManager?
     private var error = ""
     private var alert = false
+    
+    override init() {
+        super.init()
+        locationService.delegate = self
+    }
+}
+
+extension LocationViewModel: LocationServiceDelegate {
+    func locationServiceDidUpdateLocation(_ locationService: LocationService, latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+        Task {
+            await self.updateUserLocationData()
+        }
+    }
 }

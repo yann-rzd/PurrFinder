@@ -8,36 +8,34 @@
 import Foundation
 import CoreLocation
 
-class LocationService: NSObject, ObservableObject {
-    var isUpdatingLocation = false
+class LocationService: NSObject, CLLocationManagerDelegate {
+    weak var delegate: LocationServiceDelegate?
     
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-    }
-    
-    
-    // MARK: - INTERNAL: properties
-    
-    @Published var latitude: Double = 0
-    @Published var longitude: Double = 0
-    
-    
-    // MARK: - INTERNAL: methods
+    private var locationManager = CLLocationManager()
     
     func startUpdatingLocation() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        isUpdatingLocation = true
     }
     
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
-        isUpdatingLocation = false
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            delegate?.locationServiceDidUpdateLocation(self, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        }
+    }
     
-    // MARK: - PRIVATE: properties
-    
-    private let locationManager = CLLocationManager()
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .authorizedWhenInUse {
+            startUpdatingLocation()
+        }
+    }
+}
+
+protocol LocationServiceDelegate: AnyObject {
+    func locationServiceDidUpdateLocation(_ locationService: LocationService, latitude: Double, longitude: Double)
 }
