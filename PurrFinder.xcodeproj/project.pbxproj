@@ -43,7 +43,7 @@
 		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
 		E4DF01D8299183D9004E1CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01D7299183D9004E1CC6 /* Assets.xcassets */; };
 		E4DF01DB299183D9004E1CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */; };
-		E4DF01E5299183DA004E1CC6 /* OpenAIAPICallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */; };
+		E4DF01E5299183DA004E1CC6 /* OpenAIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01E4299183DA004E1CC6 /* OpenAIServiceTests.swift */; };
 		E4DF01FE299186AE004E1CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */; };
 		E4DF02042991876E004E1CC6 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */; };
 		E4DF0206299187BC004E1CC6 /* FirebaseAuthServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0205299187BC004E1CC6 /* FirebaseAuthServiceError.swift */; };
@@ -148,7 +148,7 @@
 		E4DF01D7299183D9004E1CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DF01DA299183D9004E1CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4DF01E0299183DA004E1CC6 /* PurrFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPICallerTests.swift; sourceTree = "<group>"; };
+		E4DF01E4299183DA004E1CC6 /* OpenAIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIServiceTests.swift; sourceTree = "<group>"; };
 		E4DF01EA299183DA004E1CC6 /* PurrFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurrFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DF01FD299186AE004E1CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4DF02032991876E004E1CC6 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				E46A6E1729AF4C03003B0373 /* Mock */,
-				E4DF01E4299183DA004E1CC6 /* OpenAIAPICallerTests.swift */,
+				E4DF01E4299183DA004E1CC6 /* OpenAIServiceTests.swift */,
 				E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */,
 				E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */,
 			);
@@ -820,7 +820,7 @@
 				E4DF024129919C1E004E1CC6 /* User.swift in Sources */,
 				E46A6E1929AF4CCC003B0373 /* FirebaseAuthServiceTests.swift in Sources */,
 				E4F9245829B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift in Sources */,
-				E4DF01E5299183DA004E1CC6 /* OpenAIAPICallerTests.swift in Sources */,
+				E4DF01E5299183DA004E1CC6 /* OpenAIServiceTests.swift in Sources */,
 				E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */,
 				E4DF024529919C31004E1CC6 /* NotificationService.swift in Sources */,
 				E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */,
