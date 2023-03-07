@@ -10,6 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     @StateObject private var signUpViewModel = SignUpViewModel()
     @Binding var show: Bool
+    @FocusState var isInputActive: Bool
     
     var body: some View {
         ZStack {
@@ -41,10 +42,13 @@ struct SignUpView: View {
                     .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
                     .keyboardType(.numberPad)
+                    .focused($isInputActive)
                     .toolbar {
-                        ToolbarItem(placement: .keyboard) {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            
                             Button("Done") {
-                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                isInputActive = false
                             }
                         }
                     }

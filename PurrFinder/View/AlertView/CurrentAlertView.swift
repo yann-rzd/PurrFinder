@@ -38,7 +38,7 @@ struct CurrentAlertView: View {
                 Text(viewModel.animalName)
                     .foregroundColor(.white)
                     .fontWeight(.heavy)
-                    .font(.system(size: 36))
+                    .font(.system(size: 24))
                     .tracking(5)
                 
                 Text(viewModel.animalType)
@@ -50,7 +50,7 @@ struct CurrentAlertView: View {
                 Text(viewModel.animalBreed)
                     .foregroundColor(.white)
                     .fontWeight(.medium)
-                    .font(.system(size: 24))
+                    .font(.system(size: 20))
                     .tracking(5)
                 
                 ScrollView {
@@ -61,6 +61,7 @@ struct CurrentAlertView: View {
                 .padding(.top, 10)
                 .padding(.bottom, 10)
                 .padding(.horizontal, 25)
+                .frame(minHeight: 100, maxHeight: .infinity)
                 
                 Text("Perdue le " + viewModel.animalLostDate.prefix(10) + " à " + viewModel.animalLostDate.suffix(8))
                     .foregroundColor(.white)
@@ -83,7 +84,7 @@ struct CurrentAlertView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .padding(.top, 40)
+                .padding(.top, 20)
             }
             .frame(width: UIScreen.main.bounds.width - 50)
             .padding(.top, 25)

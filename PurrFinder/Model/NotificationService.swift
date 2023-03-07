@@ -86,7 +86,7 @@ final class NotificationService {
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
-        print("REQUEST NOTIFICATION : \(request)")
+        print("📬📬📬📬📬 REQUEST NOTIFICATION 📬📬📬📬📬 : \(request)")
         
         notificationCenter.add(request) { (error) in
             if let error = error {
@@ -103,6 +103,7 @@ final class NotificationService {
         let region = CLCircularRegion(center: location, radius: 1000, identifier: "PetLocation")
         region.notifyOnEntry = true
         region.notifyOnExit = false
+
         print("REGION : \(region)")
         
         return region

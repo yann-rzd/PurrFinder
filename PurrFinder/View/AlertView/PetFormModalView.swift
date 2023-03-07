@@ -13,6 +13,7 @@ struct PetFormModalView: View {
     @Binding var isPresented: Bool
     @Binding var alertInProgress: Bool
     @Environment(\.dismiss) var dismiss
+    @FocusState var isInputActive: Bool
     
     var body: some View {
         
@@ -89,16 +90,20 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Description de votre animal :")
                 TextEditor(text: $petFormViewModel.petDescription)
-                    .padding(5)
-                    .frame(minHeight: 100, maxHeight: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    .focused($isInputActive)
                     .toolbar {
-                        ToolbarItem(placement: .keyboard) {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            
                             Button("Done") {
-                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                isInputActive = false
                             }
                         }
                     }
+                    .padding(5)
+                    .frame(minHeight: 100, maxHeight: .infinity)
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
+                    
             }
             .padding()
             

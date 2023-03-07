@@ -106,7 +106,7 @@ struct LoginView: View {
             .navigationBarItems(trailing: Button(action: {
                 self.show.toggle()
             }) {
-                Text("Pas encore inscrit ?")
+                Text("S'inscrire")
                     .fontWeight(.bold)
                     .foregroundColor(Color("BluePurr"))
             })
