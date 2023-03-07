@@ -92,7 +92,13 @@ struct PetFormModalView: View {
                     .padding(5)
                     .frame(minHeight: 100, maxHeight: .infinity)
                     .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
-                    .submitLabel(.done)
+                    .toolbar {
+                        ToolbarItem(placement: .keyboard) {
+                            Button("Done") {
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                            }
+                        }
+                    }
             }
             .padding()
             

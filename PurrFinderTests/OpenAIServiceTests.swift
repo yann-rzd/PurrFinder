@@ -10,7 +10,7 @@ import XCTest
 import Combine
 
 final class OpenAIServiceTests: XCTestCase {
-    
+
     var openAIService: OpenAIService!
     var cancellables = Set<AnyCancellable>()
     
@@ -18,17 +18,17 @@ final class OpenAIServiceTests: XCTestCase {
         super.setUp()
         openAIService = OpenAIService()
     }
-    
+
     override func tearDown() {
         openAIService = nil
         cancellables.removeAll()
         super.tearDown()
     }
-    
+
     func testGivenAValidPrompt_WhenSendPrompt_ThenCompletionReceived() {
         let expectation = XCTestExpectation(description: "Should return a response")
         let message = "Hello, World!"
-        
+
         openAIService.sendMessage(message: message)
             .sink { completion in
                 switch completion {
@@ -42,7 +42,7 @@ final class OpenAIServiceTests: XCTestCase {
                 XCTAssertNotNil(response.choices)
             }
             .store(in: &cancellables)
-        
+
         wait(for: [expectation], timeout: 10.0)
     }
 }

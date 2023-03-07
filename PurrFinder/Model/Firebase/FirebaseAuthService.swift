@@ -8,13 +8,13 @@
 import Foundation
 import Firebase
 
-final class FirebaseAuthService {
+final class FirebaseAuthService: FirebaseAuthServiceProtocol {
     
     // MARK: - PATTERN: singleton
     
     static let shared = FirebaseAuthService()
     
-    private init() { }
+    init() { }
     
     
     // MARK: - INTERNAL: properties
