@@ -9,48 +9,77 @@ import XCTest
 @testable import PurrFinder
 import CoreLocation
 
-final class LocationServiceTests: XCTestCase {
+class LocationServiceTests: XCTestCase {
+    
+    
+    var locationManager: FakeCLLocationManager!
+    var delegate: FakeLocationServiceDelegate!
     var locationService: LocationService!
-    var mockLocationManager: MockCLLocationManager!
     
     override func setUp() {
         super.setUp()
+        locationManager = FakeCLLocationManager()
+        delegate = FakeLocationServiceDelegate()
         locationService = LocationService()
-        mockLocationManager = MockCLLocationManager()
+        locationService.delegate = delegate
+        locationService.locationManager = locationManager
     }
     
     override func tearDown() {
+        locationManager = nil
+        delegate = nil
         locationService = nil
-        mockLocationManager = nil
         super.tearDown()
     }
     
-    func testLocationManagerDidUpdateLocations() {
-        let locationManager = CLLocationManager()
-        let mockLocation = CLLocation(latitude: 37.3317, longitude: -122.0307)
-        locationService.locationManager(locationManager, didUpdateLocations: [mockLocation])
-        XCTAssertEqual(locationService.latitude, mockLocation.coordinate.latitude)
-        XCTAssertEqual(locationService.longitude, mockLocation.coordinate.longitude)
+    func testStartUpdatingLocation() {
+        locationService.startUpdatingLocation()
+        XCTAssertTrue(locationManager.delegate === locationService)
+        XCTAssertTrue(locationManager.requestWhenInUseAuthorizationCalled)
+        XCTAssertTrue(locationManager.startUpdatingLocationCalled)
     }
     
-    func testLocationManagerDidChangeAuthorization_authorizedWhenInUse() {
-        mockLocationManager.mockAuthorizationStatus = .authorizedWhenInUse
-        locationService.locationManagerDidChangeAuthorization(mockLocationManager)
-        XCTAssertTrue(locationService.isUpdatingLocation)
+    func testStopUpdatingLocation() {
+        locationService.stopUpdatingLocation()
+        XCTAssertTrue(locationManager.stopUpdatingLocationCalled)
     }
-
-    func testLocationManagerDidChangeAuthorization_notAuthorized() {
-        mockLocationManager.mockAuthorizationStatus = .denied
-        locationService.locationManagerDidChangeAuthorization(mockLocationManager)
-        XCTAssertFalse(locationService.isUpdatingLocation)
+    
+    func testLocationManagerDidUpdateLocations() {
+        let location = CLLocation(latitude: 37.33233141, longitude: -122.0312186)
+        let locations = [location]
+        locationService.locationManager(locationManager, didUpdateLocations: locations)
+        XCTAssertTrue(delegate.locationServiceDidUpdateLocationCalled)
+        XCTAssertEqual(delegate.latitude, location.coordinate.latitude)
+        XCTAssertEqual(delegate.longitude, location.coordinate.longitude)
     }
 }
 
-class MockCLLocationManager: CLLocationManager {
+class FakeCLLocationManager: CLLocationManager {
+    var requestWhenInUseAuthorizationCalled = false
+    var startUpdatingLocationCalled = false
+    var stopUpdatingLocationCalled = false
     
-    var mockAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+    override func requestWhenInUseAuthorization() {
+        requestWhenInUseAuthorizationCalled = true
+    }
     
-    override var authorizationStatus: CLAuthorizationStatus {
-        return mockAuthorizationStatus
+    override func startUpdatingLocation() {
+        startUpdatingLocationCalled = true
+    }
+    
+    override func stopUpdatingLocation() {
+        stopUpdatingLocationCalled = true
+    }
+}
+
+class FakeLocationServiceDelegate: LocationServiceDelegate {
+    var locationServiceDidUpdateLocationCalled = false
+    var latitude: Double?
+    var longitude: Double?
+    
+    func locationServiceDidUpdateLocation(_ locationService: LocationService, latitude: Double, longitude: Double) {
+        locationServiceDidUpdateLocationCalled = true
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }

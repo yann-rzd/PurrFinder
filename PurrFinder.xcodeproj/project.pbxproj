@@ -85,7 +85,6 @@
 		E4E6645A299E69E0002F5A79 /* User+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E66459299E69E0002F5A79 /* User+Extension.swift */; };
 		E4E6645C299E6A34002F5A79 /* PostAlertDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645B299E6A34002F5A79 /* PostAlertDTO.swift */; };
 		E4E6645E299E6AFD002F5A79 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6645D299E6AFD002F5A79 /* UserDTO.swift */; };
-		E4ED191529ABE1C8006662B5 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4ED191429ABE1C8006662B5 /* OpenAISwift */; };
 		E4ED191729ABE20A006662B5 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ED191629ABE20A006662B5 /* OpenAIService.swift */; };
 		E4F9245829B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F9245729B63F9100D6DAF6 /* FirebaseAuthServiceMock.swift */; };
 /* End PBXBuildFile section */
@@ -193,7 +192,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4ED191529ABE1C8006662B5 /* OpenAISwift in Frameworks */,
 				5460B51BFFC5BD4B0073CC1D /* Pods_PurrFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +518,6 @@
 			);
 			name = PurrFinder;
 			packageProductDependencies = (
-				E4ED191429ABE1C8006662B5 /* OpenAISwift */,
 			);
 			productName = PurrFinder;
 			productReference = E4DF01D0299183D8004E1CC6 /* PurrFinder.app */;
@@ -598,7 +595,6 @@
 			);
 			mainGroup = E4DF01C7299183D8004E1CC6;
 			packageReferences = (
-				E4ED191329ABE1C8006662B5 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = E4DF01D1299183D8004E1CC6 /* Products */;
 			projectDirPath = "";
@@ -1294,25 +1290,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E4ED191329ABE1C8006662B5 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E4ED191429ABE1C8006662B5 /* OpenAISwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4ED191329ABE1C8006662B5 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
-			productName = OpenAISwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4DF01C8299183D8004E1CC6 /* Project object */;
 }

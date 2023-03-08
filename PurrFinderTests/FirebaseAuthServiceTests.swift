@@ -17,12 +17,6 @@ final class FirebaseAuthServiceTests: XCTestCase {
         super.setUp()
         firebaseAuthService = FirebaseAuthService()
     }
-    
-    func testSignIn() async throws {
-        let authService = FirebaseAuthServiceMock()
-        let result = try await authService.signIn(email: "test@example.com", password: "password")
-        XCTAssertNotNil(result.user)
-    }
 
 //    func testSignIn() async throws {
 //

@@ -10,8 +10,7 @@ import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
     weak var delegate: LocationServiceDelegate?
-    
-    private var locationManager = CLLocationManager()
+    internal var locationManager: CLLocationManager = CLLocationManager()
     
     func startUpdatingLocation() {
         locationManager.delegate = self
