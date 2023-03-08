@@ -126,10 +126,5 @@ struct CurrentAlertView: View {
                 dismiss()
             }, secondaryButton: .cancel(Text("Non")))
         }
-        .onAppear() {
-            Task {
-                try await viewModel.checkForPermission()
-            }
-        }
     }
 }

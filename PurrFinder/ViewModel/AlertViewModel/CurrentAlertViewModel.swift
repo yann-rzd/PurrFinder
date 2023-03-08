@@ -54,26 +54,6 @@ extension CurrentAlertView {
             }
         }
         
-        func checkForPermission() async throws{
-            let userUID = firebaseAuthService.getCurrentUserUID()
-            
-            guard await firestoreService.checkIfAlertInProgress(userUID: userUID) else {
-                return
-            }
-            
-            let userDTO = try await firestoreService.getUserData(userUID: userUID)
-            let latitude = stringToDoubleConvertor(stringNumber: userDTO.locationLatitude ?? "0")
-            let longitude = stringToDoubleConvertor(stringNumber: userDTO.locationLongitude ?? "0")
-            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            
-            let animalDTO = try await firestoreService.getPostAlertData(userUID: userUID)
-            let animalName = animalDTO.animalName
-            
-            let animalType = animalDTO.animalType
-            
-            notificationService.checkForPermission(ownerLocation: location, animalName: animalName, animalType: animalType)
-        }
-        
         
         // MARK: - PRIVATE: properties
         
@@ -111,14 +91,6 @@ extension CurrentAlertView {
         
         private func loadData() async throws {
             try await getCurrentAlertData()
-        }
-        
-        private func stringToDoubleConvertor(stringNumber: String) -> Double {
-            if let doubleNumber = Double(stringNumber) {
-                return doubleNumber
-            } else {
-                return 0.0
-            }
         }
     }
 }

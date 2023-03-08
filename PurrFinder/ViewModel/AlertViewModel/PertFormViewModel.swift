@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 extension PetFormModalView {
     @MainActor class PetFormViewModel: ObservableObject {
@@ -71,11 +72,48 @@ extension PetFormModalView {
             isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
         }
         
+        func checkForPermission() async throws{
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            
+            guard await firestoreService.checkIfAlertInProgress(userUID: userUID) else {
+                return
+            }
+            
+            let userDTO = try await firestoreService.getUserData(userUID: userUID)
+            let latitude = stringToDoubleConvertor(stringNumber: userDTO.locationLatitude ?? "0")
+            let longitude = stringToDoubleConvertor(stringNumber: userDTO.locationLongitude ?? "0")
+            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let ownerName = userDTO.name
+            let ownerPhone = userDTO.phone
+            
+            let animalDTO = try await firestoreService.getPostAlertData(userUID: userUID)
+            let animalName = animalDTO.animalName
+            let animalType = animalDTO.animalType
+            let animalBreed = animalDTO.animalBreed
+            let animalDescription = animalDTO.animalDescription
+            
+            guard let animalImage = try await storageService.downloadAnimalImage() else {
+                return
+            }
+            
+            notificationService.checkForPermission(
+                ownerLocation: location,
+                animalImage: animalImage,
+                animalName: animalName,
+                animalType: animalType,
+                animalBreed: animalBreed,
+                animalDescription: animalDescription,
+                ownerName: ownerName,
+                ownerPhone: ownerPhone
+            )
+        }
+        
         // MARK: - PRIVATE: properties
         
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
         private let firebaseAuthService = FirebaseAuthService.shared
+        private let notificationService = NotificationService.shared
         
         
         // MARK: - PRIVATE: methods
@@ -124,6 +162,14 @@ extension PetFormModalView {
                 
                 storageService.persistAnimalImageToStorage(image: petImage)
                 
+            }
+        }
+        
+        private func stringToDoubleConvertor(stringNumber: String) -> Double {
+            if let doubleNumber = Double(stringNumber) {
+                return doubleNumber
+            } else {
+                return 0.0
             }
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UserNotifications
 import CoreLocation
 
@@ -41,18 +42,39 @@ final class NotificationService {
     /// - parameter CLLocationCoordinate2D: location of the animal owner.
     /// - parameter animalName: String, name of the animal.
     /// - parameter animalType: String type of the animal
-    func checkForPermission(ownerLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
+    func checkForPermission(ownerLocation: CLLocationCoordinate2D,
+                            animalImage: UIImage,
+                            animalName: String,
+                            animalType: String,
+                            animalBreed: String,
+                            animalDescription: String,
+                            ownerName: String,
+                            ownerPhone: String) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .authorized:
-                self.scheduleNotification(ownerLocation: ownerLocation, animalName: animalName, animalType: animalType)
+                self.scheduleNotification(ownerLocation: ownerLocation,
+                                          animalImage: animalImage,
+                                          animalName: animalName,
+                                          animalType: animalType,
+                                          animalBreed: animalBreed,
+                                          animalDescription: animalDescription,
+                                          ownerName: ownerName,
+                                          ownerPhone: ownerPhone)
             case .denied:
                 return
             case .notDetermined:
                 notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAlllow, error in
                     if didAlllow {
-                        self.scheduleNotification(ownerLocation: ownerLocation, animalName: animalName, animalType: animalType)
+                        self.scheduleNotification(ownerLocation: ownerLocation,
+                                                  animalImage: animalImage,
+                                                  animalName: animalName,
+                                                  animalType: animalType,
+                                                  animalBreed: animalBreed,
+                                                  animalDescription: animalDescription,
+                                                  ownerName: ownerName,
+                                                  ownerPhone: ownerPhone)
                     }
                 }
             default:
@@ -73,13 +95,13 @@ final class NotificationService {
     /// - parameter CLLocationCoordinate2D: location of the animal owner.
     /// - parameter animalName: String, name of the animal.
     /// - parameter animalType: String type of the animal
-    private func scheduleNotification(ownerLocation: CLLocationCoordinate2D, animalName: String, animalType: String) {
+    private func scheduleNotification(ownerLocation: CLLocationCoordinate2D, animalImage: UIImage, animalName: String, animalType: String, animalBreed: String, animalDescription: String, ownerName: String, ownerPhone: String) {
         
         let identifier = "Un animale s'est égaré dans votre zone"
         
         let content = UNMutableNotificationContent()
         content.title = "Purr Finder: \(animalName) a été perdu!"
-        content.body = "Description : \(animalType)"
+        content.body = "\(animalImage)\n\(animalType)\nDescription : \(animalDescription)\nPropriétaire : \(ownerName)\n\(ownerPhone)"
         content.sound = UNNotificationSound.default
         
         let trigger = UNLocationNotificationTrigger(region: getRegion(from: ownerLocation), repeats: false)
@@ -100,12 +122,21 @@ final class NotificationService {
     /// - parameter location: geographical position.
     /// - returns: a circular geographic region
     private func getRegion(from location: CLLocationCoordinate2D) -> CLCircularRegion {
-        let region = CLCircularRegion(center: location, radius: 1000, identifier: "PetLocation")
+        let region = CLCircularRegion(center: location, radius: 10, identifier: "PetLocation")
         region.notifyOnEntry = true
         region.notifyOnExit = false
 
-        print("REGION : \(region)")
-        
+        print("🌍🌍🌍🌍🌍🌍🌍 REGION 🌍🌍🌍🌍🌍🌍🌍 : \(region)")
+
         return region
     }
+    
+    // FOR TEST
+//    private func getRegion(from location: CLLocationCoordinate2D) -> CLCircularRegion {
+//        let testLocation = CLLocationCoordinate2D(latitude: 43.113396359929624, longitude: 5.98551660608558) // coordonnées de la région de test
+//        let region = CLCircularRegion(center: testLocation, radius: 1, identifier: "TestLocation")
+//        region.notifyOnEntry = true
+//        region.notifyOnExit = true
+//        return region
+//    }
 }

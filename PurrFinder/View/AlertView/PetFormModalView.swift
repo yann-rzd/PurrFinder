@@ -90,7 +90,9 @@ struct PetFormModalView: View {
             VStack(alignment: .leading) {
                 Text("Description de votre animal :")
                 TextEditor(text: $petFormViewModel.petDescription)
-                    .focused($isInputActive)
+                    .padding(5)
+                    .frame(minHeight: 100, maxHeight: .infinity)
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
@@ -100,12 +102,11 @@ struct PetFormModalView: View {
                             }
                         }
                     }
-                    .padding(5)
-                    .frame(minHeight: 100, maxHeight: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 4).stroke(petFormViewModel.petDescription != "" ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
                     
             }
             .padding()
+            .focused($isInputActive)
+            
             
             Button(action: {
                 Task {
@@ -114,6 +115,7 @@ struct PetFormModalView: View {
                     await Task.sleep(1 * NSEC_PER_SEC)
                     
                     if petFormViewModel.isAlertPosted {
+                        try await petFormViewModel.checkForPermission()
                         alertInProgress = true
                         isPresented = false
                     }
