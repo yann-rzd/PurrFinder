@@ -21,6 +21,16 @@ final class FirestoreServiceTests: XCTestCase {
         var locationLongitude: String?
     }
     
+    struct TestPostAlert {
+        var uid: String = ""
+        var animalName: String = ""
+        var animalType: String = ""
+        var animalBreed: String = ""
+        var animalDescription: String = ""
+        var postDate: String = ""
+        var ownerUid: String = ""
+    }
+    
     override func setUpWithError() throws {
         try super.setUpWithError()
         let settings = FirestoreSettings()
@@ -71,7 +81,7 @@ final class FirestoreServiceTests: XCTestCase {
             locationLatitude: "37.7749",
             locationLongitude: "-122.4194"
         )
-
+        
         let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
         
         // Save user data to Firestore
@@ -102,22 +112,22 @@ final class FirestoreServiceTests: XCTestCase {
             locationLatitude: "37.7749",
             locationLongitude: "-122.4194"
         )
-
+        
         let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
-
+        
         // Ajouter l'utilisateur dans la base de données avant de le supprimer
         let documentReference = FirestoreService.shared.getUserDocumentReference(user: user)
         try await FirestoreService.shared.saveUserData(user: user)
-
+        
         // Vérifier que l'utilisateur existe avant la suppression
         let db = Firestore.firestore()
         let userRef = db.collection("userData").document(userUID)
         let snapshot = try await userRef.getDocument()
         XCTAssertTrue(snapshot.exists)
-
+        
         // Supprimer l'utilisateur
         try await FirestoreService.shared.deleteUserData(uid: userUID)
-
+        
         // Vérifier que l'utilisateur n'existe plus après la suppression
         let snapshotAfterDelete = try await userRef.getDocument()
         XCTAssertFalse(snapshotAfterDelete.exists)
@@ -137,17 +147,17 @@ final class FirestoreServiceTests: XCTestCase {
         let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
         
         try await FirestoreService.shared.saveUserData(user: user)
-
+        
         // Update the user's name and phone number
         let newName = "Jane"
         let newPhone = "987-654-3210"
         try await FirestoreService.shared.updateUserDataNamePhone(userUID: userTest.uid, name: newName, phone: newPhone)
-
+        
         // Get the user's data and check that their name and phone number were updated
         let updatedUserDTO = try await FirestoreService.shared.getUserData(userUID: userTest.uid)
         XCTAssertEqual(updatedUserDTO.name, newName)
         XCTAssertEqual(updatedUserDTO.phone, newPhone)
-
+        
         // Delete the test user's data
         try await FirestoreService.shared.deleteUserData(uid: userTest.uid)
     }
@@ -163,10 +173,11 @@ final class FirestoreServiceTests: XCTestCase {
             locationLatitude: "37.7749",
             locationLongitude: "-122.4194"
         )
+        
         let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
         
         // Save the user to Firestore
-        let documentReference = FirestoreService.shared.getUserDocumentReference(user: user)
+        _ = FirestoreService.shared.getUserDocumentReference(user: user)
         
         try await FirestoreService.shared.saveUserData(user: user)
         
@@ -182,6 +193,113 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(updatedUserDTO.locationLatitude, newLatitude)
         XCTAssertEqual(updatedUserDTO.locationLongitude, newLongitude)
     }
+    
+    func testCreatePostAlert() async throws {
+        let postAlertTest = TestPostAlert(
+            uid: "1234",
+            animalName: "Simba",
+            animalType: "Cat",
+            animalBreed: "Siamese",
+            animalDescription: "This is Simba. He is a 5-year-old Siamese cat with blue eyes.",
+            postDate: "2022-03-09T16:00:00Z",
+            ownerUid: "5678"
+        )
+        
+        let postAlert = PurrFinder.PostAlert(
+            uid: postAlertTest.uid,
+            animalName: postAlertTest.animalName,
+            animalType: postAlertTest.animalType,
+            animalBreed: postAlertTest.animalBreed,
+            animalDescription: postAlertTest.animalDescription,
+            postDate: postAlertTest.postDate,
+            ownerUid: postAlertTest.ownerUid
+        )
+        
+        let userUID = "5678"
+        try await FirestoreService.shared.createPostAlert(post: postAlert, userUID: userUID)
+        
+        let db = Firestore.firestore()
+        let postAlertRef = db.collection("postAlertData").document(userUID)
+        let snapshot = try await postAlertRef.getDocument()
+        XCTAssertTrue(snapshot.exists)
+        
+        let postAlertDTO = try await FirestoreService.shared.getPostAlertData(userUID: userUID)
+        
+        XCTAssertEqual(postAlertDTO.uid, postAlertTest.uid)
+        XCTAssertEqual(postAlertDTO.animalName, postAlertTest.animalName)
+        XCTAssertEqual(postAlertDTO.animalType, postAlertTest.animalType)
+        XCTAssertEqual(postAlertDTO.animalBreed, postAlertTest.animalBreed)
+        XCTAssertEqual(postAlertDTO.animalDescription, postAlertTest.animalDescription)
+        XCTAssertEqual(postAlertDTO.postDate, postAlertTest.postDate)
+        XCTAssertEqual(postAlertDTO.ownerUid, postAlertTest.ownerUid)
+    }
+    
+    func testCheckIfAlertInProgress() async throws {
+        // Créer un document "postAlertData" dans la collection
+        let db = Firestore.firestore()
+        
+        let postAlertDataRef = db.collection("postAlertData").addDocument(data: [
+            "ownerUid": "12345",
+            "alertMessage": "Test alert message"
+        ])
+        let postAlertDataId = postAlertDataRef.documentID
+        
+        // Appeler la fonction checkIfAlertInProgress avec l'UID de l'utilisateur
+        let isAlertInProgress = await FirestoreService.shared.checkIfAlertInProgress(userUID: "12345")
+        
+        // Vérifier que la fonction renvoie true
+        XCTAssertTrue(isAlertInProgress)
+        
+        // Supprimer le document créé précédemment
+        try await db.collection("postAlertData").document(postAlertDataId).delete()
+        
+        // Appeler la fonction checkIfAlertInProgress avec un UID différent
+        let isAlertInProgress2 = await FirestoreService.shared.checkIfAlertInProgress(userUID: "67890")
+        
+        // Vérifier que la fonction renvoie false
+        XCTAssertFalse(isAlertInProgress2)
+        
+        try await db.collection("postAlertData").document(postAlertDataId).delete()
+    }
+    
+    func testDeletePostAlert() async throws {
+        // Créer une alerte pour la supprimer ensuite
+        let postAlertTest = TestPostAlert(
+            uid: "1234",
+            animalName: "Simba",
+            animalType: "Cat",
+            animalBreed: "Siamese",
+            animalDescription: "This is Simba. He is a 5-year-old Siamese cat with blue eyes.",
+            postDate: "2022-03-09T16:00:00Z",
+            ownerUid: "5678"
+        )
+        
+        let postAlert = PurrFinder.PostAlert(
+            uid: postAlertTest.uid,
+            animalName: postAlertTest.animalName,
+            animalType: postAlertTest.animalType,
+            animalBreed: postAlertTest.animalBreed,
+            animalDescription: postAlertTest.animalDescription,
+            postDate: postAlertTest.postDate,
+            ownerUid: postAlertTest.ownerUid
+        )
+        
+        let userUID = "5678"
+        try await FirestoreService.shared.createPostAlert(post: postAlert, userUID: userUID)
+        
+        // Vérifier que l'alerte a bien été créée
+        let db = Firestore.firestore()
+        let postAlertRef = db.collection("postAlertData").document(userUID)
+        var snapshot = try await postAlertRef.getDocument()
+        XCTAssertTrue(snapshot.exists)
+        
+        // Supprimer l'alerte
+        try await FirestoreService.shared.deletePostAlert(userUID: userUID)
+        
+        // Vérifier que l'alerte a bien été supprimée
+        snapshot = try await postAlertRef.getDocument()
+        XCTAssertFalse(snapshot.exists)
+    }
 }
 
 extension User {
@@ -193,6 +311,18 @@ extension User {
         profileImage = userTest.profileImage
         locationLatitude = userTest.locationLatitude
         locationLongitude = userTest.locationLongitude
+    }
+}
+
+extension PostAlert {
+    init(postAlertTest: PurrFinder.PostAlert) {
+        uid = postAlertTest.uid
+        animalName = postAlertTest.animalName
+        animalType = postAlertTest.animalType
+        animalBreed = postAlertTest.animalBreed
+        animalDescription = postAlertTest.animalDescription
+        postDate = postAlertTest.postDate
+        ownerUid = postAlertTest.ownerUid
     }
 }
 
