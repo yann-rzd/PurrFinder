@@ -90,6 +90,98 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(userDTO.locationLatitude, user.locationLatitude)
         XCTAssertEqual(userDTO.locationLongitude, user.locationLongitude)
     }
+    
+    func testDeleteUserData() async throws {
+        let userUID = "1234"
+        let userTest = TestUser(
+            uid: userUID,
+            name: "John",
+            email: "john@test.com",
+            phone: "123-456-7890",
+            profileImage: nil,
+            locationLatitude: "37.7749",
+            locationLongitude: "-122.4194"
+        )
+
+        let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
+
+        // Ajouter l'utilisateur dans la base de données avant de le supprimer
+        let documentReference = FirestoreService.shared.getUserDocumentReference(user: user)
+        try await FirestoreService.shared.saveUserData(user: user)
+
+        // Vérifier que l'utilisateur existe avant la suppression
+        let db = Firestore.firestore()
+        let userRef = db.collection("userData").document(userUID)
+        let snapshot = try await userRef.getDocument()
+        XCTAssertTrue(snapshot.exists)
+
+        // Supprimer l'utilisateur
+        try await FirestoreService.shared.deleteUserData(uid: userUID)
+
+        // Vérifier que l'utilisateur n'existe plus après la suppression
+        let snapshotAfterDelete = try await userRef.getDocument()
+        XCTAssertFalse(snapshotAfterDelete.exists)
+    }
+    
+    func testUpdateUserDataNamePhone() async throws {
+        // Create a test user and save their data
+        let userTest = TestUser(
+            uid: "1234",
+            name: "John",
+            email: "john@test.com",
+            phone: "123-456-7890",
+            profileImage: nil,
+            locationLatitude: "37.7749",
+            locationLongitude: "-122.4194"
+        )
+        let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
+        
+        try await FirestoreService.shared.saveUserData(user: user)
+
+        // Update the user's name and phone number
+        let newName = "Jane"
+        let newPhone = "987-654-3210"
+        try await FirestoreService.shared.updateUserDataNamePhone(userUID: userTest.uid, name: newName, phone: newPhone)
+
+        // Get the user's data and check that their name and phone number were updated
+        let updatedUserDTO = try await FirestoreService.shared.getUserData(userUID: userTest.uid)
+        XCTAssertEqual(updatedUserDTO.name, newName)
+        XCTAssertEqual(updatedUserDTO.phone, newPhone)
+
+        // Delete the test user's data
+        try await FirestoreService.shared.deleteUserData(uid: userTest.uid)
+    }
+    
+    func testUpdateUserLocationData() async throws {
+        // Create a test user
+        let userTest = TestUser(
+            uid: "1234",
+            name: "John",
+            email: "john@test.com",
+            phone: "123-456-7890",
+            profileImage: nil,
+            locationLatitude: "37.7749",
+            locationLongitude: "-122.4194"
+        )
+        let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
+        
+        // Save the user to Firestore
+        let documentReference = FirestoreService.shared.getUserDocumentReference(user: user)
+        
+        try await FirestoreService.shared.saveUserData(user: user)
+        
+        // Update the user's location
+        let newLatitude = "37.7749"
+        let newLongitude = "-122.4194"
+        try await FirestoreService.shared.updateUserLocationData(userUID: user.uid, latitude: newLatitude, longitude: newLongitude)
+        
+        // Get the updated user from Firestore
+        let updatedUserDTO = try await FirestoreService.shared.getUserData(userUID: user.uid)
+        
+        // Check that the location was updated
+        XCTAssertEqual(updatedUserDTO.locationLatitude, newLatitude)
+        XCTAssertEqual(updatedUserDTO.locationLongitude, newLongitude)
+    }
 }
 
 extension User {
