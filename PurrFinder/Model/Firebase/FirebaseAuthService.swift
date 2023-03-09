@@ -8,15 +8,14 @@
 import Foundation
 import Firebase
 
-final class FirebaseAuthService: FirebaseAuthServiceProtocol {
+final class FirebaseAuthService {
     
     // MARK: - PATTERN: singleton
     
     static let shared = FirebaseAuthService()
-    
+
     init() { }
-    
-    
+ 
     // MARK: - INTERNAL: properties
     
     var isLoggedIn: Bool {
