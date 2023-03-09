@@ -7,8 +7,10 @@
 
 import SwiftUI
 import Firebase
+import FirebaseCore
 import FirebaseAuth
 import FirebaseStorage
+import FirebasePerformance
 
 @main
 struct PurrFinderApp: App {

@@ -108,9 +108,12 @@
 
 /* Begin PBXFileReference section */
 		197FC3FB31593D2BD08716CB /* Pods-PurrFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder/Pods-PurrFinder.release.xcconfig"; sourceTree = "<group>"; };
+		2AD7C3E0136A34B14C33C9BD /* Pods-PurrFinder-PurrFinderUITests.emulators.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.emulators.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.emulators.xcconfig"; sourceTree = "<group>"; };
 		3793E269FD2CFD9901168436 /* Pods-PurrFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinder/Pods-PurrFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		6C89BA7C41723516D434C0CE /* Pods_PurrFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurrFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABEC6120017634F3E4339460 /* Pods-PurrFinder.emulators.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder.emulators.xcconfig"; path = "Target Support Files/Pods-PurrFinder/Pods-PurrFinder.emulators.xcconfig"; sourceTree = "<group>"; };
+		B5966FCBF5B5D51403C67BB3 /* Pods-PurrFinderTests.emulators.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinderTests.emulators.xcconfig"; path = "Target Support Files/Pods-PurrFinderTests/Pods-PurrFinderTests.emulators.xcconfig"; sourceTree = "<group>"; };
 		B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PurrFinder-PurrFinderUITests/Pods-PurrFinder-PurrFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
 		E41F01A929A6617E00CCD79C /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
@@ -234,6 +237,9 @@
 				B8BE430F82A33E5AB93306A5 /* Pods-PurrFinder-PurrFinderUITests.release.xcconfig */,
 				70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */,
 				FBEAC6C55D88B2FBB92A7504 /* Pods-PurrFinderTests.release.xcconfig */,
+				ABEC6120017634F3E4339460 /* Pods-PurrFinder.emulators.xcconfig */,
+				2AD7C3E0136A34B14C33C9BD /* Pods-PurrFinder-PurrFinderUITests.emulators.xcconfig */,
+				B5966FCBF5B5D51403C67BB3 /* Pods-PurrFinderTests.emulators.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -517,8 +523,6 @@
 			dependencies = (
 			);
 			name = PurrFinder;
-			packageProductDependencies = (
-			);
 			productName = PurrFinder;
 			productReference = E4DF01D0299183D8004E1CC6 /* PurrFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -594,8 +598,6 @@
 				Base,
 			);
 			mainGroup = E4DF01C7299183D8004E1CC6;
-			packageReferences = (
-			);
 			productRefGroup = E4DF01D1299183D8004E1CC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -912,7 +914,7 @@
 		};
 		E489F51D29B77E0B00073EC2 /* Emulators */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3793E269FD2CFD9901168436 /* Pods-PurrFinder.debug.xcconfig */;
+			baseConfigurationReference = ABEC6120017634F3E4339460 /* Pods-PurrFinder.emulators.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -946,7 +948,7 @@
 		};
 		E489F51E29B77E0B00073EC2 /* Emulators */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70394FF88E012F307E24185B /* Pods-PurrFinderTests.debug.xcconfig */;
+			baseConfigurationReference = B5966FCBF5B5D51403C67BB3 /* Pods-PurrFinderTests.emulators.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -967,7 +969,7 @@
 		};
 		E489F51F29B77E0B00073EC2 /* Emulators */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED85E18E40A3E48A74270C11 /* Pods-PurrFinder-PurrFinderUITests.debug.xcconfig */;
+			baseConfigurationReference = 2AD7C3E0136A34B14C33C9BD /* Pods-PurrFinder-PurrFinderUITests.emulators.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

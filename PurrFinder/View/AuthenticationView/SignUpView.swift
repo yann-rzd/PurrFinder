@@ -35,6 +35,7 @@ struct SignUpView: View {
                     .background(RoundedRectangle(cornerRadius: 4).stroke(signUpViewModel.email != "" ? Color("BluePurr") : signUpViewModel.color, lineWidth: 2))
                     .padding(.top, 25)
                     .submitLabel(.done)
+                    .focused($isInputActive)
                 
                 TextField("Téléphone", text: $signUpViewModel.phone)
                     .textInputAutocapitalization(.never)
@@ -46,7 +47,6 @@ struct SignUpView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
-                            
                             Button("Done") {
                                 isInputActive = false
                             }
@@ -60,6 +60,7 @@ struct SignUpView: View {
                     .padding(.top, 25)
                     .keyboardType(.emailAddress)
                     .submitLabel(.done)
+                    .focused($isInputActive)
                 
                 HStack(spacing: 15) {
                     VStack {
@@ -67,10 +68,12 @@ struct SignUpView: View {
                             TextField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
                                 .submitLabel(.done)
+                                .focused($isInputActive)
                         } else {
                             SecureField("Mot de passe", text: $signUpViewModel.pass)
                                 .textInputAutocapitalization(.never)
                                 .submitLabel(.done)
+                                .focused($isInputActive)
                         }
                     }
                     
@@ -92,10 +95,12 @@ struct SignUpView: View {
                             TextField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
                                 .submitLabel(.done)
+                                .focused($isInputActive)
                         } else {
                             SecureField("Re-entre", text: $signUpViewModel.repass)
                                 .textInputAutocapitalization(.never)
                                 .submitLabel(.done)
+                                .focused($isInputActive)
                         }
                     }
                     

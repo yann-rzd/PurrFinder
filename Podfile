@@ -9,6 +9,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'Alamofire'
+pod 'Firebase/Performance'
 
   # Pods for PurrFinder
 
