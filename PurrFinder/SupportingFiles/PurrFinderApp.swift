@@ -17,30 +17,14 @@ struct PurrFinderApp: App {
     
     init() {
         FirebaseApp.configure()
-#if EMULATORS
-        print(
-        """
-        ****************************************************
-        Testing on Emulators
-        ****************************************************
-        """
-        )
-        Auth.auth().useEmulator(withHost:"localhost", port:9099)
-        Storage.storage().useEmulator(withHost: "localhorst", port: 9199)
-        let settings = Firestore.firestore().settings
-        settings.host = "localhost:8080"
-        settings.isPersistenceEnabled = false
-        settings.isSSLEnabled = false
-        Firestore.firestore().settings = settings
-#elseif DEBUG
-        print(
-        """
-        ****************************************************
-        Testing on Live Server
-        ****************************************************
-        """
-        )
-#endif
+        if ProcessInfo.processInfo.environment["unit_tests"] == "true" {
+          print("Setting up Firebase emulator localhost:8080")
+          let settings = Firestore.firestore().settings
+          settings.host = "localhost:8080"
+          settings.isPersistenceEnabled = false
+          settings.isSSLEnabled = false
+          Firestore.firestore().settings = settings
+        }
     }
     
     var body: some Scene {

@@ -12,9 +12,6 @@ import Firebase
 final class FirebaseAuthServiceTests: XCTestCase {
     
     var firebaseAuthService: FirebaseAuthService!
-    var auth: Auth!
-    var email: String!
-    var password: String!
     
     override func setUp() {
         super.setUp()

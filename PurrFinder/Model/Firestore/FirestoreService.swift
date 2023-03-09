@@ -106,7 +106,7 @@ final class FirestoreService {
     
     // MARK: - PRIVATE: methods
     
-    private func getUserDocumentReference(user: User) -> DocumentReference {
+    func getUserDocumentReference(user: User) -> DocumentReference {
         return db.collection("userData").document(user.uid)
     }
 }

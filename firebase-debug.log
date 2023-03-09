@@ -142,3 +142,319 @@ INFO: Connected to new websocket client
 [info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=1xzBOvMOMOrt3oxBVWxoiC9-yNtgMUsfmUbkndHNC3HzB5Bxe0fWnG&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=1xzBOvMOMOrt3oxBVWxoiC9-yNtgMUsfmUbkndHNC3HzB5Bxe0fWnG&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
 [info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=1zDLu43LHSU9_k3-7ANnEDyWIYFhjpCLkPrzomioKUBBk2kg5NYJ4G&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=1zDLu43LHSU9_k3-7ANnEDyWIYFhjpCLkPrzomioKUBBk2kg5NYJ4G&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
 [info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=kMi2_sOD0Rh-eghIskapNk1POKgN5VzWvyuS0q1Bv7kVekv_H0fRjg&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=kMi2_sOD0Rh-eghIskapNk1POKgN5VzWvyuS0q1Bv7kVekv_H0fRjg&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ROL7OWsbHZQXNLnAH2Y1C57vs-DwT6q05Jl-UOQYmv0p_e4segaOEH&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ROL7OWsbHZQXNLnAH2Y1C57vs-DwT6q05Jl-UOQYmv0p_e4segaOEH&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=bn2vL21ZiSvxR1pv__dtmm0ReRjg-vR_A0PyY6jApB8K_vpEgBAM09&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=bn2vL21ZiSvxR1pv__dtmm0ReRjg-vR_A0PyY6jApB8K_vpEgBAM09&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-03-09T14:54:50.959Z] Mar 09, 2023 3:54:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:54:50.981Z] Mar 09, 2023 3:54:50 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:50 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:54:52.600Z] Mar 09, 2023 3:54:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:54:52.603Z] Mar 09, 2023 3:54:52 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:52 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:54:54.915Z] Mar 09, 2023 3:54:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:54:54.938Z] Mar 09, 2023 3:54:54 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:54 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:54:56.598Z] Mar 09, 2023 3:54:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:54:56.600Z] Mar 09, 2023 3:54:56 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:54:56 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:55:00.796Z] Mar 09, 2023 3:55:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:55:00.801Z] Mar 09, 2023 3:55:00 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:00 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:55:07.386Z] Mar 09, 2023 3:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:55:07.392Z] Mar 09, 2023 3:55:07 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:07 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:55:20.816Z] Mar 09, 2023 3:55:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:55:20.821Z] Mar 09, 2023 3:55:20 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:20 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:55:35.826Z] Mar 09, 2023 3:55:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:55:35.833Z] Mar 09, 2023 3:55:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:55:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:56:05.864Z] Mar 09, 2023 3:56:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:56:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:56:05.872Z] Mar 09, 2023 3:56:05 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:56:05 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:56:45.865Z] Mar 09, 2023 3:56:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:56:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:56:45.875Z] Mar 09, 2023 3:56:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:56:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:57:55.898Z] Mar 09, 2023 3:57:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:57:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T14:57:55.902Z] Mar 09, 2023 3:57:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:57:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T14:59:09.774Z] Mar 09, 2023 3:59:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:59:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2023-03-09T14:59:09.977Z] Mar 09, 2023 3:59:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 3:59:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2023-03-09T15:00:05.996Z] Mar 09, 2023 4:00:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:00:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:00:06.010Z] Mar 09, 2023 4:00:06 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:00:06 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=c0URvJMPp905GIA5dgAP2DEJOSFJConrnlYPprtoCZhYtX1KVX5_Jq&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=c0URvJMPp905GIA5dgAP2DEJOSFJConrnlYPprtoCZhYtX1KVX5_Jq&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-03-09T15:01:04.911Z] Mar 09, 2023 4:01:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:04.916Z] Mar 09, 2023 4:01:04 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:04 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:06.225Z] Mar 09, 2023 4:01:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:06.227Z] Mar 09, 2023 4:01:06 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:06 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:07.749Z] Mar 09, 2023 4:01:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:07.752Z] Mar 09, 2023 4:01:07 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:07 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:09.734Z] Mar 09, 2023 4:01:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:09.735Z] Mar 09, 2023 4:01:09 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:09 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:14.626Z] Mar 09, 2023 4:01:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:14.629Z] Mar 09, 2023 4:01:14 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:14 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:23.880Z] Mar 09, 2023 4:01:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:23.885Z] Mar 09, 2023 4:01:23 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:23 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:34.862Z] Mar 09, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:34.864Z] Mar 09, 2023 4:01:34 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:34 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:01:44.868Z] Mar 09, 2023 4:01:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:01:44.876Z] Mar 09, 2023 4:01:44 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:01:44 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:02:14.889Z] Mar 09, 2023 4:02:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:02:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:02:14.892Z] Mar 09, 2023 4:02:14 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:02:14 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:02:59.916Z] Mar 09, 2023 4:02:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:02:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:02:59.918Z] Mar 09, 2023 4:02:59 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:02:59 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:03:59.961Z] Mar 09, 2023 4:03:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:03:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:03:59.963Z] Mar 09, 2023 4:03:59 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:03:59 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:05:30.025Z] Mar 09, 2023 4:05:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:05:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:05:30.030Z] Mar 09, 2023 4:05:30 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:05:30 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:07:20.105Z] Mar 09, 2023 4:07:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:07:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:07:20.110Z] Mar 09, 2023 4:07:20 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:07:20 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:09:35.199Z] Mar 09, 2023 4:09:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:09:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:09:35.201Z] Mar 09, 2023 4:09:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:09:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:11:35.286Z] Mar 09, 2023 4:11:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:11:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:11:35.292Z] Mar 09, 2023 4:11:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:11:35 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:13:45.379Z] Mar 09, 2023 4:13:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:13:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:13:45.382Z] Mar 09, 2023 4:13:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:13:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:15:55.464Z] Mar 09, 2023 4:15:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:15:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:15:55.474Z] Mar 09, 2023 4:15:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:15:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=A-4I4ICI2tvbc7pW2zUgc-Zu0mxw31r01Mu9hFCvWeAFDR5juHa_5S&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=A-4I4ICI2tvbc7pW2zUgc-Zu0mxw31r01Mu9hFCvWeAFDR5juHa_5S&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-03-09T15:17:45.102Z] Mar 09, 2023 4:17:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:17:45.104Z] Mar 09, 2023 4:17:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:45 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:17:46.561Z] Mar 09, 2023 4:17:46 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:46 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:17:46.565Z] Mar 09, 2023 4:17:46 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:46 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:17:48.140Z] Mar 09, 2023 4:17:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:17:48.142Z] Mar 09, 2023 4:17:48 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:48 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:17:50.068Z] Mar 09, 2023 4:17:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:17:50.070Z] Mar 09, 2023 4:17:50 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:50 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:17:55.065Z] Mar 09, 2023 4:17:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:17:55.068Z] Mar 09, 2023 4:17:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:17:55 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:18:05.070Z] Mar 09, 2023 4:18:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:18:05.071Z] Mar 09, 2023 4:18:05 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:05 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:18:15.070Z] Mar 09, 2023 4:18:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:18:15.071Z] Mar 09, 2023 4:18:15 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:15 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:18:30.081Z] Mar 09, 2023 4:18:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:18:30.082Z] Mar 09, 2023 4:18:30 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:30 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=dwtJvzISdR2knv-ZRrN2jxh3DnitJZ17Bnch7X_s36hKASqkUwJAFK&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=dwtJvzISdR2knv-ZRrN2jxh3DnitJZ17Bnch7X_s36hKASqkUwJAFK&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-03-09T15:18:52.128Z] Mar 09, 2023 4:18:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:18:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ev7c1Si8_aRSjj4t3j9KfTdZwYs1vy-6Tv3r4N5SMYyeueQ6zdrYz4&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ev7c1Si8_aRSjj4t3j9KfTdZwYs1vy-6Tv3r4N5SMYyeueQ6zdrYz4&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=XVcE5gnH5VXFYQPBqqJdTJYwztCxdl1tquBEuV9coAo1fujpunkUjy&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=XVcE5gnH5VXFYQPBqqJdTJYwztCxdl1tquBEuV9coAo1fujpunkUjy&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[debug] [2023-03-09T15:42:18.690Z] Mar 09, 2023 4:42:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:18.709Z] Mar 09, 2023 4:42:18 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:18 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:19.772Z] Mar 09, 2023 4:42:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:19.773Z] Mar 09, 2023 4:42:19 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:19 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:21.840Z] Mar 09, 2023 4:42:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:21.841Z] Mar 09, 2023 4:42:21 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:21 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:23.614Z] Mar 09, 2023 4:42:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:23.617Z] Mar 09, 2023 4:42:23 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:23 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:28.618Z] Mar 09, 2023 4:42:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:28.625Z] Mar 09, 2023 4:42:28 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:28 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:33.624Z] Mar 09, 2023 4:42:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:33.626Z] Mar 09, 2023 4:42:33 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:33 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:42:43.632Z] Mar 09, 2023 4:42:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:42:43.635Z] Mar 09, 2023 4:42:43 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:42:43 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:43:02.554Z] Mar 09, 2023 4:43:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:43:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:43:02.560Z] Mar 09, 2023 4:43:02 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:43:02 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:43:28.671Z] Mar 09, 2023 4:43:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:43:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:43:28.674Z] Mar 09, 2023 4:43:28 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:43:28 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:44:08.703Z] Mar 09, 2023 4:44:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:44:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:44:08.706Z] Mar 09, 2023 4:44:08 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:44:08 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:45:08.754Z] Mar 09, 2023 4:45:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:45:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:45:08.761Z] Mar 09, 2023 4:45:08 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:45:08 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[debug] [2023-03-09T15:46:53.816Z] Mar 09, 2023 4:46:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:46:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-03-09T15:46:53.818Z] Mar 09, 2023 4:46:53 PM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /bad-request
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 09, 2023 4:46:53 PM io.gapi.emulators.netty.NotFoundHandler handleRequest\nINFO: Unknown request URI: /bad-request\n"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=_bAqi-zjZp-11MdkBffCsN4dM9_9anOuL9TgaqcpGE1HotkovRBgTQ&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=_bAqi-zjZp-11MdkBffCsN4dM9_9anOuL9TgaqcpGE1HotkovRBgTQ&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=t4fUWxLNva6W6FXxxWyweY25oIobrFgKeb-fIA0KIIjvRJu3tXedw3&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=t4fUWxLNva6W6FXxxWyweY25oIobrFgKeb-fIA0KIIjvRJu3tXedw3&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=0GQDKMnPugHatv0osYjvTINXJd3ginsA2NvzidFxyDuyjBRaU3GMF2&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=0GQDKMnPugHatv0osYjvTINXJd3ginsA2NvzidFxyDuyjBRaU3GMF2&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Na7mXa35GiWvgYmwwLFIOn5tGXKOWaXCsF5J2ic1xCxOF7rQ8PMZIb&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Na7mXa35GiWvgYmwwLFIOn5tGXKOWaXCsF5J2ic1xCxOF7rQ8PMZIb&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=jkvM_JJWqkwxNqanwpZx2xcxG32kDQyR6QplBpfiz-pIuNFS__ZIAd&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=jkvM_JJWqkwxNqanwpZx2xcxG32kDQyR6QplBpfiz-pIuNFS__ZIAd&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}
+[info] i  To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ff1Gukw1ELgrk3CVq7VaQNnO7aQrIfGCiYr2U591DDvebnz_q7UBts&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE {"metadata":{"emulator":{"name":"auth"},"message":"To reset the password for test@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=ff1Gukw1ELgrk3CVq7VaQNnO7aQrIfGCiYr2U591DDvebnz_q7UBts&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE"}}

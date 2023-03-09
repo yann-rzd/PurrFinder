@@ -18,3 +18,5 @@ struct User {
     var locationLatitude: String?
     var locationLongitude: String?
 }
+
+
