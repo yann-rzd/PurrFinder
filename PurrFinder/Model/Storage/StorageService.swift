@@ -18,8 +18,7 @@ final class StorageService {
     
     // MARK: - INTERNAL: properties
     
-    func persistProfileImageToStorage(image: UIImage) {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func persistProfileImageToStorage(userUID: String, image: UIImage) {
         let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
         
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
@@ -41,8 +40,7 @@ final class StorageService {
         }
     }
     
-    func persistAnimalImageToStorage(image: UIImage) {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func persistAnimalImageToStorage(userUID: String, image: UIImage) {
         let ref = Storage.storage().reference(withPath: "animalImages/\(userUID)")
         
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }

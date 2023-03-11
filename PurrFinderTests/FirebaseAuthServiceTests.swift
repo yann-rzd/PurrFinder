@@ -17,8 +17,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         super.setUp()
         firebaseAuthService = FirebaseAuthService()
     }
-    
-    
+
     func testSignIn() async throws {
         
         let auth = Auth.auth()

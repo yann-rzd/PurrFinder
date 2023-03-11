@@ -10,27 +10,32 @@ import SwiftUI
 struct ProfileImagePicker: UIViewControllerRepresentable {
     
     @Binding var image: UIImage?
-    
     private let controller = UIImagePickerController()
+    private let firebaseAuthService = FirebaseAuthService.shared
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self, storageService: StorageService.shared)
+        return Coordinator(parent: self, storageService: StorageService.shared, firebaseAuthService: firebaseAuthService)
     }
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: ProfileImagePicker
         let storageService: StorageService
+        let firebaseAuthService: FirebaseAuthService
         
-        init(parent: ProfileImagePicker, storageService: StorageService) {
+        
+        init(parent: ProfileImagePicker, storageService: StorageService, firebaseAuthService: FirebaseAuthService) {
             self.parent = parent
             self.storageService = storageService
+            self.firebaseAuthService = firebaseAuthService
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
             parent.image = info[.originalImage] as? UIImage
             if let image = parent.image {
-                storageService.persistProfileImageToStorage(image: image)
+                let userUID = firebaseAuthService.getCurrentUserUID()
+                storageService.persistProfileImageToStorage(userUID: userUID, image: image)
             }
             picker.dismiss(animated: true)
         }
@@ -38,6 +43,8 @@ struct ProfileImagePicker: UIViewControllerRepresentable {
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             picker.dismiss(animated: true)
         }
+        
+        
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
@@ -48,4 +55,6 @@ struct ProfileImagePicker: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
+
+    
 }

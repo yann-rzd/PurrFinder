@@ -34,10 +34,10 @@
 		E46A6E1929AF4CCC003B0373 /* FirebaseAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */; };
 		E484497729BA268300A97778 /* FirestoreServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E484497629BA268300A97778 /* FirestoreServiceTests.swift */; };
 		E484497929BC877800A97778 /* StorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E484497829BC877800A97778 /* StorageServiceTests.swift */; };
+		E4A53FE629BCCB1400D006D9 /* NotificationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A53FE529BCCB1400D006D9 /* NotificationServiceTests.swift */; };
 		E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37829AE55CB00794657 /* View+Extension.swift */; };
 		E4B5D37D29AE5E6300794657 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37C29AE5E6300794657 /* APIKeys.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
-		E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */; };
 		E4CA485B299403F900CEEA3E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485A299403F900CEEA3E /* Picker.swift */; };
 		E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */; };
 		E4DE139529A3D2EE0007EDD4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE139429A3D2EE0007EDD4 /* StorageService.swift */; };
@@ -139,10 +139,10 @@
 		E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceTests.swift; sourceTree = "<group>"; };
 		E484497629BA268300A97778 /* FirestoreServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceTests.swift; sourceTree = "<group>"; };
 		E484497829BC877800A97778 /* StorageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTests.swift; sourceTree = "<group>"; };
+		E4A53FE529BCCB1400D006D9 /* NotificationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServiceTests.swift; sourceTree = "<group>"; };
 		E4B5D37829AE55CB00794657 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		E4B5D37C29AE5E6300794657 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBefore.swift; sourceTree = "<group>"; };
 		E4CA485A299403F900CEEA3E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		E4DE139429A3D2EE0007EDD4 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -292,7 +292,6 @@
 			children = (
 				E4CA485A299403F900CEEA3E /* Picker.swift */,
 				E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */,
-				E4CA4854299401EF00CEEA3E /* ImagePickerBefore.swift */,
 				E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */,
 				E440DE7F29AA64C9000A832F /* MapView.swift */,
 			);
@@ -359,6 +358,7 @@
 				E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */,
 				E484497629BA268300A97778 /* FirestoreServiceTests.swift */,
 				E484497829BC877800A97778 /* StorageServiceTests.swift */,
+				E4A53FE529BCCB1400D006D9 /* NotificationServiceTests.swift */,
 			);
 			path = PurrFinderTests;
 			sourceTree = "<group>";
@@ -748,7 +748,6 @@
 				E4DF0212299188E2004E1CC6 /* AuthenticationErrorViewModel.swift in Sources */,
 				E4DF0253299294F1004E1CC6 /* ChatHelpView.swift in Sources */,
 				E4DF0206299187BC004E1CC6 /* FirebaseAuthServiceError.swift in Sources */,
-				E4CA4855299401EF00CEEA3E /* ImagePickerBefore.swift in Sources */,
 				E4DF024029919C1E004E1CC6 /* User.swift in Sources */,
 				E41F01B929A9148A00CCD79C /* AnimalImagePicker.swift in Sources */,
 				E41F01BD29A9309D00CCD79C /* PostAlertViewModel.swift in Sources */,
@@ -812,6 +811,7 @@
 				E484497729BA268300A97778 /* FirestoreServiceTests.swift in Sources */,
 				E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */,
 				E484497929BC877800A97778 /* StorageServiceTests.swift in Sources */,
+				E4A53FE629BCCB1400D006D9 /* NotificationServiceTests.swift in Sources */,
 				E4DF024529919C31004E1CC6 /* NotificationService.swift in Sources */,
 				E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 			);

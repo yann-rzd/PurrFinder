@@ -156,11 +156,11 @@ extension PetFormModalView {
                 }
                 
                 guard let petImage = petImage else {
-                    storageService.persistAnimalImageToStorage(image: UIImage(imageLiteralResourceName: "Cat"))
+                    storageService.persistAnimalImageToStorage(userUID: uid, image: UIImage(imageLiteralResourceName: "Cat"))
                     return
                 }
                 
-                storageService.persistAnimalImageToStorage(image: petImage)
+                storageService.persistAnimalImageToStorage(userUID: uid, image: petImage)
                 
             }
         }

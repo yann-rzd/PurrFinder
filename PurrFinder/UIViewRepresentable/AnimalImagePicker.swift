@@ -12,25 +12,29 @@ struct AnimalImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
     
     private let controller = UIImagePickerController()
+    private let firebaseAuthService = FirebaseAuthService.shared
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self, storageService: StorageService.shared)
+        return Coordinator(parent: self, storageService: StorageService.shared, firebaseAuthService: firebaseAuthService)
     }
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: AnimalImagePicker
         let storageService: StorageService
+        let firebaseAuthService: FirebaseAuthService
         
-        init(parent: AnimalImagePicker, storageService: StorageService) {
+        init(parent: AnimalImagePicker, storageService: StorageService, firebaseAuthService: FirebaseAuthService) {
             self.parent = parent
             self.storageService = storageService
+            self.firebaseAuthService = firebaseAuthService
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             parent.image = info[.originalImage] as? UIImage
             if let image = parent.image {
-                storageService.persistAnimalImageToStorage(image: image)
+                let userUID = firebaseAuthService.getCurrentUserUID()
+                storageService.persistAnimalImageToStorage(userUID: userUID, image: image)
             }
             picker.dismiss(animated: true)
         }
