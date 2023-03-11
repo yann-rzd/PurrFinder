@@ -38,7 +38,8 @@ extension UserSettingsView {
         }
         
         private func deleteUserImage() async throws {
-            try await storageService.deleteUserProfileImageFromStorage()
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            try await storageService.deleteUserProfileImageFromStorage(userUID: userUID)
         }
         
         private func signOut() throws {

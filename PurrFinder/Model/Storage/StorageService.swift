@@ -63,8 +63,7 @@ final class StorageService {
     }
     
     
-    func downloadProfileImage() async throws -> UIImage? {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func downloadProfileImage(userUID: String) async throws -> UIImage? {
         let storage = Storage.storage().reference(withPath: "profileImages/\(userUID)")
 
         let url = try await storage.downloadURL()
@@ -75,8 +74,7 @@ final class StorageService {
         return profileImage
     }
     
-    func downloadAnimalImage() async throws -> UIImage? {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func downloadAnimalImage(userUID: String) async throws -> UIImage? {
         let storage = Storage.storage().reference(withPath: "animalImages/\(userUID)")
 
         let url = try await storage.downloadURL()
@@ -87,8 +85,7 @@ final class StorageService {
         return animalImage
     }
     
-    func deleteUserProfileImageFromStorage() async throws {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func deleteUserProfileImageFromStorage(userUID: String) async throws {
         let ref = Storage.storage().reference(withPath: "profileImages/\(userUID)")
         
         do {
@@ -98,8 +95,7 @@ final class StorageService {
         }
     }
     
-    func deleteAnimalImageFromStorage() async throws {
-        let userUID = firebaseAuthService.getCurrentUserUID()
+    func deleteAnimalImageFromStorage(userUID: String) async throws {
         let ref = Storage.storage().reference(withPath: "animalImages/\(userUID)")
         
         do {

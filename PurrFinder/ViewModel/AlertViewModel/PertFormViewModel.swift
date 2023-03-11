@@ -92,7 +92,7 @@ extension PetFormModalView {
             let animalBreed = animalDTO.animalBreed
             let animalDescription = animalDTO.animalDescription
             
-            guard let animalImage = try await storageService.downloadAnimalImage() else {
+            guard let animalImage = try await storageService.downloadAnimalImage(userUID: userUID) else {
                 return
             }
             

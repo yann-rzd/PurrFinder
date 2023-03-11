@@ -66,7 +66,8 @@ extension CurrentAlertView {
         // MARK: - PRIVATE: methods
         
         private func getAnimalImage() async throws {
-            self.animalImage = try await storageService.downloadAnimalImage()
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            self.animalImage = try await storageService.downloadAnimalImage(userUID: userUID)
         }
         
         private func getAnimalData() async throws {
@@ -86,7 +87,8 @@ extension CurrentAlertView {
         }
         
         private func deleteAnimalImage() async throws {
-            try await storageService.deleteAnimalImageFromStorage()
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            try await storageService.deleteAnimalImageFromStorage(userUID: userUID)
         }
         
         private func loadData() async throws {

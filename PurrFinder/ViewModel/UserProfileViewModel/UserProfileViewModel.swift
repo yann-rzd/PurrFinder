@@ -106,7 +106,8 @@ extension UserProfileView {
         }
         
         private func getProfileImage() async throws {
-            self.profileImage = try await storageService.downloadProfileImage()
+            let userUID = firebaseAuthService.getCurrentUserUID()
+            self.profileImage = try await storageService.downloadProfileImage(userUID: userUID)
         }
     }
 }

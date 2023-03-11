@@ -355,10 +355,10 @@
 			children = (
 				E4DF01E4299183DA004E1CC6 /* OpenAIServiceTests.swift */,
 				E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */,
+				E4A53FE529BCCB1400D006D9 /* NotificationServiceTests.swift */,
 				E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */,
 				E484497629BA268300A97778 /* FirestoreServiceTests.swift */,
 				E484497829BC877800A97778 /* StorageServiceTests.swift */,
-				E4A53FE529BCCB1400D006D9 /* NotificationServiceTests.swift */,
 			);
 			path = PurrFinderTests;
 			sourceTree = "<group>";
