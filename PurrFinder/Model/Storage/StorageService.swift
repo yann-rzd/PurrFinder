@@ -13,7 +13,7 @@ final class StorageService {
     // MARK: - PATTERN: singleton
     static let shared = StorageService()
     
-    private init() {}
+    init() {}
     
     
     // MARK: - INTERNAL: properties

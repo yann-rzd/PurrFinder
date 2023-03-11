@@ -33,6 +33,7 @@
 		E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */; };
 		E46A6E1929AF4CCC003B0373 /* FirebaseAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */; };
 		E484497729BA268300A97778 /* FirestoreServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E484497629BA268300A97778 /* FirestoreServiceTests.swift */; };
+		E484497929BC877800A97778 /* StorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E484497829BC877800A97778 /* StorageServiceTests.swift */; };
 		E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37829AE55CB00794657 /* View+Extension.swift */; };
 		E4B5D37D29AE5E6300794657 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37C29AE5E6300794657 /* APIKeys.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
@@ -137,6 +138,7 @@
 		E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
 		E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceTests.swift; sourceTree = "<group>"; };
 		E484497629BA268300A97778 /* FirestoreServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceTests.swift; sourceTree = "<group>"; };
+		E484497829BC877800A97778 /* StorageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTests.swift; sourceTree = "<group>"; };
 		E4B5D37829AE55CB00794657 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		E4B5D37C29AE5E6300794657 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				E46A6E1529AF4A4F003B0373 /* LocationServiceTests.swift */,
 				E46A6E1829AF4CCC003B0373 /* FirebaseAuthServiceTests.swift */,
 				E484497629BA268300A97778 /* FirestoreServiceTests.swift */,
+				E484497829BC877800A97778 /* StorageServiceTests.swift */,
 			);
 			path = PurrFinderTests;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				E4DF01E5299183DA004E1CC6 /* OpenAIServiceTests.swift in Sources */,
 				E484497729BA268300A97778 /* FirestoreServiceTests.swift in Sources */,
 				E46A6E1629AF4A4F003B0373 /* LocationServiceTests.swift in Sources */,
+				E484497929BC877800A97778 /* StorageServiceTests.swift in Sources */,
 				E4DF024529919C31004E1CC6 /* NotificationService.swift in Sources */,
 				E4DF023D29919BF4004E1CC6 /* PostAlert.swift in Sources */,
 			);
