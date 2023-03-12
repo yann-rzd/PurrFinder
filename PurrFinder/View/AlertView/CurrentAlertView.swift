@@ -57,6 +57,7 @@ struct CurrentAlertView: View {
                     Text(viewModel.animalDescription)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .multilineTextAlignment(.center)
                 }
                 .padding(.top, 10)
                 .padding(.bottom, 10)

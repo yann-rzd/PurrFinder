@@ -112,7 +112,7 @@ struct PetFormModalView: View {
                 Task {
                     petFormViewModel.createPostAlert()
                     await petFormViewModel.isAlertPosted()
-                    await Task.sleep(1 * NSEC_PER_SEC)
+                    try await Task.sleep(nanoseconds: 1000000000)
                     
                     if petFormViewModel.isAlertPosted {
                         try await petFormViewModel.checkForPermission()

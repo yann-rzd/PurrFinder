@@ -113,7 +113,7 @@ final class FirestoreServiceTests: XCTestCase {
         let user = PurrFinder.User(uid: userTest.uid, name: userTest.name, email: userTest.email, phone: userTest.phone, profileImage: userTest.profileImage, locationLatitude: userTest.locationLatitude, locationLongitude: userTest.locationLongitude)
         
         // Add the user to the database before deleting it
-        let documentReference = FirestoreService.shared.getUserDocumentReference(user: user)
+        _ = FirestoreService.shared.getUserDocumentReference(user: user)
         try await FirestoreService.shared.saveUserData(user: user)
         
         // Verify that the user exists before deleting
