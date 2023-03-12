@@ -1,2 +1,10 @@
 # .gitignore
+
+# API keys
 /PurrFinder/SupportingFiles/APIKey.swift
+
+Build
+
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
