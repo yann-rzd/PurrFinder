@@ -44,7 +44,7 @@ final class FirestoreServiceTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testSaveUserData() async throws {
+    func testGivenUserData_WhenSaveUserData_ThenUserDataSaved() async throws {
         let userTest = TestUser(
             uid: "1234",
             name: "John",
@@ -71,7 +71,7 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(userDTO.locationLongitude, user.locationLongitude)
     }
     
-    func testGetUserData() async throws {
+    func testGivenUserData_WhenGetUserData_ThenUserDataRetreived() async throws {
         let userTest = TestUser(
             uid: "1234",
             name: "John",
@@ -101,7 +101,7 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(userDTO.locationLongitude, user.locationLongitude)
     }
     
-    func testDeleteUserData() async throws {
+    func testGivenUserData_WhenDeletingUserData_ThenUserDataDeleted() async throws {
         let userUID = "1234"
         let userTest = TestUser(
             uid: userUID,
@@ -132,8 +132,8 @@ final class FirestoreServiceTests: XCTestCase {
         let snapshotAfterDelete = try await userRef.getDocument()
         XCTAssertFalse(snapshotAfterDelete.exists)
     }
-    
-    func testUpdateUserDataNamePhone() async throws {
+
+    func testGivenUserData_WhenUpdateUserNameAndPhoneData_ThenUserNameAndPhoneDataUpdated() async throws {
         // Create a test user and save their data
         let userTest = TestUser(
             uid: "1234",
@@ -162,7 +162,7 @@ final class FirestoreServiceTests: XCTestCase {
         try await FirestoreService.shared.deleteUserData(uid: userTest.uid)
     }
     
-    func testUpdateUserLocationData() async throws {
+    func testGivenUserData_WhenUpdateUserLocationData_ThenUserUserLocationDataUpdated() async throws {
         // Create a test user
         let userTest = TestUser(
             uid: "1234",
@@ -194,7 +194,7 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(updatedUserDTO.locationLongitude, newLongitude)
     }
     
-    func testCreatePostAlert() async throws {
+    func testGivenPostAlertData_WhenSavePostAlertData_ThenPostAlertDataSaved() async throws {
         let postAlertTest = TestPostAlert(
             uid: "1234",
             animalName: "Simba",
@@ -234,7 +234,7 @@ final class FirestoreServiceTests: XCTestCase {
         XCTAssertEqual(postAlertDTO.ownerUid, postAlertTest.ownerUid)
     }
     
-    func testCheckIfAlertInProgress() async throws {
+    func testGivenPostAlertData_WhenCheckIfAlertInProgress_ThenReturnIfAlertInProgress() async throws {
         // Créer un document "postAlertData" dans la collection
         let db = Firestore.firestore()
         
@@ -262,7 +262,7 @@ final class FirestoreServiceTests: XCTestCase {
         try await db.collection("postAlertData").document(postAlertDataId).delete()
     }
     
-    func testDeletePostAlert() async throws {
+    func testGivenPostAlertData_WhenDeletePostAlertData_ThenPostAlertDataDeleted() async throws {
         // Créer une alerte pour la supprimer ensuite
         let postAlertTest = TestPostAlert(
             uid: "1234",

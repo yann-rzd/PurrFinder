@@ -13,8 +13,8 @@ import CoreLocation
 final class NotificationServiceTests: XCTestCase {
 
     let notificationService = NotificationService.shared
-        
-        func testRequestNotificationAuthorization() {
+
+        func testGivenNotification_WhenRequestNotificationAuthorization_ThenAuthorizationrequested() {
             let center = UNUserNotificationCenter.current()
             center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 XCTAssertNotNil(granted)
@@ -22,7 +22,7 @@ final class NotificationServiceTests: XCTestCase {
             }
         }
         
-        func testCheckForPermission() {
+        func testGivenNotification_WhenCheckForPermissionNotification_ThenPermissionChecked() {
             let ownerLocation = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
             let animalImage = UIImage(imageLiteralResourceName: "Cat")
             let animalName = "Fluffy"
@@ -48,7 +48,7 @@ final class NotificationServiceTests: XCTestCase {
             wait(for: [expectation], timeout: 10)
         }
         
-        func testGetRegion() {
+        func testGivenLocation_WhenGetRegionOfNotification_ThenRegionRetreive() {
             let location = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
             let region = notificationService.getRegion(from: location)
             XCTAssertNotNil(region)

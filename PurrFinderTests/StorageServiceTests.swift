@@ -17,8 +17,8 @@ final class StorageServiceTests: XCTestCase {
         super.setUp()
         Storage.storage().useEmulator(withHost: "localhost", port: 9199)
     }
-    
-    func testPersistProfileImageToStorage() async throws {
+
+    func testGivenProfileImage_WhenPersistProfileImage_ThenProfileImagePersisted() async throws {
         let image = UIImage(systemName: "photo")!
         
         let userUID = "7890"
@@ -40,7 +40,7 @@ final class StorageServiceTests: XCTestCase {
         }
     }
     
-    func testPersistAnimalImageToStorage() async throws {
+    func testGivenAnimalImage_WhenPersistAnimalImage_ThenAnimalImagePersisted() async throws {
         let image = UIImage(systemName: "photo")!
         
         let userUID = "7890"
@@ -62,7 +62,7 @@ final class StorageServiceTests: XCTestCase {
         }
     }
     
-    func testDownloadProfileImage() async throws {
+    func testGivenProfileImage_WhenDownloadProfileImage_ThenProfileImageDownloaded() async throws {
         // 1. Créer une image factice pour tester.
         let image = UIImage(systemName: "photo")!
         
@@ -87,7 +87,7 @@ final class StorageServiceTests: XCTestCase {
         }
     }
     
-    func testDownloadAnimalImage() async throws {
+    func testGivenAnimalImage_WhenDownloadAnimalImage_ThenAnimalImageDownloaded() async throws {
         // 1. Créer une image factice pour tester.
         let image = UIImage(systemName: "photo")!
         
@@ -112,7 +112,7 @@ final class StorageServiceTests: XCTestCase {
         }
     }
     
-    func testDeleteProfileImage() async throws {
+    func testGivenProfileImage_WhenDeleteProfileImage_ThenProfileImageDeleted() async throws {
         // 1. Créer une image factice pour tester.
         let image = UIImage(systemName: "photo")!
         
@@ -150,7 +150,7 @@ final class StorageServiceTests: XCTestCase {
         XCTAssertFalse(isRefExists, "The reference should not exist in Firebase Storage.")
     }
     
-    func testDeleteAnimalImage() async throws {
+    func testGivenAniamlImage_WhenDeleteAnimalImage_ThenAnimalImageDeleted() async throws {
         // 1. Créer une image factice pour tester.
         let image = UIImage(systemName: "photo")!
         

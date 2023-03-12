@@ -17,8 +17,10 @@ final class FirebaseAuthServiceTests: XCTestCase {
         super.setUp()
         firebaseAuthService = FirebaseAuthService()
     }
-
-    func testSignIn() async throws {
+    func testGivenUserLogInInformation_WhenSignIn_ThenUserLoggedIn() {
+        
+    }
+    func testGivenUserLogInInformation_WhenSignIn_ThenUserLoggedIn() async throws {
         
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099)
@@ -45,7 +47,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-    func testSignUp() async throws {
+    func testGivenUserLogInInformation_WhenSignUp_ThenUserSignedUp() async throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth
@@ -70,7 +72,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-    func testResetPassword() async throws {
+    func testGivenUserLogInInformation_WhenResetPassword_ThenResetPasswordSend() async throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth
@@ -92,7 +94,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-    func testSignOut() throws {
+    func testGivenUserLogedIn_WhenSignOutUser_ThenUserSignedOut() throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth
@@ -112,7 +114,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         user?.delete()
     }
     
-    func testDeleteUser() async throws {
+    func testGivenUser_WhenDeletindUser_ThenUserDeleted() async throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth
@@ -135,7 +137,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-    func testGetCurrentUserEmail() async throws {
+    func testGivenUserLogedIn_WhenGetCurrentUserEmail_ThenUserEmailRetreived() async throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth
@@ -155,7 +157,7 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-    func testGetCurrentUserUID() async throws {
+    func testGivenUserLogedIn_WhenGetCurrentUserUID_ThenUserUIDRetreived() async throws {
         // Création d'une instance Firebase Auth dédiée aux tests
         let auth = Auth.auth()
         auth.useEmulator(withHost: "localhost", port: 9099) // Si vous utilisez un émulateur Firebase Auth

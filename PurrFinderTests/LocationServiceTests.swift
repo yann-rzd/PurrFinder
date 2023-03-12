@@ -32,19 +32,20 @@ class LocationServiceTests: XCTestCase {
         super.tearDown()
     }
     
-    func testStartUpdatingLocation() {
+    func testGivenLocationNotUpdated_WhenStartUpdatingLocation_ThenLocationUpdated() {
         locationService.startUpdatingLocation()
         XCTAssertTrue(locationManager.delegate === locationService)
         XCTAssertTrue(locationManager.requestWhenInUseAuthorizationCalled)
         XCTAssertTrue(locationManager.startUpdatingLocationCalled)
     }
     
-    func testStopUpdatingLocation() {
+    func testGivenLocationUpdated_WhenStopUpdatingLocation_ThenLocationNotUpdated() {
         locationService.stopUpdatingLocation()
         XCTAssertTrue(locationManager.stopUpdatingLocationCalled)
     }
     
-    func testLocationManagerDidUpdateLocations() {
+    
+    func testGivenLocation_WhenNewLocation_ThenLocationUpdated() {
         let location = CLLocation(latitude: 37.33233141, longitude: -122.0312186)
         let locations = [location]
         locationService.locationManager(locationManager, didUpdateLocations: locations)
