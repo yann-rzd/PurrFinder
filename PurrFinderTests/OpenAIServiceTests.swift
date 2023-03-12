@@ -38,7 +38,7 @@ final class OpenAIServiceTests: XCTestCase {
                     XCTFail("Error: \(error.localizedDescription)")
                 }
             } receiveValue: { response in
-                // Vérifiez ici le contenu de la réponse
+                // Check here the content of the answer
                 XCTAssertNotNil(response.choices)
             }
             .store(in: &cancellables)
