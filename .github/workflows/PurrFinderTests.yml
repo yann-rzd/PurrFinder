@@ -16,6 +16,9 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ secrets.PURRFINDER_TOKEN }}
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6
 
       - uses: maxim-lobanov/setup-xcode@v1
         with:
