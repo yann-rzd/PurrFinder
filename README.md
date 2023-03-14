@@ -7,7 +7,7 @@
 # Reciplease
 🍽 Send an alert and find your pet with PurrFinder app
 
-<img src="https://imgur.com/UcR1xG8" width="200" height="450">&nbsp; &nbsp; <img src="https://imgur.com/ZKZiskq" width="200" height="450">&nbsp; &nbsp; <img src="https://imgur.com/rtOsqK8" width="200" height="450">&nbsp; &nbsp; <img src="https://imgur.com/dhPSPjh" width="200" height="450">&nbsp; &nbsp; <img src="https://imgur.com/ywfyqUc" width="200" height="450">&nbsp; &nbsp; <img src="https://imgur.com/I82r2eJ" width="200" height="450">  
+<img src="https://i.imgur.com/UcR1xG8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ZKZiskq.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/rtOsqK8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/dhPSPjh.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ywfyqUc.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/I82r2eJ.png" width="200" height="450">  
 
 ## 🍕 About
 Reciplease is the app thats will help you cook nice plats in your everyday life. It will let you enter your ingredients left in your fridge and search for recipes. Recipes that you can save in your app favorite page and have access offline.
