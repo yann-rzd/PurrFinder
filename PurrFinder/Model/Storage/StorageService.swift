@@ -36,7 +36,6 @@ final class StorageService {
                 }
                 print("Successfully stored image with url : \(url?.absoluteString ?? "")")
             }
-            
         }
     }
     
