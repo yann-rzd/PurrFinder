@@ -16,6 +16,12 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ secrets.PURRFINDER_TOKEN }}
+        
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '3.0'
