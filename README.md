@@ -5,7 +5,7 @@
 </h1>
 
 # PurrFinder
-🐈 Send an alert and find your pet with PurrFinder app
+🐈 Send an alert and find your pet with PurrFinder app.
 
 <img src="https://i.imgur.com/UcR1xG8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ZKZiskq.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/rtOsqK8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/dhPSPjh.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ywfyqUc.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/I82r2eJ.png" width="200" height="450">  
 
