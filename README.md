@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://imgur.com/VPqlydX" alt="PurrFinder" width="200"></a>
+  <img src="https://i.imgur.com/VPqlydX.png" alt="PurrFinder" width="200"></a>
   <br>
 </h1>
 
