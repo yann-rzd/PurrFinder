@@ -19,7 +19,7 @@ Reciplease is written in Swift 5 and supports iOS 13.0+. Built with Xcode 14.
 This application is developed according to the [MVVM](https://medium.com/@abhilash.mathur1891/mvvm-in-ios-swift-aa1448a66fb4) architecture.
 
 ## 🛠 Dependencies
-To authenticate the use and management of accounts I use [Firebase Authtication](https://firebase.google.com/docs/auth?hl=fr). To save and provide data in real time I use [Firestore](https://firebase.google.com/docs/firestore?hl=fr) and [Storage](https://firebase.google.com/docs/storage?hl=fr). To make network calls I use [Alamofire](https://github.com/Alamofire/Alamofire) for an elegant HTTP Networking in Swift.
+To authenticate the use and management of accounts I use [Firebase Authentication](https://firebase.google.com/docs/auth?hl=fr). To save and provide data in real time I use [Firestore](https://firebase.google.com/docs/firestore?hl=fr) and [Storage](https://firebase.google.com/docs/storage?hl=fr). To make network calls I use [Alamofire](https://github.com/Alamofire/Alamofire) for an elegant HTTP Networking in Swift.
 I use [CocoaPods](https://cocoapods.org) as dependency manager.
 
 ## 🕵️ How to test 
