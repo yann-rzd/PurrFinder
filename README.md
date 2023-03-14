@@ -25,7 +25,7 @@ I use [CocoaPods](https://cocoapods.org) as dependency manager.
 ## 🕵️ How to test 
 ### Clone the project
 
-Run `git@github.com:github.com/yann-rzd/Reciplease.git`
+Run `git@https://github.com/yann-rzd/PurrFinder.git`
 
 ### Install dependencies
 
@@ -33,14 +33,14 @@ Run `pod install`
 
 ### Workspace
 
-Open `Reciplease.xcworkspace`
+Open `PurrFinder.xcworkspace`
 
-### Add your [Edamam](https://www.edamam.com/) API key
+### Add your [Open AI](https://platform.openai.com/) API key
 
 Create a file `APIKeys.swift`
 
 Add this code `struct APIKeys {
-    static let recipeKey = "yourAPIKey"
+    static let openAIAPIKey = "yourAPIKey"
 }` and replace yourAPIKey with your key. 
 
 Build & Run 🔥
