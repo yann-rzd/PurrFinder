@@ -11,11 +11,17 @@ import Combine
 
 extension ChatHelpView {
     @MainActor class ChatHelpViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var chatMessages: [ChatMessage] = []
         @Published var messagetext: String = ""
         
         let openAIService = OpenAIService()
         @Published var cancellables = Set<AnyCancellable>()
+        
+        
+        // MARK: - INTERNAL: methods
         
         func messageView(message: ChatMessage) -> some View {
             HStack {

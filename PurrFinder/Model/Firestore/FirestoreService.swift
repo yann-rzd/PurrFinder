@@ -68,7 +68,6 @@ final class FirestoreService {
         let docRef = db.collection("postAlertData").document(userUID)
         let postAlertDTOResponse = try await docRef.getDocument(as: PostAlertDTO.self)
         
-//        let id = postAlertDTOResponse.0
         return postAlertDTOResponse.1
     }
     

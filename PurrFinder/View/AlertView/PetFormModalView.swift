@@ -31,8 +31,6 @@ struct PetFormModalView: View {
             .padding(.trailing, 20)
             .padding(.top, 20)
             
-            //            Spacer()
-            
             ZStack(alignment: .bottomTrailing) {
                 ZStack {
                     if let image = petFormViewModel.petImage {
@@ -106,7 +104,6 @@ struct PetFormModalView: View {
             }
             .padding()
             .focused($isInputActive)
-            
             
             Button(action: {
                 Task {

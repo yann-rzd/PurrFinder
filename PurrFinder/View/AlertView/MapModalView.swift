@@ -16,9 +16,7 @@ struct MapModalView: View {
     var body: some View {
         NavigationView {
             MapView(centerCoordinate: $centerCoordinate)
-//                .ignoresSafeArea()
                 .navigationBarTitle("", displayMode: .inline)
-//                .navigationBarBackButtonHidden(true)
                 .navigationBarItems(trailing: Button(action: {
                         self.isPresented.toggle()
                     }) {

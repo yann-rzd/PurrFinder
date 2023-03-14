@@ -24,7 +24,6 @@ struct UserProfileView: View {
                 
                 Spacer()
                 
-                /// Profile image and edit image button
                 ZStack(alignment: .bottomTrailing) {
                     ZStack {
                         if let image = userProfileViewModel.profileImage {
@@ -54,8 +53,6 @@ struct UserProfileView: View {
                 
                 Spacer()
                 
-                /// Profile information
-                
                 TextField("Nom", text: $userProfileViewModel.name)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(userProfileViewModel.isEditProfileInformation ? Color("BluePurr") : Color(.black), lineWidth: 0.5))
@@ -73,8 +70,6 @@ struct UserProfileView: View {
                     .submitLabel(.done)
                 
                 
-                /// Edit profile informations button
-                ///
                 Button(action: {
                     userProfileViewModel.isEditProfileInformation.toggle()
                     if !userProfileViewModel.isEditProfileInformation {
@@ -96,7 +91,6 @@ struct UserProfileView: View {
                 
                 Spacer()
                 
-                /// Signout button
                 Button(action: {
                     userProfileViewModel.signOut()
                 }) {

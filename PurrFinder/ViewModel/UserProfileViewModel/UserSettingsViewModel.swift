@@ -10,8 +10,14 @@ import Foundation
 extension UserSettingsView {
     @MainActor
     class UserSettingsViewModel: ObservableObject {
+        
+        // MARK: - INTERNAL: properties
+        
         @Published var alert = false
         @Published var error = ""
+        
+        
+        // MARK: - INTERNAL: methods
         
         func deleteUser() async {
             do {
@@ -27,6 +33,15 @@ extension UserSettingsView {
                 self.alert.toggle()
             }
         }
+        
+        // MARK: - PRIVATE: properties
+        
+        private let firebaseAuthService = FirebaseAuthService.shared
+        private let firestoreService = FirestoreService.shared
+        private let storageService = StorageService.shared
+        
+        
+        // MARK: - PRIVATE: methods
         
         private func deleteUserData() async throws {
             let userUID = firebaseAuthService.getCurrentUserUID()
@@ -48,9 +63,5 @@ extension UserSettingsView {
             NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
             
         }
-        
-        private let firebaseAuthService = FirebaseAuthService.shared
-        private let firestoreService = FirestoreService.shared
-        private let storageService = StorageService.shared
     }
 }

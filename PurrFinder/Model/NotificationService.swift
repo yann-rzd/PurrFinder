@@ -14,7 +14,9 @@ final class NotificationService {
     
     static let shared = NotificationService()
     
-    private init() { }
+    
+    
+    // MARK: - INTERNAL: methods
     
     func requestNotificationAuthorization() {
         let center = UNUserNotificationCenter.current()
@@ -71,10 +73,26 @@ final class NotificationService {
             }
         }
     }
+    
+    func getRegion(from location: CLLocationCoordinate2D) -> CLCircularRegion {
+        let region = CLCircularRegion(center: location, radius: 10, identifier: "PetLocation")
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+
+        print("🌍🌍🌍🌍🌍🌍🌍 REGION 🌍🌍🌍🌍🌍🌍🌍 : \(region)")
+
+        return region
+    }
 
     
+    // MARK: - PRIVATE: properties
+    
+    private init() { }
     private let notificationCenter = UNUserNotificationCenter.current()
 
+    
+    // MARK: - PRIVATE: methods
+    
     private func scheduleNotification(ownerLocation: CLLocationCoordinate2D, animalImage: UIImage, animalName: String, animalType: String, animalBreed: String, animalDescription: String, ownerName: String, ownerPhone: String) {
         
         let identifier = "Un animale s'est égaré dans votre zone"
@@ -95,15 +113,5 @@ final class NotificationService {
                 print("Error scheduling notification: \(error)")
             }
         }
-    }
-    
-    func getRegion(from location: CLLocationCoordinate2D) -> CLCircularRegion {
-        let region = CLCircularRegion(center: location, radius: 10, identifier: "PetLocation")
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-
-        print("🌍🌍🌍🌍🌍🌍🌍 REGION 🌍🌍🌍🌍🌍🌍🌍 : \(region)")
-
-        return region
     }
 }

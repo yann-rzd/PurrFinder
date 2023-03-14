@@ -25,7 +25,6 @@ struct LoginView: View {
                         .font(Font.custom("AmaticSC-Bold", size: 32))
                         .foregroundColor(Color("BluePurr"))
                     
-                    
                     Text("Se connecter")
                         .font(.title)
                         .fontWeight(.bold)
@@ -111,7 +110,6 @@ struct LoginView: View {
                     .foregroundColor(Color("BluePurr"))
             })
             
-            
             if loginViewModel.alert {
                 AuthenticationErrorView(alert: $loginViewModel.alert, error: $loginViewModel.error)
             }
@@ -119,6 +117,5 @@ struct LoginView: View {
         .onTapGesture {
             hideKeyboard()
         }
-        
     }
 }

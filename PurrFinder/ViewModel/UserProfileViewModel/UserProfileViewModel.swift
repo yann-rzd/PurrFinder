@@ -11,6 +11,8 @@ import Firebase
 
 extension UserProfileView {
     
+    // MARK: - INTERNAL: properties
+    
     @MainActor class UserProfileViewModel: ObservableObject {
         @Published var isEditProfileInformation = false
         @Published var color = Color.black.opacity(0.7)
@@ -23,7 +25,9 @@ extension UserProfileView {
         @Published var alert = false
         @Published var error = ""
         
-                
+        
+        // MARK: - INTERNAL: methods
+        
         func getUserData() async throws {
             let userUID = firebaseAuthService.getCurrentUserUID()
 
@@ -86,10 +90,15 @@ extension UserProfileView {
             }
         }
         
+        
+        // MARK: - PRIVATE: properties
+        
         private let firebaseAuthService = FirebaseAuthService.shared
         private let firestoreService = FirestoreService.shared
         private let storageService = StorageService.shared
         
+        
+        // MARK: - PRIVATE: methods
         
         private func isValidPhoneNumber(phone: String) -> Bool {
             let PHONE_REGEX = "^0[1-9](\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}(\\s|\\.|\\-)?[0-9]{2}$"

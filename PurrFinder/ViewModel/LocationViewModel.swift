@@ -11,14 +11,34 @@ import CoreLocation
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    override init() {
+        super.init()
+        locationService.delegate = self
+    }
+    
+    // MARK: - INTERNAL: properties
+    
     @Published var latitude: Double = 0
     @Published var longitude: Double = 0
     
-    private let locationService = LocationService()
+    
+    // MARK: - INTERNAL: methods
     
     func getUserLocation() {
         locationService.startUpdatingLocation()
     }
+    
+    
+    // MARK: - PRIVATE: properties
+    
+    private let locationService = LocationService()
+    private let firestoreService = FirestoreService.shared
+    private let firebaseAuthService = FirebaseAuthService.shared
+    private var error = ""
+    private var alert = false
+    
+    
+    // MARK: - PRIVATE: methods
     
     private func updateUserLocationData() async {
         let userUID = firebaseAuthService.getCurrentUserUID()
@@ -33,16 +53,6 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             self.error = error.localizedDescription
             self.alert.toggle()
         }
-    }
-    
-    private let firestoreService = FirestoreService.shared
-    private let firebaseAuthService = FirebaseAuthService.shared
-    private var error = ""
-    private var alert = false
-    
-    override init() {
-        super.init()
-        locationService.delegate = self
     }
 }
 

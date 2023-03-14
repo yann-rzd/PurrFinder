@@ -9,8 +9,14 @@ import Foundation
 import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
+    
+    // MARK: - INTERNAL: properties
+    
     weak var delegate: LocationServiceDelegate?
     internal var locationManager: CLLocationManager = CLLocationManager()
+    
+    
+    // MARK: - INTERNAL: methods
     
     func startUpdatingLocation() {
         locationManager.delegate = self

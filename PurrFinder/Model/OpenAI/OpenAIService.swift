@@ -10,7 +10,12 @@ import Alamofire
 import Combine
 
 class OpenAIService {
+    
+    // MARK: - INTERNAL: properties
     let basUrl = "https://api.openai.com/v1/"
+    
+    
+    // MARK: - INTERNAL: methods
     
     func sendMessage(message: String) -> AnyPublisher<OpenAICompletionsResponse, Error> {
         let body = OpenAICompletionBody(model: "text-davinci-003", prompt: message, temperature: 0.7, max_tokens: 500)
