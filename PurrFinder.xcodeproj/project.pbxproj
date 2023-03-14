@@ -38,7 +38,6 @@
 		E4B5D37929AE55CB00794657 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37829AE55CB00794657 /* View+Extension.swift */; };
 		E4B5D37D29AE5E6300794657 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5D37C29AE5E6300794657 /* APIKeys.swift */; };
 		E4C3F83D2992BA6D0016B665 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */; };
-		E4CA485B299403F900CEEA3E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485A299403F900CEEA3E /* Picker.swift */; };
 		E4CA485D2994044500CEEA3E /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */; };
 		E4DE139529A3D2EE0007EDD4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE139429A3D2EE0007EDD4 /* StorageService.swift */; };
 		E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF01D3299183D8004E1CC6 /* PurrFinderApp.swift */; };
@@ -143,7 +142,6 @@
 		E4B5D37829AE55CB00794657 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		E4B5D37C29AE5E6300794657 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		E4C3F83C2992BA6D0016B665 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		E4CA485A299403F900CEEA3E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		E4CA485C2994044500CEEA3E /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		E4DE139429A3D2EE0007EDD4 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		E4DF01D0299183D8004E1CC6 /* PurrFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurrFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,7 +288,6 @@
 		E4CA48592994032800CEEA3E /* UIViewRepresentable */ = {
 			isa = PBXGroup;
 			children = (
-				E4CA485A299403F900CEEA3E /* Picker.swift */,
 				E41B483A29A3D6F200341687 /* ProfileImagePicker.swift */,
 				E41F01B829A9148A00CCD79C /* AnimalImagePicker.swift */,
 				E440DE7F29AA64C9000A832F /* MapView.swift */,
@@ -767,7 +764,6 @@
 				E41F01AD29A6671B00CCD79C /* UserSettingsViewModel.swift in Sources */,
 				E4DF021429918931004E1CC6 /* ContentView.swift in Sources */,
 				E4DF023C29919BF4004E1CC6 /* PostAlert.swift in Sources */,
-				E4CA485B299403F900CEEA3E /* Picker.swift in Sources */,
 				E4DF01D4299183D8004E1CC6 /* PurrFinderApp.swift in Sources */,
 				E41B483B29A3D6F200341687 /* ProfileImagePicker.swift in Sources */,
 				E440DE8029AA64C9000A832F /* MapView.swift in Sources */,

@@ -19,7 +19,7 @@ struct MapModalView: View {
 //                .ignoresSafeArea()
                 .navigationBarTitle("", displayMode: .inline)
 //                .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: Button(action: {
+                .navigationBarItems(trailing: Button(action: {
                         self.isPresented.toggle()
                     }) {
                         Image(systemName: "xmark.circle.fill")

@@ -33,6 +33,8 @@ struct ChatHelpView: View {
                     .padding()
                     .background(.gray.opacity(0.1))
                     .cornerRadius(12)
+                    .submitLabel(.done)
+                
                 Button {
                     viewModel.sendMessage()
                 } label: {
