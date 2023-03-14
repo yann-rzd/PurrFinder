@@ -7,7 +7,7 @@
 # PurrFinder
 🐈 Send an alert and find your pet with PurrFinder app.
 
-<img src="https://i.imgur.com/UcR1xG8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ZKZiskq.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/rtOsqK8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/dhPSPjh.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ywfyqUc.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/I82r2eJ.png" width="200" height="450">  
+<img src="https://i.imgur.com/UcR1xG8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ZKZiskq.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/rtOsqK8.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/dhPSPjh.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/hMAMAQ9.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/ywfyqUc.png" width="200" height="450">&nbsp; &nbsp; <img src="https://i.imgur.com/I82r2eJ.png" width="200" height="450">  
 
 ## 🐶 About
 The mission of the PurrFinder application is to allow owners to find their lost pet. Users can create an alert if their furry best friend is lost. It will send a notification to users in the area and can contact the owner if they have any information. The application also offers a chat bot to help the owner if he needs information.
