@@ -32,7 +32,7 @@ struct UserProfileView: View {
                                 .frame(width: 120, height: 120)
                                 .clipShape(Circle())
                         } else {
-                            Image(systemName: "person.crop.circle")
+                            Image("Profile")
                                 .resizable()
                                 .frame(width: 120, height: 120)
                                 .clipShape(Circle())

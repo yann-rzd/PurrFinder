@@ -24,6 +24,7 @@ extension UserSettingsView {
                 try await deleteUserData()
                 try await deleteUserImage()
                 try deleteUserAccount()
+                try await Task.sleep(nanoseconds: 1000000000)
                 try firebaseAuthService.signOut()
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)

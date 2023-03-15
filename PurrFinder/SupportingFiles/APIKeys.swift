@@ -8,6 +8,6 @@
 import Foundation
 
 struct APIKeys {
-    static let openAIAPIKey = "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"
+    static let openAIAPIKey = "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"
     
 }
