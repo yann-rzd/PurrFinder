@@ -74,8 +74,7 @@ struct UserProfileView: View {
                     userProfileViewModel.isEditProfileInformation.toggle()
                     if !userProfileViewModel.isEditProfileInformation {
                         Task {
-                            try
-                            await userProfileViewModel.saveUserDataNamePhone()
+                            try await userProfileViewModel.saveUserDataNamePhone()
                         }
                     }
                 }) {

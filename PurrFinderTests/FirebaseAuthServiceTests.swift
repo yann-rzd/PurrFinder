@@ -115,21 +115,21 @@ final class FirebaseAuthServiceTests: XCTestCase {
         try? await user?.delete()
     }
     
-//    func testGivenUserLogedIn_WhenGetCurrentUserEmail_ThenUserEmailRetreived() async throws {
-//        let auth = Auth.auth()
-//        auth.useEmulator(withHost: "localhost", port: 9099)
-//
-//        try await auth.createUser(withEmail: "test@example.com", password: "password")
-//
-//        try await auth.signIn(withEmail: "test@example.com", password: "password")
-//
-//        let email = firebaseAuthService.getCurrentUserEmail()
-//
-//        XCTAssertEqual(email, "test@example.com")
-//
-//        let user = auth.currentUser
-//        try? await user?.delete()
-//    }
+    func testGivenUserLogedIn_WhenGetCurrentUserEmail_ThenUserEmailRetreived() async throws {
+        let auth = Auth.auth()
+        auth.useEmulator(withHost: "localhost", port: 9099)
+
+        try await auth.createUser(withEmail: "test@example.com", password: "password")
+
+        try await auth.signIn(withEmail: "test@example.com", password: "password")
+
+        let email = firebaseAuthService.getCurrentUserEmail()
+
+        XCTAssertEqual(email, "test@example.com")
+
+        let user = auth.currentUser
+        try? await user?.delete()
+    }
     
     func testGivenUserLogedIn_WhenGetCurrentUserUID_ThenUserUIDRetreived() async throws {
         let auth = Auth.auth()

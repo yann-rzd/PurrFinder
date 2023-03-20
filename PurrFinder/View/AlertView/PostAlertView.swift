@@ -20,7 +20,7 @@ struct PostAlertView: View {
                 CurrentAlertView(alertInProgress: $viewModel.alertStillInProgressResponse)
             } else {
                 VStack {
-                    Text("Push pour lancer une alerte")
+                    Text("Appuyez pour lancer une alerte")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color("BluePurr"))

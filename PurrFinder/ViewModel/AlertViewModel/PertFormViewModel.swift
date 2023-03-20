@@ -72,7 +72,7 @@ extension PetFormModalView {
             isAlertPosted = await firestoreService.checkIfAlertInProgress(userUID: userUID)
         }
         
-        func checkForPermission() async throws{
+        func sendNotification() async throws{
             let userUID = firebaseAuthService.getCurrentUserUID()
             
             guard await firestoreService.checkIfAlertInProgress(userUID: userUID) else {
@@ -96,7 +96,7 @@ extension PetFormModalView {
                 return
             }
             
-            notificationService.checkForPermission(
+            notificationService.sendNotification(
                 ownerLocation: location,
                 animalImage: animalImage,
                 animalName: animalName,

@@ -32,7 +32,7 @@ final class NotificationServiceTests: XCTestCase {
             let ownerName = "John Doe"
             let ownerPhone = "555-1234"
             
-            notificationService.checkForPermission(ownerLocation: ownerLocation,
+            notificationService.sendNotification(ownerLocation: ownerLocation,
                                                     animalImage: animalImage,
                                                     animalName: animalName,
                                                     animalType: animalType,

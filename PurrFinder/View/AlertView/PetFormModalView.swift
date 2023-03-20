@@ -112,7 +112,7 @@ struct PetFormModalView: View {
                     try await Task.sleep(nanoseconds: 1000000000)
                     
                     if petFormViewModel.isAlertPosted {
-                        try await petFormViewModel.checkForPermission()
+                        try await petFormViewModel.sendNotification()
                         alertInProgress = true
                         isPresented = false
                     }

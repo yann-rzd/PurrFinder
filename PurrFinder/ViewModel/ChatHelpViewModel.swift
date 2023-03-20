@@ -41,7 +41,6 @@ extension ChatHelpView {
             chatMessages.append(userMessage)
             
             openAIService.sendMessage(message: messagetext).sink { completion in
-                // Handle error
             } receiveValue: { response in
                 guard let textResponse = response.choices.first?.text.trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\""))) else { return }
                 let gptMessage = ChatMessage(id: response.id, content: textResponse, dateCreated: Date(), sender: .gpt)

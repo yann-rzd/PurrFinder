@@ -33,7 +33,7 @@ final class NotificationService {
         })
     }
 
-    func checkForPermission(ownerLocation: CLLocationCoordinate2D,
+    func sendNotification(ownerLocation: CLLocationCoordinate2D,
                             animalImage: UIImage,
                             animalName: String,
                             animalType: String,
@@ -75,11 +75,9 @@ final class NotificationService {
     }
     
     func getRegion(from location: CLLocationCoordinate2D) -> CLCircularRegion {
-        let region = CLCircularRegion(center: location, radius: 10, identifier: "PetLocation")
+        let region = CLCircularRegion(center: location, radius: 1000, identifier: "PetLocation")
         region.notifyOnEntry = true
         region.notifyOnExit = false
-
-        print("🌍🌍🌍🌍🌍🌍🌍 REGION 🌍🌍🌍🌍🌍🌍🌍 : \(region)")
 
         return region
     }
