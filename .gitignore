@@ -1,7 +1,7 @@
 # .gitignore
 
 # API keys
-/PurrFinder/SupportingFiles/APIKey.swift
+/PurrFinder/SupportingFiles/APIKeys.swift
 
 Build
 
